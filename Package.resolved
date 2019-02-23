@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "JSONConfig",
+        "repositoryURL": "https://github.com/iamjono/JSONConfig.git",
+        "state": {
+          "branch": null,
+          "revision": "3252ba90f47ea7aad65919cd1832faf1fe35da75",
+          "version": "3.0.2"
+        }
+      },
+      {
         "package": "COpenSSL",
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-COpenSSL.git",
         "state": {

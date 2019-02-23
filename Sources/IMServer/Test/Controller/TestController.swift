@@ -9,17 +9,28 @@ import PerfectHTTP
 
 class TestController : BaseController {
     
-    /// 服务
+    //MARK: - 声明区域
     lazy var testService: TestService = {
         return TestServiceImpl()
     }()
     
-    /// 获取密码
+    override init() {
+        super.init()
+        
+        //MARK: - 路由
+        self.route.add(method: .post, uri: "\(baseRoute)/getpassword", handler: self.getPassword())
+        self.route.add(method: .get, uri: "\(baseRoute)/getpassword", handler: self.getPassword())
+    }
+}
+
+extension TestController {
+    
+    //MARK: - 获取密码
     public func getPassword() -> RequestHandler {
         return { request, response in
             guard let username = request.param(name: "username") else {
                 do {
-                    try response.setBody(json: error001)
+                    try response.setBody(json: ResultSet.requestIllegal)
                 } catch {
                     print(error)
                 }
@@ -34,13 +45,5 @@ class TestController : BaseController {
             }
             response.completed()
         }
-    }
-    
-    override init() {
-        super.init()
-        
-        //路由
-        self.route.add(method: .post, uri: "\(ApiRoot)/getpassword", handler: self.getPassword())
-        self.route.add(method: .get, uri: "\(ApiRoot)/getpassword", handler: self.getPassword())
     }
 }

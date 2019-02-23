@@ -12,9 +12,7 @@ protocol TestService: class {
     
     var testModel: TestModel { get }
     
-    /// 获取密码
-    ///
-    /// @param username: 用户名
+    //MARK: - 获取密码
     func getPassword(username: String) -> JSONConvertible
 }
 

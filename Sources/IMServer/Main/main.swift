@@ -1,66 +1,37 @@
+//
+//  main.swift
+//  IMServerPackageDescription
+//
+//  Created by yiqiang on 2018/1/20.
+//
+
 import PerfectLib
-import PerfectHTTP
 import PerfectHTTPServer
-
-import PerfectRequestLogger
 import PostgresStORM
-import PerfectTurnstilePostgreSQL
-import TurnstilePerfect
+import PerfectRequestLogger
 
-//创建服务
+//MARK: - 创建服务
 let server = HTTPServer()
 
-//请求日志
-RequestLogFile.location = "./log/request.log"
+//MARK: - 请求日志
+RequestLogFile.location = baseLog
 
-//数据库配置
-PostgresConnector.host        = "localhost"
-PostgresConnector.username    = "postgres"
-PostgresConnector.password    = "19920213"
-PostgresConnector.database    = "postgres"
-PostgresConnector.port        = 5432
+//MARK: - 环境初始化
+Environment.initialize()
 
-//用户实体
-let auth = AuthAccount()
-try? auth.setup()
+//MARK: - 路由初始化
+server.addRoutes(initializeRoute())
 
-//用户认证实体
-tokenStore = AccessTokenStore()
-try? tokenStore?.setup()
+//MARK: - 过滤器初始化
+server.setRequestFilters(baseRequestFilter())
+server.setResponseFilters(baseResponseFilter())
 
-//路由
-let baseController = BaseController()
-let testController = TestController()
-let authWebRoutes = makeWebAuthRoutes() //权限路由[Web]
-let authJsonRoutes = makeJSONAuthRoutes(ApiRoot) //权限路由[Api]
+//MARK: - 测试初始化
+UtilTest.setup()
 
-server.addRoutes(authWebRoutes)
-server.addRoutes(authJsonRoutes)
-server.addRoutes(baseController.route)
-server.addRoutes(testController.route)
-
-//过滤器, 顺序很重要
-var authenticationConfig = AuthenticationConfig()
-authenticationConfig.include("\(ApiRoot)/check")
-authenticationConfig.include("\(ApiRoot)/getpassword")
-authenticationConfig.exclude("\(ApiRoot)/login")
-authenticationConfig.exclude("\(ApiRoot)/register")
-let authFilter = AuthFilter(authenticationConfig) //认证过滤器
-
-let pturnstile = TurnstilePerfectRealm() //Realm 过滤器, 用于认证存储
-
-let myLogger = RequestLogger() //日志过滤器
-
-server.setRequestFilters([pturnstile.requestFilter])
-server.setResponseFilters([pturnstile.responseFilter])
-server.setRequestFilters([(authFilter, .high)])
-server.setRequestFilters([(myLogger, .high)])
-server.setResponseFilters([(myLogger, .low)])
-
-//启动服务
-server.serverPort = 8181 //端口
-server.documentRoot = "./webroot" //Web 目录
-
+//MARK: - 启动服务
+server.serverPort = UInt16(baseServerPort)
+server.documentRoot = baseDocument
 do {
     try server.start()
 } catch PerfectError.networkError(let err, let msg) {

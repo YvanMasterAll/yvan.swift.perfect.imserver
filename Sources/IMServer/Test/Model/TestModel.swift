@@ -13,24 +13,19 @@ import PerfectLib
 
 class TestModel: BaseModel {
     
-    /// 用户名
-    public var username: String = ""
+    //MARK: - 声明区域
+    public var username: String = ""    //用户名
+    public var password: String = ""    //密码
     
-    /// 密码
-    public var password: String = ""
-    
-    /// 表名
     override open func table() -> String {
         return "users"
     }
     
-    /// 表映射
+    //MARK: - 表映射
     override open func to(_ this: StORMRow) {
         username = this.data["username"] as? String ?? ""
         password = this.data["password"] as? String ?? ""
     }
-    
-    /// 映射方法
     public func rows() -> [TestModel] {
         var rows = [TestModel]()
         for i in 0..<self.results.rows.count {
@@ -40,21 +35,6 @@ class TestModel: BaseModel {
         }
         return rows
     }
-    
-    /// 获取密码
-    public func getPassword(username: String) -> JSONConvertible {
-        let t = TestModel()
-        
-        try? t.find([("username", username)])
-        
-        for row in t.rows() {
-            return Result.init(0, row.password).asObject()
-        }
-
-        return Result.init(1, "未找到密码").asObject()
-    }
-    
-    /// 转换格式
     func asObject() -> [[String: Any]] {
         var entries = [[String: Any]]()
         for row in rows() {
@@ -65,7 +45,21 @@ class TestModel: BaseModel {
         }
         return entries
     }
+}
+
+extension TestModel {
     
-    
+    //MARK: -  获取密码
+    public func getPassword(username: String) -> JSONConvertible {
+        let t = TestModel()
+        
+        try? t.find([("username", username)])
+        
+        for row in t.rows() {
+            return Result.init(.success, row.password).toDict()
+        }
+        
+        return Result.init(.failure, "未找到密码").toDict()
+    }
 }
 
