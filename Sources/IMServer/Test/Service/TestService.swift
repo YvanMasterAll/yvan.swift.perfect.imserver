@@ -13,6 +13,6 @@ protocol TestService: class {
     var testModel: TestModel { get }
     
     //MARK: - 获取密码
-    func getPassword(username: String) -> JSONConvertible
+    func getPassword(username: String) throws -> String?
 }
 

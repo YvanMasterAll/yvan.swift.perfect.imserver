@@ -20,6 +20,9 @@ let package = Package(
 			"PerfectHTTPServer",
 			"PostgresStORM", 
 			"PerfectPostgreSQL"
-			])
+			]),
+        .testTarget(
+            name: "IMServerTests",
+            dependencies: ["IMServer"]),
 	]
 )

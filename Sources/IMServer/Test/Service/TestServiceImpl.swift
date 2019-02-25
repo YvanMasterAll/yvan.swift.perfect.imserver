@@ -17,7 +17,7 @@ class TestServiceImpl: TestService {
     /// 获取密码
     ///
     /// - Parameter username: 用户名
-    func getPassword(username: String) -> JSONConvertible {
-        return self.testModel.getPassword(username: username)
+    func getPassword(username: String) throws -> String? {
+        return try self.testModel.getPassword(username: username)
     }
 }

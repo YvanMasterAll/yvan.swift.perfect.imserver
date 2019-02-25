@@ -27,7 +27,7 @@ server.setRequestFilters(baseRequestFilter())
 server.setResponseFilters(baseResponseFilter())
 
 //MARK: - 测试初始化
-UtilTest.setup()
+TestUtil.setup()
 
 //MARK: - 启动服务
 server.serverPort = UInt16(baseServerPort)

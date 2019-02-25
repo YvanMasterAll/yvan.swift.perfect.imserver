@@ -29,21 +29,18 @@ extension TestController {
     public func getPassword() -> RequestHandler {
         return { request, response in
             guard let username = request.param(name: "username") else {
-                do {
-                    try response.setBody(json: ResultSet.requestIllegal)
-                } catch {
-                    print(error)
-                }
-                response.completed()
+                response.callback(ResultSet.requestIllegal)
                 return
             }
-            let t = self.testService.getPassword(username: username)
             do {
-                try response.setBody(json: t)
+                var result = Result.init(code: .failure, msg: "未找到密码")
+                if let data = try self.testService.getPassword(username: username) {
+                    result = Result.init(code: .success, data: [data])
+                }
+                response.callback(result)
             } catch {
-                print(error)
+                response.callback(ResultSet.serverError)
             }
-            response.completed()
         }
     }
 }

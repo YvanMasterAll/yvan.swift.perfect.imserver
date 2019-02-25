@@ -30,5 +30,10 @@ struct Environment {
             PostgresConnector.database  = dict["db_name"]     as? String ?? baseDBName
             PostgresConnector.port      = dict["db_port"]     as? Int    ?? baseDBPort
         }
+        initializeTables()
+    }
+    fileprivate static func initializeTables() {
+        //MARK: - 测试模块
+        try? TestModel.init().setup()
     }
 }

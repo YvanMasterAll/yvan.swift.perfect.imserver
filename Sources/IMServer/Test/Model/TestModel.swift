@@ -5,11 +5,9 @@
 //  Created by yiqiang on 2018/1/20.
 //
 
-import Turnstile
-import TurnstileCrypto
-import PostgresStORM
 import StORM
 import PerfectLib
+import PostgresStORM
 
 class TestModel: BaseModel {
     
@@ -50,16 +48,13 @@ class TestModel: BaseModel {
 extension TestModel {
     
     //MARK: -  获取密码
-    public func getPassword(username: String) -> JSONConvertible {
+    public func getPassword(username: String) throws -> String? {
         let t = TestModel()
-        
-        try? t.find([("username", username)])
-        
+        try t.find([("username", username)])
         for row in t.rows() {
-            return Result.init(.success, row.password).toDict()
+            return row.password
         }
-        
-        return Result.init(.failure, "未找到密码").toDict()
+        return nil
     }
 }
 

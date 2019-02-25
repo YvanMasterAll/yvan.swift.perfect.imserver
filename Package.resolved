@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "IMServerLib",
+        "repositoryURL": "/Users/yiqiang/Work/Workplace/Swift/IMServer/IMServerLib",
+        "state": {
+          "branch": null,
+          "revision": "8d62b263f64f0d7bd8e0b9642645d271bb54a8ec",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "JSONConfig",
         "repositoryURL": "https://github.com/iamjono/JSONConfig.git",
         "state": {
@@ -101,15 +110,6 @@
         }
       },
       {
-        "package": "PerfectMustache",
-        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Mustache.git",
-        "state": {
-          "branch": null,
-          "revision": "a3bce7e83fb6995cb2048c2dab75e7ce07773819",
-          "version": "3.0.2"
-        }
-      },
-      {
         "package": "PerfectNet",
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Net.git",
         "state": {
@@ -143,15 +143,6 @@
           "branch": null,
           "revision": "04fcd2d29f50e05dbca907219322fd475c205c33",
           "version": "3.0.5"
-        }
-      },
-      {
-        "package": "PerfectTurnstilePostgreSQL",
-        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Turnstile-PostgreSQL.git",
-        "state": {
-          "branch": null,
-          "revision": "aa458bf4b3a98670a88136092c4bb0c7bcf29837",
-          "version": "3.0.0"
         }
       },
       {
@@ -191,39 +182,12 @@
         }
       },
       {
-        "package": "SwiftRandom",
-        "repositoryURL": "https://github.com/iamjono/SwiftRandom.git",
-        "state": {
-          "branch": null,
-          "revision": "cb36e1aaa692ee86ec5c16a15fda86de94611737",
-          "version": "0.3.0"
-        }
-      },
-      {
         "package": "SwiftString",
         "repositoryURL": "https://github.com/iamjono/SwiftString.git",
         "state": {
           "branch": null,
           "revision": "a628671f5d84a31bd9d4220eb434da888f364b79",
           "version": "2.0.4"
-        }
-      },
-      {
-        "package": "Turnstile",
-        "repositoryURL": "https://github.com/stormpath/Turnstile.git",
-        "state": {
-          "branch": null,
-          "revision": "6426a6d3c17dca7c6070b9f76859c93b1ab2815a",
-          "version": "1.0.6"
-        }
-      },
-      {
-        "package": "TurnstilePerfect",
-        "repositoryURL": "https://github.com/PerfectSideRepos/Turnstile-Perfect.git",
-        "state": {
-          "branch": null,
-          "revision": "c40fcb79a2f103b93f044b0f682e4abb27e77cec",
-          "version": "3.0.0"
         }
       }
     ]
