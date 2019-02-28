@@ -1,7 +1,7 @@
 import XCTest
 
-import IMServerTests
+import AppTests
 
 var tests = [XCTestCaseEntry]()
-tests += IMServerTests.allTests()
+tests += AppTests.allTests()
 XCTMain(tests)

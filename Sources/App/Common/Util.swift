@@ -43,7 +43,8 @@ struct Util {
 struct TestUtil {
     
     public static func setup() {
-        self.test_RandomNumber()
+        
+        //self.test_RandomNumber()
     }
     
     //MAKR: - 测试随机数生成

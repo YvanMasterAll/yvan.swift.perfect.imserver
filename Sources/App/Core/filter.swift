@@ -44,6 +44,7 @@ open class basePreferredFilter: HTTPRequestFilter, HTTPResponseFilter {
                        response: HTTPResponse,
                        callback: (HTTPRequestFilterResult) -> ()) {
         //TODO: 请求预处理
+
         callback(.continue(request, response))
     }
 }

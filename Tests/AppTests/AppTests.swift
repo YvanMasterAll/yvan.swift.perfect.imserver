@@ -1,15 +1,27 @@
 import XCTest
 import class Foundation.Bundle
-@testable import IMServerLib
 
-final class IMServerTests: XCTestCase {
+final class AppTests: BaseTestCase {
     
-    //MARK: - 测试随机数生成
-    func testRandomNumber() {
-        for _ in 0..<100 {
-            print(Util.randomNumber(min: 10, max: 20))
-        }
-        print("1")
+    //MARK: - 测试网络
+    func test_Network() {
+        let timeout = 5 as TimeInterval
+        let ept = expectation(description: "")
+        //let url = "https://www.baidu.com/"
+        let url = "http://192.168.1.3:8181/api/v1/getpassword"
+        CurlHelper.instance.request(url: url,
+                                    method: .post,
+                                    cookie: nil,
+                                    fields: [.init(name: "name", filePath: "yvan")],
+                                    completion: { (data, success, error, code) in
+                                        print("请求结果: \(success)")
+                                        print("响应代码: \(code)")
+                                        if let _ = data { print("请求数据: \(data!)") }
+                                        if let _ = error { print("错误信息: \(error!)") }
+                                        XCTAssertEqual(code, 200)
+                                        ept.fulfill()
+        })
+        waitForExpectations(timeout: timeout, handler: nil)
     }
     
     func testExample() throws {
@@ -22,7 +34,7 @@ final class IMServerTests: XCTestCase {
             return
         }
         
-        let fooBinary = productsDirectory.appendingPathComponent("IMServer")
+        let fooBinary = productsDirectory.appendingPathComponent("App")
 
         let process = Process()
         process.executableURL = fooBinary

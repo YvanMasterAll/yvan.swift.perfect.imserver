@@ -14,15 +14,18 @@ let package = Package(
 		.package(url: "https://github.com/PerfectlySoft/Perfect-PostgreSQL.git", "3.0.0"..<"4.0.0")
 	],
 	targets: [
-		.target(name: "IMServer", dependencies: [
+		.target(name: "App", dependencies: [
 			"PerfectRequestLogger", 
 			"JSONConfig", 
 			"PerfectHTTPServer",
 			"PostgresStORM", 
 			"PerfectPostgreSQL"
 			]),
+        .target(
+            name: "Run",
+            dependencies: ["App"]),
         .testTarget(
-            name: "IMServerTests",
-            dependencies: ["IMServer"]),
+            name: "AppTests",
+            dependencies: ["App"])
 	]
 )

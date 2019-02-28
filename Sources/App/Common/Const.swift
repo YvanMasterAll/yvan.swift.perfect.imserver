@@ -20,17 +20,16 @@ let baseConfig = "./config/ApplicationConfiguration.json"
 var baseDBHost     = "localhost"
 var baseServerPort = 8181
 var baseDBPort     = 5432
-var baseDBUsername = "postgres"
-var baseDBPassword = "19920213"
-var baseDBName     = "postgres"
-var baseURL        = "http://192.168.1.3:8181"
+var baseDBUsername = ""
+var baseDBPassword = ""
+var baseDBName     = ""
+var baseURL        = "http://192.168.1.6:8181"
 var baseDomain     = ""
 var baseDocument   = "webroot"
 
 //MARK: - 枚举类型
 protocol BaseType { }
-
-public enum Gender: BaseType {      //s性别
+public enum Gender: BaseType {      //性别
     
     case male, female
     
@@ -46,6 +45,25 @@ public enum Gender: BaseType {      //s性别
         case "男"                : self = .male
         case "女"                : self = .female
         default                 : return nil
+        }
+    }
+}
+public enum Status {                //状态
+    
+    case normal, delete
+    
+    public var value: String {
+        switch self {
+        case .normal             : return "正常"
+        case .delete             : return "删除"
+        }
+    }
+    
+    init?(_ value: String) {
+        switch value {
+        case "正常"               : self = .normal
+        case "删除"               : self = .delete
+        default                  : return nil
         }
     }
 }

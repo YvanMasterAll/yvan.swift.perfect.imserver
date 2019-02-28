@@ -6,6 +6,7 @@
 //
 
 import StORM
+import Foundation
 import PerfectLib
 import PostgresStORM
 
@@ -25,23 +26,7 @@ class TestModel: BaseModel {
         password = this.data["password"] as? String ?? ""
     }
     public func rows() -> [TestModel] {
-        var rows = [TestModel]()
-        for i in 0..<self.results.rows.count {
-            let row = TestModel()
-            row.to(self.results.rows[i])
-            rows.append(row)
-        }
-        return rows
-    }
-    func asObject() -> [[String: Any]] {
-        var entries = [[String: Any]]()
-        for row in rows() {
-            var r = [String: Any]()
-            r["username"]   = row.username
-            r["password"]   = row.password
-            entries.append(r)
-        }
-        return entries
+        return self._rows(model: self)
     }
 }
 
