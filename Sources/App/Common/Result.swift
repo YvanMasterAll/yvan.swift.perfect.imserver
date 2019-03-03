@@ -52,8 +52,8 @@ struct Result {
 }
 struct ResultSet {
     
-    static let requestIllegal  = Result.init(code: .requestIllegal, msg: "非法请求")
-    static let serverError     = Result.init(code: .serverError, msg: "服务端错误")
+    static let requestIllegal  = Result.init(code: .requestIllegal)
+    static let serverError     = Result.init(code: .serverError)
 }
 enum ResultCode: Int {
     
@@ -63,6 +63,8 @@ enum ResultCode: Int {
     //MARK: - 400
     case requestIllegal     = 401
     case failure            = 499
+    case userExists         = 411
+    case signinFailure      = 412
     
     //MARK: - 500
     case serverError        = 500
@@ -78,6 +80,8 @@ enum ResultCode: Int {
         //MARK: - 400
         case .requestIllegal:   return "非法请求"
         case .failure:          return "请求失败"
+        case .userExists:       return "用户已存在"
+        case .signinFailure:    return "登陆失败"
         //MARK: - 500
         case .serverError:      return "服务器异常"
         }

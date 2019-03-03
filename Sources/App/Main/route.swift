@@ -13,6 +13,7 @@ func initializeRoute() -> Routes {
     
     //MARK: - 测试模块
     routes.add(TestController().route)
+    routes.add(AccountController().route)
     
     return routes
 }

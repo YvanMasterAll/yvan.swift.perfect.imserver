@@ -17,11 +17,12 @@ class TestModel: BaseModel {
     public var password: String = ""    //密码
     
     override open func table() -> String {
-        return "users"
+        return "test"
     }
     
     //MARK: - 表映射
     override open func to(_ this: StORMRow) {
+        super.to(this)
         username = this.data["username"] as? String ?? ""
         password = this.data["password"] as? String ?? ""
     }

@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "IMServerLib",
-        "repositoryURL": "/Users/yiqiang/Work/Workplace/Swift/IMServer/IMServerLib",
-        "state": {
-          "branch": null,
-          "revision": "8d62b263f64f0d7bd8e0b9642645d271bb54a8ec",
-          "version": "1.0.0"
-        }
-      },
-      {
         "package": "JSONConfig",
         "repositoryURL": "https://github.com/iamjono/JSONConfig.git",
         "state": {
@@ -110,6 +101,15 @@
         }
       },
       {
+        "package": "PerfectMustache",
+        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Mustache.git",
+        "state": {
+          "branch": null,
+          "revision": "a3bce7e83fb6995cb2048c2dab75e7ce07773819",
+          "version": "3.0.2"
+        }
+      },
+      {
         "package": "PerfectNet",
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Net.git",
         "state": {
@@ -188,6 +188,33 @@
           "branch": null,
           "revision": "a628671f5d84a31bd9d4220eb434da888f364b79",
           "version": "2.0.4"
+        }
+      },
+      {
+        "package": "SwiftValidators",
+        "repositoryURL": "https://github.com/YvanMasterAll/SwiftValidators.git",
+        "state": {
+          "branch": null,
+          "revision": "91526b5ac1f2994172881e8426a055a092a759b9",
+          "version": "9.0.0"
+        }
+      },
+      {
+        "package": "Turnstile",
+        "repositoryURL": "https://github.com/stormpath/Turnstile.git",
+        "state": {
+          "branch": null,
+          "revision": "6426a6d3c17dca7c6070b9f76859c93b1ab2815a",
+          "version": "1.0.6"
+        }
+      },
+      {
+        "package": "TurnstilePerfect",
+        "repositoryURL": "https://github.com/YvanMasterAll/Turnstile-Perfect.git",
+        "state": {
+          "branch": null,
+          "revision": "305c982eeb8f20f76a6eea68d861af4c7492e7f1",
+          "version": "2.0.0"
         }
       }
     ]

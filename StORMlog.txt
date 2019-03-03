@@ -75,3 +75,966 @@
 
 [ERROR] [FA782ED5-E961-431A-8935-5D329F17237D] [2019-02-28 15:11:15 GMT+08:00] Error msg: error("Connection Error")
 [ERROR] [E813E79D-E370-4946-9E84-741D00CCB440] [2019-02-28 15:11:15 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [D81D88B8-4D5B-4DD9-8ECE-47C62402EAA1] [2019-03-03 19:51:52 GMT+08:00] Running setup: test
+[INFO] [93951C64-D5B9-4107-818D-DDA80457103D] [2019-03-03 19:51:52 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [5320F1F3-1C9C-49E6-8388-A9E05BCC93F4] [2019-03-03 19:51:52 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.3:5432/imserver
+[INFO] [DD285F46-4845-4352-AF3B-BCA8C110CB59] [2019-03-03 19:52:31 GMT+08:00] Running setup: test
+[INFO] [474DF3D7-7174-4334-9E64-21FD82C18863] [2019-03-03 19:52:31 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [859A630C-2301-4066-9605-6A6D5CBA4DAF] [2019-03-03 19:52:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [6E3835F7-8EBE-49D1-9CC9-874B14F54772] [2019-03-03 19:52:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B76B4B17-2718-4920-ACEC-44D0B0E1D398] [2019-03-03 19:52:31 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [C9CD46AD-92CF-4136-A060-9B228CD3D9F6] [2019-03-03 19:52:31 GMT+08:00] Error msg: 
+[INFO] [C366FE96-9E2C-419F-8AF7-F8E1B11DB766] [2019-03-03 19:52:31 GMT+08:00] Running setup: users
+[INFO] [DFB55446-99C2-428B-867F-F8CF698E0E50] [2019-03-03 19:52:31 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [EE7B887A-AC12-462D-A190-FE66E48B53A1] [2019-03-03 19:52:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [F41F8834-D410-4F92-9F85-E3E5CE9C49AA] [2019-03-03 19:52:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F0D2CDBD-E2A7-44C7-9A1B-4BAC3D6CB8B6] [2019-03-03 19:52:31 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [935EB76A-F0C7-4162-BFD0-70DAD38D98B1] [2019-03-03 19:52:31 GMT+08:00] Error msg: 
+[INFO] [8D449F43-E662-4A08-B9B5-0E2CF6463381] [2019-03-03 19:52:50 GMT+08:00] Running setup: test
+[INFO] [76BCF000-2485-4801-B267-E280BE6B16F8] [2019-03-03 19:52:50 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [8E419CDF-DE2F-49EA-A3DD-CAEFF1DB3015] [2019-03-03 19:52:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [3128AB8D-C024-4DAE-9897-7E775A5CAB32] [2019-03-03 19:52:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [519B3843-AE90-498B-BC5A-41830702DF51] [2019-03-03 19:52:50 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [3D56F68B-E584-43E0-92DD-A6BCC2ACD2F7] [2019-03-03 19:52:50 GMT+08:00] Error msg: 
+[INFO] [000084A6-ABBC-4F05-8078-B16D8D29AB51] [2019-03-03 19:52:50 GMT+08:00] Running setup: users
+[INFO] [AAA48220-60F0-4BBB-B7A1-E5DBF1254E3E] [2019-03-03 19:52:50 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [C2AD8058-B39E-4B75-AC04-757455C30700] [2019-03-03 19:52:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [DE7F6A66-4EF8-4979-AE66-B88B771D71F4] [2019-03-03 19:52:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [795AD0EC-157D-4596-878A-3F0F6EE279D5] [2019-03-03 19:52:50 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [52D8335B-4663-4A97-AA1A-02FFA6522EEE] [2019-03-03 19:52:50 GMT+08:00] Error msg: 
+[INFO] [C61553BB-F02B-499D-B825-5C876EDE531E] [2019-03-03 19:55:49 GMT+08:00] Running setup: test
+[INFO] [862AABE2-F1F3-4584-AB44-7FC553511ADC] [2019-03-03 19:55:49 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [15D8E228-93C3-468C-B76F-814F02CC664B] [2019-03-03 19:55:49 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [18A452A4-0EB9-4EA1-B7F7-F17B008A0FF4] [2019-03-03 19:55:49 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4613A278-4FF2-4453-8796-B206303F098E] [2019-03-03 19:55:49 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [9EAFD517-FF50-46D1-8310-D8E92E0818E6] [2019-03-03 19:55:49 GMT+08:00] Error msg: 
+[INFO] [E8146710-6C8B-4A6B-B43D-D1011C19E251] [2019-03-03 19:55:49 GMT+08:00] Running setup: users
+[INFO] [1DD6F433-D642-4F2B-B253-C80C3CDE54CA] [2019-03-03 19:55:49 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [F7AAB656-E28A-48D1-8470-197C652D65C4] [2019-03-03 19:55:49 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [5D5CCA4B-6135-4298-93BB-651832CBDAA6] [2019-03-03 19:55:49 GMT+08:00] Postgres conn state: ok
+[DEBUG] [22B2B6F5-90DF-4394-B3B4-FEFFECEB05F7] [2019-03-03 19:55:49 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [B139E906-6B3A-48AB-872D-726A51AE969C] [2019-03-03 19:55:49 GMT+08:00] Error msg: 
+[INFO] [1FFC143F-640B-4E79-B33B-F68CA6D6699A] [2019-03-03 19:58:24 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [3C4EE11C-B0E3-4720-AF2E-C6853E280BA6] [2019-03-03 19:58:24 GMT+08:00] Postgres conn state: ok
+[DEBUG] [74EA4CAA-DD43-4D9E-948B-B31CCE27AFE4] [2019-03-03 19:58:24 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [40E2BD73-5018-4729-A8C0-340450D33D52] [2019-03-03 19:58:24 GMT+08:00] Error msg: ERROR:  relation "account" does not exist
+LINE 1: SELECT COUNT(*) AS counter FROM account  WHERE username = $1
+                                        ^
+[ERROR] [C3BC5FD5-88F8-4AA6-AF2F-76A68955AD2C] [2019-03-03 19:58:24 GMT+08:00] Error msg: error("ERROR:  relation \"account\" does not exist\nLINE 1: SELECT COUNT(*) AS counter FROM account  WHERE username = $1\n                                        ^")
+[INFO] [5EACAD97-D446-42E0-A9D1-5DE58BD27584] [2019-03-03 19:58:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [5B987B08-2639-4418-841D-CB05A21539D0] [2019-03-03 19:58:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7EA170F0-996E-4ED7-B1BC-B720DDEB7BD6] [2019-03-03 19:58:31 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : mE_7iTOB-vHNabEkXIx-7w, user001, $2a$10$9WNS0oyGfH93ZboGyy3L0O1dgJcuasNcsfECwCWC.sY9NCzV52GZq
+[INFO] [B0C495EF-F827-4084-9B22-A61D7BFDF60A] [2019-03-03 19:58:31 GMT+08:00] Error msg: ERROR:  relation "account" does not exist
+LINE 1: INSERT INTO account ("uniqueid","username","password") VALUE...
+                    ^
+[ERROR] [46DB55A4-FCB4-4E08-8E68-C333A76495D9] [2019-03-03 19:58:31 GMT+08:00] Error: error("ERROR:  relation \"account\" does not exist\nLINE 1: INSERT INTO account (\"uniqueid\",\"username\",\"password\") VALUE...\n                    ^")
+[ERROR] [62530A64-5F8D-432E-A651-267F48E45168] [2019-03-03 19:58:31 GMT+08:00] Error: error("ERROR:  relation \"account\" does not exist\nLINE 1: INSERT INTO account (\"uniqueid\",\"username\",\"password\") VALUE...\n                    ^")
+[ERROR] [0B98EF03-85A0-4F0B-9360-5D39B7DD0A0A] [2019-03-03 19:58:31 GMT+08:00] Error: error("error(\"ERROR:  relation \\\"account\\\" does not exist\\nLINE 1: INSERT INTO account (\\\"uniqueid\\\",\\\"username\\\",\\\"password\\\") VALUE...\\n                    ^\")")
+[ERROR] [54DDC62E-18BB-4CC3-879F-68118FE8F946] [2019-03-03 19:58:31 GMT+08:00] Error: error("error(\"error(\\\"ERROR:  relation \\\\\\\"account\\\\\\\" does not exist\\\\nLINE 1: INSERT INTO account (\\\\\\\"uniqueid\\\\\\\",\\\\\\\"username\\\\\\\",\\\\\\\"password\\\\\\\") VALUE...\\\\n                    ^\\\")\")")
+[INFO] [F7BFC4A4-0177-47C7-8C79-769281F71A6F] [2019-03-03 19:58:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [BF7FD391-7A94-441F-BC2D-BDB0FABAE249] [2019-03-03 19:58:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [2E82D6FB-9FCE-4820-92B6-7DBE8BD0FF10] [2019-03-03 19:58:31 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [570044E0-23C0-4679-8EC9-9BD8E6481796] [2019-03-03 19:58:31 GMT+08:00] Error msg: ERROR:  relation "account" does not exist
+LINE 1: SELECT COUNT(*) AS counter FROM account  WHERE username = $1
+                                        ^
+[ERROR] [C43A210E-F199-47C1-91CD-43A6DFB6A166] [2019-03-03 19:58:31 GMT+08:00] Error msg: error("ERROR:  relation \"account\" does not exist\nLINE 1: SELECT COUNT(*) AS counter FROM account  WHERE username = $1\n                                        ^")
+[INFO] [A7FA40CF-EF31-4E2B-8688-E76E7DA3477C] [2019-03-03 19:59:06 GMT+08:00] Running setup: test
+[INFO] [F0AB1C6D-C526-4776-BC9B-455AF526CF6D] [2019-03-03 19:59:06 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [F7E20F92-834B-4D6B-A826-0B95FD49E2BC] [2019-03-03 19:59:06 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CBBD180B-9268-49E4-9F6F-01D244D8E368] [2019-03-03 19:59:06 GMT+08:00] Postgres conn state: ok
+[DEBUG] [CC65C0C1-57AE-43C6-8BA5-E82FA3F3AB47] [2019-03-03 19:59:06 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [0AC43F58-2C7B-4C04-B756-E72B7CEA6092] [2019-03-03 19:59:06 GMT+08:00] Error msg: 
+[INFO] [0FC20BAD-8656-4FF0-B4D2-144D99F34E1E] [2019-03-03 19:59:06 GMT+08:00] Running setup: users
+[INFO] [B6469626-8C36-43F8-A925-AE2ED6AAB50C] [2019-03-03 19:59:06 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [2847037D-76DD-4C74-AD2B-1AAE8A996E34] [2019-03-03 19:59:06 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CAA10762-FDD6-4AF2-BE09-F0E53D0866A0] [2019-03-03 19:59:06 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4688C15E-8451-444E-840D-4F2DDC79210A] [2019-03-03 19:59:06 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [E4772052-EFE2-4D17-8192-FB36749B53FE] [2019-03-03 19:59:06 GMT+08:00] Error msg: 
+[INFO] [E181932A-2A6D-4F33-A795-ABF501D794E5] [2019-03-03 19:59:06 GMT+08:00] Running setup: account
+[INFO] [90AB426D-9E78-4250-A0EC-ABE1C545D649] [2019-03-03 19:59:06 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [4A4457B1-1C8E-44AF-8C18-8C3A17E36954] [2019-03-03 19:59:06 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [F609FBB7-5285-419E-A981-A2FD989C2760] [2019-03-03 19:59:06 GMT+08:00] Postgres conn state: ok
+[DEBUG] [CCC3C100-788D-45C9-9EE2-FA3F04919391] [2019-03-03 19:59:06 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [8C1E6B83-62E9-4E60-9736-7B1319E610AF] [2019-03-03 19:59:06 GMT+08:00] Error msg: 
+[INFO] [7BC72987-E4F2-4F09-A950-AD7455AD0660] [2019-03-03 19:59:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [6B9534C0-B310-4524-893B-87DC7E2AE53B] [2019-03-03 19:59:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [1E26AF84-D732-4BDA-8392-6478D2BE50C5] [2019-03-03 19:59:20 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [02EFEECB-4041-4783-B9A5-016EAC45AC58] [2019-03-03 19:59:20 GMT+08:00] Error msg: 
+[INFO] [4D644215-C97A-4DD7-9AE3-8456280182C5] [2019-03-03 19:59:27 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [C5AA5699-B855-4528-9F90-2E1C4BC1E181] [2019-03-03 19:59:27 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D7147A84-4D6D-4F6C-945A-D2E79162139B] [2019-03-03 19:59:27 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : h_TOtuCm15lXj8B9nlVELw, user001, $2a$10$mMe9ozIx3ZkNwb2Znzo6J.FSLfJT.7hAnmWogsmHC/MNQoqq./lJm
+[INFO] [E44B1BE0-B6C0-4E4D-9706-5C12CF86F28B] [2019-03-03 19:59:27 GMT+08:00] Error msg: 
+[INFO] [0315A847-AAB1-4496-9F94-78834305A7A7] [2019-03-03 19:59:27 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [C8CEE258-B0EC-4A0F-A910-A6289C2D1B8B] [2019-03-03 19:59:27 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F933A13E-3C1B-44B7-9E78-625E23A365FD] [2019-03-03 19:59:27 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : h_TOtuCm15lXj8B9nlVELw, 用户.QS*VWR, , 0, , , user001, , , , 男
+[INFO] [CECE1F38-C95D-4EB5-890A-9542B319F877] [2019-03-03 19:59:27 GMT+08:00] Error msg: 
+[INFO] [7FD3882A-CDDB-4EE0-880E-988FA16C90C2] [2019-03-03 19:59:27 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CE741FE4-EBC4-4FA3-B75B-76F5F5C0239D] [2019-03-03 19:59:27 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A63AF7B2-EB84-452B-87A0-6A78CE2B2C9B] [2019-03-03 19:59:27 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [104F080C-FE62-420E-825E-42570028F44B] [2019-03-03 19:59:27 GMT+08:00] Error msg: 
+[INFO] [0A28CE07-F9AD-4C56-A993-D982995383E8] [2019-03-03 19:59:27 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [959D609F-7FD4-4701-B79B-4DC4694B3433] [2019-03-03 19:59:27 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4E698CCC-3357-4272-B926-C1BBFCE1308F] [2019-03-03 19:59:27 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user001
+[INFO] [411EBCAB-FEC4-46A1-ACB2-AC3755A65953] [2019-03-03 19:59:27 GMT+08:00] Error msg: 
+[INFO] [819F52DD-2BA9-4B01-82C7-772C4BB3F2A5] [2019-03-03 19:59:34 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [8A9ABD29-B060-4D45-AA95-A7715E445579] [2019-03-03 19:59:34 GMT+08:00] Postgres conn state: ok
+[DEBUG] [32322014-D5ED-42C1-B20C-51D4BE4B7C31] [2019-03-03 19:59:34 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : fHC8M6cBsabnsGSjxR0UQQ, h_TOtuCm15lXj8B9nlVELw, 573307174, 573307174, 315360000
+[INFO] [E85A8AAA-522D-41ED-81A0-946CBC679911] [2019-03-03 19:59:34 GMT+08:00] Error msg: ERROR:  relation "tokens" does not exist
+LINE 1: INSERT INTO tokens ("token","userid","created","updated","id...
+                    ^
+[ERROR] [1672E8C1-D361-4B90-B6FB-E9D7F2E276FA] [2019-03-03 19:59:34 GMT+08:00] Error: error("ERROR:  relation \"tokens\" does not exist\nLINE 1: INSERT INTO tokens (\"token\",\"userid\",\"created\",\"updated\",\"id...\n                    ^")
+[ERROR] [19FBA364-2787-4EBE-9548-C47790C358E4] [2019-03-03 19:59:34 GMT+08:00] Error: error("ERROR:  relation \"tokens\" does not exist\nLINE 1: INSERT INTO tokens (\"token\",\"userid\",\"created\",\"updated\",\"id...\n                    ^")
+[ERROR] [0E77EA4F-8B10-4D5D-87EF-087388D9C5D6] [2019-03-03 19:59:34 GMT+08:00] Error: error("error(\"ERROR:  relation \\\"tokens\\\" does not exist\\nLINE 1: INSERT INTO tokens (\\\"token\\\",\\\"userid\\\",\\\"created\\\",\\\"updated\\\",\\\"id...\\n                    ^\")")
+[ERROR] [6DBF7283-2340-468D-9627-4BA8A235B3E9] [2019-03-03 19:59:34 GMT+08:00] Error: error("error(\"error(\\\"ERROR:  relation \\\\\\\"tokens\\\\\\\" does not exist\\\\nLINE 1: INSERT INTO tokens (\\\\\\\"token\\\\\\\",\\\\\\\"userid\\\\\\\",\\\\\\\"created\\\\\\\",\\\\\\\"updated\\\\\\\",\\\\\\\"id...\\\\n                    ^\\\")\")")
+[INFO] [FE55E649-9F99-4A88-815E-9AAEDC4AD560] [2019-03-03 19:59:34 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [1C74EE36-EA33-4E3F-B378-F8DEBD28D8DB] [2019-03-03 19:59:34 GMT+08:00] Postgres conn state: ok
+[DEBUG] [ABFE3115-1AF3-4194-BCFE-34CE9C37F354] [2019-03-03 19:59:34 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : h_TOtuCm15lXj8B9nlVELw
+[INFO] [7487A051-C79B-4254-A75C-F697190328BB] [2019-03-03 19:59:34 GMT+08:00] Error msg: 
+[INFO] [8FDA01FA-0055-4610-AB5B-DB3EC4390532] [2019-03-03 19:59:34 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0CC0C6BB-1FAB-47E5-93B3-A76B03C17C5A] [2019-03-03 19:59:34 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E24EAC8A-CAA0-4E44-A23F-854BBE806A13] [2019-03-03 19:59:34 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender" FROM users  WHERE uniqueid = $1  ORDER BY id LIMIT 50 : h_TOtuCm15lXj8B9nlVELw
+[INFO] [1ABF848C-BF5A-4F7A-B2DE-4D0B91914A23] [2019-03-03 19:59:34 GMT+08:00] Error msg: 
+[INFO] [4937AF04-E620-4836-B875-24417C83EA81] [2019-03-03 20:01:46 GMT+08:00] Running setup: test
+[INFO] [446DF600-A2E2-4F6C-AE52-D547486DF64A] [2019-03-03 20:01:46 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [044A8D5A-D2E5-4F0C-A042-EC1916ED8F0B] [2019-03-03 20:01:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [B3A73B87-060E-4661-8AD2-0EE64D6DF162] [2019-03-03 20:01:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [EBB7E20B-526F-45F8-8F92-46FCAC5D093C] [2019-03-03 20:01:46 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [C3F3D655-BDEF-4C03-92EA-0B17E9EB6EAF] [2019-03-03 20:01:46 GMT+08:00] Error msg: 
+[INFO] [88388ACC-3CF1-40C8-82B6-10C9F120B848] [2019-03-03 20:01:46 GMT+08:00] Running setup: users
+[INFO] [FBE011C7-C44F-44D1-A5A2-82DBA4FF60E1] [2019-03-03 20:01:46 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [86B74935-6691-4389-8F1D-C518E879F0AF] [2019-03-03 20:01:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [23B5A668-A0DB-45D9-B182-F14986BA927B] [2019-03-03 20:01:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7F56FFE1-72F6-401B-B1C6-F6DB9ADBA342] [2019-03-03 20:01:46 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [B20E4350-16A7-48C6-8AF9-DC48F46BEF62] [2019-03-03 20:01:46 GMT+08:00] Error msg: 
+[INFO] [66AF11AA-0351-4E91-A39B-091E213463AF] [2019-03-03 20:01:46 GMT+08:00] Running setup: tokens
+[INFO] [697A16CE-3DB2-46BC-A796-747D5008F5AC] [2019-03-03 20:01:46 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [8F64D7EE-4725-4CEE-8690-6720A24DEA34] [2019-03-03 20:01:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [E48E3069-6CCB-487F-A4CF-016B16E4B96F] [2019-03-03 20:01:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [38EBC09C-2253-4F64-A37C-DEE9895CC3C3] [2019-03-03 20:01:46 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [BD6138AA-C6F1-4C6D-A006-61C3A4517A3D] [2019-03-03 20:01:46 GMT+08:00] Error msg: 
+[INFO] [EDBF2FD1-67E6-4341-BFF0-9447DF9B592D] [2019-03-03 20:01:46 GMT+08:00] Running setup: account
+[INFO] [E5D5F9DD-EA9A-4BFE-AF3A-3134F4641461] [2019-03-03 20:01:46 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [6161B855-F9C9-495A-B69E-C6B75E662644] [2019-03-03 20:01:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [3DE246F1-72C4-4C27-8B9C-ACAE81EB0C07] [2019-03-03 20:01:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [085E67AE-10EB-42A9-A5B6-464E1A407BB7] [2019-03-03 20:01:46 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [FC94F551-C872-4285-8E50-2437370519E6] [2019-03-03 20:01:46 GMT+08:00] Error msg: 
+[INFO] [DEC6FA5C-74D7-4F06-87FA-000C2AEF5D1C] [2019-03-03 20:01:56 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [E51DAF1D-2E26-4BBB-B5A4-5298825E98FA] [2019-03-03 20:01:56 GMT+08:00] Postgres conn state: ok
+[DEBUG] [8AD214BF-4C27-439E-99F3-34449AAF34F4] [2019-03-03 20:01:56 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : fHC8M6cBsabnsGSjxR0UQQ
+[INFO] [8DE3B272-F41B-4594-AE3C-F59CFFE9AEB9] [2019-03-03 20:01:56 GMT+08:00] Error msg: 
+[INFO] [A74F6EE9-335B-4D77-8BA5-EF5B3D35AEAD] [2019-03-03 20:01:56 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0B91D471-1925-45AC-B2DB-A8F1E025133B] [2019-03-03 20:01:56 GMT+08:00] Postgres conn state: ok
+[DEBUG] [04DCD143-448C-4192-BFA2-0DCEF18A2615] [2019-03-03 20:01:56 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [B139FA95-30E2-45E5-9965-3BFB8FFFB416] [2019-03-03 20:01:56 GMT+08:00] Error msg: 
+[INFO] [3391E003-0FAA-4383-9D07-9C24A064EDA9] [2019-03-03 20:01:56 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [7FF117A9-6A24-45F5-BA9A-32D88D48CFA1] [2019-03-03 20:01:56 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C0C0804B-7161-4088-B711-C60C19E23EB0] [2019-03-03 20:01:56 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user001
+[INFO] [3CF6F8E5-1E72-4E76-8331-6C2FF8EABA8E] [2019-03-03 20:01:56 GMT+08:00] Error msg: 
+[INFO] [40356882-8199-41E0-B297-23B4155E7CCE] [2019-03-03 20:02:26 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D4AF4248-0049-4713-A49C-AA15AC49480F] [2019-03-03 20:02:26 GMT+08:00] Postgres conn state: ok
+[DEBUG] [145CD408-DDFE-429A-84A7-F57F5193F097] [2019-03-03 20:02:26 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : fHC8M6cBsabnsGSjxR0UQQ
+[INFO] [F1111A24-F723-4E8D-9F4E-A4CD41A66F26] [2019-03-03 20:02:26 GMT+08:00] Error msg: 
+[INFO] [F9F3E51E-6827-4C62-8B3A-F55D8303E350] [2019-03-03 20:02:26 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D201D7D8-0B6D-40C1-AE92-985B4E7E54C2] [2019-03-03 20:02:26 GMT+08:00] Postgres conn state: ok
+[DEBUG] [8B0BD5DE-CF00-494B-B74D-77857BED0C59] [2019-03-03 20:02:26 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [0BF17006-0152-4ED1-B8EB-E8F4B7655D96] [2019-03-03 20:02:26 GMT+08:00] Error msg: 
+[INFO] [9247B511-75A5-4752-9E3B-9D1C406299C6] [2019-03-03 20:02:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [3B193FF0-DFDC-49D3-B02B-D4142DA71830] [2019-03-03 20:02:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A19E28FC-5607-4120-84F1-80B6FD2B3D90] [2019-03-03 20:02:32 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : t9EVYPOeTkMtTcOxYHgDvw, user001, $2a$10$d9/OVRuwqN5cBqf0lhQTXOvbS3ZLNMJJl6MujY0861J/cjSgqjKxC
+[INFO] [947DEEE2-AE62-4D3D-B4FE-41D867CDA0E2] [2019-03-03 20:02:32 GMT+08:00] Error msg: 
+[INFO] [804ED904-D97F-4FBE-8A81-A9478EB11783] [2019-03-03 20:02:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [3A216790-A07C-4A8B-AA7D-4DBFB81CBD07] [2019-03-03 20:02:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5553A036-7E74-4188-9E51-12FA2E25A3AF] [2019-03-03 20:02:32 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : t9EVYPOeTkMtTcOxYHgDvw, 用户//P:9I-, , 0, , , user001, , , , 男
+[INFO] [15E69834-9F16-4472-8D64-80AD2EF22E1D] [2019-03-03 20:02:33 GMT+08:00] Error msg: 
+[INFO] [2B07736C-7DED-4642-87A8-D0A234D0C735] [2019-03-03 20:02:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [C619C99F-5E9F-4647-9DA8-18AC6EB43896] [2019-03-03 20:02:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [ACC8F306-96F4-4448-A27F-409033E7F4D7] [2019-03-03 20:02:33 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [66DA46FC-7715-4EF5-B35D-939BE22F383C] [2019-03-03 20:02:33 GMT+08:00] Error msg: 
+[INFO] [3F7A8210-101A-4A5A-B12B-6EAB5D341B60] [2019-03-03 20:02:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [6C5031DB-DE11-4DC3-8D61-11426D152F63] [2019-03-03 20:02:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7A6B4371-0152-4D87-AC61-E4244FB8D127] [2019-03-03 20:02:33 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user001
+[INFO] [A4BC96A2-192D-4F60-AC54-F854745A2896] [2019-03-03 20:02:33 GMT+08:00] Error msg: 
+[INFO] [F1BF0DC1-A531-45F7-880D-66F36072BB22] [2019-03-03 20:02:40 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [B94E24BF-E2C8-408C-B06D-5254A52E2820] [2019-03-03 20:02:40 GMT+08:00] Postgres conn state: ok
+[DEBUG] [1DCA7BA4-B57A-4A07-AEEF-77A238EC26A0] [2019-03-03 20:02:40 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : oXJqBbBMj9vdB6LP4AwXNg, t9EVYPOeTkMtTcOxYHgDvw, 573307360, 573307360, 315360000
+[INFO] [B1CB0F59-92F6-4719-8A73-85DFEC76E947] [2019-03-03 20:02:40 GMT+08:00] Error msg: 
+[INFO] [664FFE7D-794B-4153-B61F-FF4FDDBC6C72] [2019-03-03 20:02:40 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [2243140A-CDEF-4B61-B6C2-FEF752D75F6A] [2019-03-03 20:02:40 GMT+08:00] Postgres conn state: ok
+[DEBUG] [622F86B1-2C94-4CB7-9B30-B4D2B3A83184] [2019-03-03 20:02:40 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : t9EVYPOeTkMtTcOxYHgDvw
+[INFO] [71D07F81-DDB8-4051-8026-F6659EB8F4AF] [2019-03-03 20:02:40 GMT+08:00] Error msg: 
+[INFO] [255C47ED-6C08-4F50-9951-737D1238F21D] [2019-03-03 20:02:40 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [1A0B2D9D-2F58-467B-BB1D-3D1497470FF1] [2019-03-03 20:02:40 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B6BFF3A7-46A9-4673-8C1D-16AAD800172A] [2019-03-03 20:02:40 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender" FROM users  WHERE uniqueid = $1  ORDER BY id LIMIT 50 : t9EVYPOeTkMtTcOxYHgDvw
+[INFO] [3876316A-763E-4FEF-AFF3-1322476FC5AE] [2019-03-03 20:02:40 GMT+08:00] Error msg: 
+[INFO] [BCD23B20-7F53-433B-991A-9809A1D72BCC] [2019-03-03 20:10:10 GMT+08:00] Running setup: test
+[INFO] [0262856E-D3CF-40F9-8BE9-91E603A5608E] [2019-03-03 20:10:10 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [132D7A44-B91E-405D-961D-B3E834CDBFBF] [2019-03-03 20:10:10 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D870897B-926A-4BFD-8EE6-4D2870C58C06] [2019-03-03 20:10:10 GMT+08:00] Postgres conn state: ok
+[DEBUG] [2EAB6EA9-A984-490E-9131-64E23F03FB03] [2019-03-03 20:10:10 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [FDE0D578-7C97-473B-A6E8-6B27D8C0A645] [2019-03-03 20:10:10 GMT+08:00] Error msg: 
+[INFO] [2D001CC7-9175-4E96-91A8-2E0E99CEA43E] [2019-03-03 20:10:10 GMT+08:00] Running setup: users
+[INFO] [39D0CB8C-9879-4D77-ABAE-0C6109AB6017] [2019-03-03 20:10:10 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [65755E84-E271-4535-BD9D-544895CE2B29] [2019-03-03 20:10:10 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [BA9F25F9-B0E1-45F5-B621-68AB2EDBCA81] [2019-03-03 20:10:10 GMT+08:00] Postgres conn state: ok
+[DEBUG] [60D5A9DA-8E4A-407D-81FA-04CCE6A7E727] [2019-03-03 20:10:10 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [23CCA16F-5BA3-4A3D-AD35-017682828E02] [2019-03-03 20:10:10 GMT+08:00] Error msg: 
+[INFO] [E7DC211B-2985-4EE5-9A5D-16558CB76C41] [2019-03-03 20:10:10 GMT+08:00] Running setup: tokens
+[INFO] [FD4C430A-6A8D-43C2-97F7-D92C799958F3] [2019-03-03 20:10:10 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [8CC81D74-5E64-4B81-8FF0-EBCC667687A4] [2019-03-03 20:10:10 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0E21AAAD-0D26-445E-8077-C7DF5A58B129] [2019-03-03 20:10:10 GMT+08:00] Postgres conn state: ok
+[DEBUG] [49AD5B77-838E-4A38-8F90-608BF96D06BC] [2019-03-03 20:10:10 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [C96B770F-BE65-4CFF-A405-03D314045C5F] [2019-03-03 20:10:10 GMT+08:00] Error msg: 
+[INFO] [0299BB39-ECFF-4A70-A958-93F70EBF6BAE] [2019-03-03 20:10:10 GMT+08:00] Running setup: account
+[INFO] [EE0FCAA0-4FC4-424C-AAFC-02FAF22E6DA5] [2019-03-03 20:10:10 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [894B2279-6CDE-422E-8F39-3F26EEA028B0] [2019-03-03 20:10:10 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [E8A5CB70-A4F0-4675-A567-B09F0E57AEC4] [2019-03-03 20:10:10 GMT+08:00] Postgres conn state: ok
+[DEBUG] [DB910A5A-C5C1-49F0-A997-71CC278940EC] [2019-03-03 20:10:10 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [A08E3CE2-5997-4B8C-8D1B-263B6F957DCD] [2019-03-03 20:10:10 GMT+08:00] Error msg: 
+[INFO] [FF8C8FF0-23C5-4DCD-9C55-037FEE487BB5] [2019-03-03 20:10:19 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [4A001E41-DDF5-4E88-B177-0050A19F6C5C] [2019-03-03 20:10:19 GMT+08:00] Postgres conn state: ok
+[DEBUG] [116A174D-36FC-4AEC-AAD8-901FC2FAD0FE] [2019-03-03 20:10:19 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : oXJqBbBMj9vdB6LP4AwXNg
+[INFO] [614F5B8B-CAC0-4408-A3B2-4BB90883EC8D] [2019-03-03 20:10:19 GMT+08:00] Error msg: 
+[INFO] [57E06B9B-129B-4123-987B-1C35AEE823F3] [2019-03-03 20:10:19 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [02D078DF-0720-4579-A7E4-0F54F4456984] [2019-03-03 20:10:19 GMT+08:00] Postgres conn state: ok
+[DEBUG] [9B2ED26F-438D-4E78-973B-B30711F842E4] [2019-03-03 20:10:19 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [88877D20-9AA8-4AD0-B5C8-B3CCC90F0510] [2019-03-03 20:10:19 GMT+08:00] Error msg: 
+[INFO] [1B58402B-BB3F-4CA1-98B2-2C6C4D3A8884] [2019-03-03 20:10:26 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [18EE3AE8-2874-465E-A459-AE0CF23C74A3] [2019-03-03 20:10:26 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4CB32A9E-1050-4855-B676-567D4EB57CA5] [2019-03-03 20:10:26 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : eih7xnVLUpIfT1Pes-nMcQ, user001, $2a$10$cdn7p.dEI/llAEW8V9iuReDbiLazlVHWWuQ3saGpaz7hVyDWZEElu
+[INFO] [CF8F263A-952E-47A7-9C7F-EB456099B1DE] [2019-03-03 20:10:26 GMT+08:00] Error msg: 
+[INFO] [09305FCD-FE76-46FF-A6AE-B163EC801945] [2019-03-03 20:10:26 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [34CD1F11-84EF-4DE8-95BE-005ADD022FD3] [2019-03-03 20:10:26 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B437C5E7-9595-4106-BCD9-55DA888F548B] [2019-03-03 20:10:26 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : eih7xnVLUpIfT1Pes-nMcQ, 用户acDUUkibCC, , 0, , , user001, , , , 男
+[INFO] [F568D9F0-0568-4D47-B505-80C61B5FE5D6] [2019-03-03 20:10:26 GMT+08:00] Error msg: 
+[INFO] [3A0CFB5F-AF7E-44CE-98B7-504A29C27F12] [2019-03-03 20:10:26 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [07120CA9-C5CB-44C0-9C41-61C584322FD0] [2019-03-03 20:10:26 GMT+08:00] Postgres conn state: ok
+[DEBUG] [DDB42ACC-7F3A-4F94-9E8C-56FE2CF6545B] [2019-03-03 20:10:26 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [AE8102CB-3B78-407C-80E6-3C7B69B6C913] [2019-03-03 20:10:26 GMT+08:00] Error msg: 
+[INFO] [48992839-4BC4-4ACA-B394-4257DFFD579D] [2019-03-03 20:10:26 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CC952A70-C5B8-4732-8B00-6227A903689A] [2019-03-03 20:10:26 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7A04FA09-3BCA-4030-9449-A2E4A1341209] [2019-03-03 20:10:26 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user001
+[INFO] [2CAEA889-7668-4108-A51F-D343FB5323C6] [2019-03-03 20:10:26 GMT+08:00] Error msg: 
+[INFO] [A0740AF9-0EB0-410C-A814-925405A41EDF] [2019-03-03 20:10:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [7B320F54-A991-4CE4-B99F-AC1E836A9AD7] [2019-03-03 20:10:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A7E96544-BB4F-46E7-A454-C2D2E589DAEB] [2019-03-03 20:10:33 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : Td44674uW5DR9a23YoZIOw, eih7xnVLUpIfT1Pes-nMcQ, 573307833, 573307833, 315360000
+[INFO] [BEFA8B95-81ED-4E30-9C4C-CC120240A16B] [2019-03-03 20:10:33 GMT+08:00] Error msg: 
+[INFO] [176A005F-D9B9-49EB-A15A-3084F40CC262] [2019-03-03 20:10:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [FB5F980A-0883-43D5-9D4B-6462BB58ED91] [2019-03-03 20:10:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7DEB4995-44BA-428C-B332-E749FF90A80E] [2019-03-03 20:10:33 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : eih7xnVLUpIfT1Pes-nMcQ
+[INFO] [39317326-B013-4B38-892A-DAEAE848BB25] [2019-03-03 20:10:33 GMT+08:00] Error msg: 
+[INFO] [D56028EC-0B29-4A54-8B17-99D8BEC24291] [2019-03-03 20:10:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [7D7FA432-E1DC-4729-94F8-E164DEF236B1] [2019-03-03 20:10:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [CB7998EB-B0C2-4B7D-BEA4-D24681B9D4AA] [2019-03-03 20:10:33 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender" FROM users  WHERE uniqueid = $1  ORDER BY id LIMIT 50 : eih7xnVLUpIfT1Pes-nMcQ
+[INFO] [5D8F541D-3723-48DD-B41E-9A27EE8A1AEC] [2019-03-03 20:10:33 GMT+08:00] Error msg: 
+[INFO] [CD2E6949-94A0-457A-9317-EA5C86A4B589] [2019-03-03 20:13:56 GMT+08:00] Running setup: test
+[INFO] [29A507F3-4B2E-4B88-B848-A2E2BCCF0F70] [2019-03-03 20:13:57 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [E9774BE1-1CE0-4655-A1A3-DF73A4D3B1DB] [2019-03-03 20:13:57 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [AB89EA2F-C1CB-43FB-9C7E-AB2DE3E4A8A5] [2019-03-03 20:13:57 GMT+08:00] Postgres conn state: ok
+[DEBUG] [0E64D1CB-D5E1-4392-A2E3-FB2ED5012F85] [2019-03-03 20:13:57 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [3B71F0CD-9700-4361-8635-D61274A46A79] [2019-03-03 20:13:57 GMT+08:00] Error msg: 
+[INFO] [95CBA056-C35D-4175-B777-4FAC3A1F9279] [2019-03-03 20:13:57 GMT+08:00] Running setup: users
+[INFO] [B496B134-A269-4D1F-95B8-6460A1ED098E] [2019-03-03 20:13:57 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [962D1B4D-C0DF-4559-826F-6424CDC1B4AB] [2019-03-03 20:13:57 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [1A58926B-6BF8-4279-A2EC-E59EB731EC2D] [2019-03-03 20:13:57 GMT+08:00] Postgres conn state: ok
+[DEBUG] [EAFD0EA4-FD5C-45D2-A9F2-6AC51538FAD8] [2019-03-03 20:13:57 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [50B5D225-2F8B-4478-80AF-32B8D6F573A3] [2019-03-03 20:13:57 GMT+08:00] Error msg: 
+[INFO] [8DF506B8-1B87-48D1-B101-7957FF7B1176] [2019-03-03 20:13:57 GMT+08:00] Running setup: tokens
+[INFO] [05458388-960C-4BCD-85C6-202A82312E73] [2019-03-03 20:13:57 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [BCE8364E-8B77-4ABF-9B70-0AEA0EECF3A8] [2019-03-03 20:13:57 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [E497190D-BA9A-4ABF-BDCD-B0FD4BFE0412] [2019-03-03 20:13:57 GMT+08:00] Postgres conn state: ok
+[DEBUG] [ABDD2501-D2B4-4252-98AB-D73E4FBD642C] [2019-03-03 20:13:57 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [C4F72CD0-2B0E-4C19-9B2F-28E87C673F1A] [2019-03-03 20:13:57 GMT+08:00] Error msg: 
+[INFO] [6B80D940-F215-4F75-B080-53E5C3133105] [2019-03-03 20:13:57 GMT+08:00] Running setup: account
+[INFO] [5F720331-2272-4BB3-8024-AB4211CB83C8] [2019-03-03 20:13:57 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [0A3D5D35-4DA8-4452-A5C8-A4A9BE869793] [2019-03-03 20:13:57 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [576F8821-5125-4A07-820E-761BF9FCA457] [2019-03-03 20:13:57 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D8DBA6C9-F441-407C-806C-B369EB2395F7] [2019-03-03 20:13:57 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [99440FDA-06E0-4CF3-A3EC-F8511EF56520] [2019-03-03 20:13:57 GMT+08:00] Error msg: 
+[INFO] [133A0FE4-6E84-49E7-9317-F68AD4998CF8] [2019-03-03 20:14:02 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D02856A2-9DFB-4AB8-93D9-5FF62977B239] [2019-03-03 20:14:02 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E28D2BAD-E910-4AEA-AB64-545E2850C06F] [2019-03-03 20:14:02 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : Td44674uW5DR9a23YoZIOw
+[INFO] [40235C80-98A9-4C45-A2A2-D80BB6C6636A] [2019-03-03 20:14:02 GMT+08:00] Error msg: 
+[INFO] [9830B37C-C937-4486-8A23-D0113B705D10] [2019-03-03 20:14:02 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [11274E80-73D1-468B-8299-8111DEC3536B] [2019-03-03 20:14:02 GMT+08:00] Postgres conn state: ok
+[DEBUG] [443AC798-A320-4550-99EB-1C239CEA452F] [2019-03-03 20:14:02 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : Td44674uW5DR9a23YoZIOw
+[INFO] [A522280D-0715-491F-BA0D-02FDC5601517] [2019-03-03 20:14:02 GMT+08:00] Error msg: 
+[INFO] [222E0A20-CB71-4DC4-A825-5E4295F5552F] [2019-03-03 20:14:02 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [64BF86D9-F5BF-4B52-96CC-7C920CBBD33E] [2019-03-03 20:14:02 GMT+08:00] Postgres conn state: ok
+[DEBUG] [ED10EA1C-034A-4B66-A63A-AC1A1E64024B] [2019-03-03 20:14:02 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : eih7xnVLUpIfT1Pes-nMcQ, 573307833, 573308042, 315360000, Td44674uW5DR9a23YoZIOw
+[INFO] [9AD76B85-BDC9-42B9-8B4E-C317BF170B0D] [2019-03-03 20:14:02 GMT+08:00] Error msg: 
+[INFO] [B16084C3-927F-4FA2-BC80-5EE345B899F5] [2019-03-03 20:15:13 GMT+08:00] Running setup: test
+[INFO] [E6C0D1A0-84C3-4D46-B869-626FC172CF6B] [2019-03-03 20:15:13 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [0C94E18E-EC84-42CA-B819-EB6AAA16CB63] [2019-03-03 20:15:13 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [863B4A57-AA90-4DF3-AD96-4F741D4385EE] [2019-03-03 20:15:13 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F57BFD0C-9561-4498-8FE3-5B1053242E6B] [2019-03-03 20:15:13 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [BFB8FA60-A7E9-431C-AE76-86A7FF5FE65E] [2019-03-03 20:15:13 GMT+08:00] Error msg: 
+[INFO] [732E69E5-1FA7-4296-9B86-7C89BF056AF8] [2019-03-03 20:15:13 GMT+08:00] Running setup: users
+[INFO] [E3AD627C-BDA8-48DA-BBC5-BDD63A671390] [2019-03-03 20:15:13 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [A9944CEA-ABC6-465A-8B80-EFE411971B45] [2019-03-03 20:15:13 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [CF8D8AE0-B4D0-44C0-86C6-C39ACB939F7D] [2019-03-03 20:15:13 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F7718573-32D3-4F09-A77C-F9DAA5E7A066] [2019-03-03 20:15:13 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [4CDDDB74-2CF3-433C-84F7-57944D47F517] [2019-03-03 20:15:13 GMT+08:00] Error msg: 
+[INFO] [65D28610-A62B-4D43-BA18-A586D25BD75F] [2019-03-03 20:15:13 GMT+08:00] Running setup: tokens
+[INFO] [7CEC22F7-1486-4E52-989C-F881798017AD] [2019-03-03 20:15:13 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [AE0DD05A-7A9D-46B1-8635-A2DE47297539] [2019-03-03 20:15:13 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [DB248301-1720-439F-B11C-F98BF147AC41] [2019-03-03 20:15:13 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C513DAB2-8010-4FCA-8F5C-3E17632C2BC6] [2019-03-03 20:15:13 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [79662ADC-CE40-4B3D-8332-86318604FFBF] [2019-03-03 20:15:13 GMT+08:00] Error msg: 
+[INFO] [2C057053-418D-4731-9FD6-1618CF0AC0BD] [2019-03-03 20:15:13 GMT+08:00] Running setup: account
+[INFO] [387620A5-3400-44D4-B636-02DBC66D3FD7] [2019-03-03 20:15:13 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [6254A8FB-3C7F-4155-A04F-02DF2F838A03] [2019-03-03 20:15:13 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [1F549E23-7B79-4790-8B2C-7DF69726748B] [2019-03-03 20:15:13 GMT+08:00] Postgres conn state: ok
+[DEBUG] [25360AB6-6439-4252-B636-970671AD2024] [2019-03-03 20:15:13 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [44447F83-3A93-4A1A-9781-B743C7E505D5] [2019-03-03 20:15:13 GMT+08:00] Error msg: 
+[INFO] [A53B2142-EA04-4A71-B2C7-1ADF4623FD5F] [2019-03-03 20:15:18 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [51F350DE-AF6E-46AF-9059-68FE0170FE97] [2019-03-03 20:15:18 GMT+08:00] Postgres conn state: ok
+[DEBUG] [78718941-1CF9-471D-A936-213B7FC3F206] [2019-03-03 20:15:18 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : Td44674uW5DR9a23YoZIOw
+[INFO] [71F1BAFE-F0A3-4A73-BFC2-60EB47064B1D] [2019-03-03 20:15:18 GMT+08:00] Error msg: 
+[INFO] [A64F14BB-7F1A-4897-A8A0-C93540D2B8A0] [2019-03-03 20:15:18 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [7C6527FF-03AF-4203-8AA3-BB27137581FE] [2019-03-03 20:15:18 GMT+08:00] Postgres conn state: ok
+[DEBUG] [97CB027B-5CA1-4108-8F1F-C49E1F256419] [2019-03-03 20:15:18 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : Td44674uW5DR9a23YoZIOw
+[INFO] [8B69AF1A-1A5A-466A-BB10-24D6BFD39267] [2019-03-03 20:15:18 GMT+08:00] Error msg: 
+[INFO] [96F150EC-E9FC-4CE2-A034-18FBE28648A2] [2019-03-03 20:15:18 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [EF304D0D-DDD8-4ECA-A9B0-EE411A0BBC37] [2019-03-03 20:15:18 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B00977C9-0C3F-42FC-B1A9-E723007DB49C] [2019-03-03 20:15:18 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : eih7xnVLUpIfT1Pes-nMcQ, 573307833, 573308118, 315360000, Td44674uW5DR9a23YoZIOw
+[INFO] [BA94ECFC-C7AE-4057-B8FB-D937E9385530] [2019-03-03 20:15:18 GMT+08:00] Error msg: 
+[INFO] [F74D59A6-9B4F-4807-BB8F-37C24293C889] [2019-03-03 20:15:18 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [44DD7750-F76F-4E62-82F4-AD4971C22E02] [2019-03-03 20:15:18 GMT+08:00] Postgres conn state: ok
+[DEBUG] [EFAF2F69-CC11-4DA9-ABC9-61DAE38744B7] [2019-03-03 20:15:18 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user002
+[INFO] [E34A3A98-3354-44C6-BF40-0BAAC40A9992] [2019-03-03 20:15:18 GMT+08:00] Error msg: 
+[INFO] [053955A0-D486-4451-94A8-16FDEE14B937] [2019-03-03 20:15:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [EB60DE06-0BFC-4A6F-96B9-C8BEC104908A] [2019-03-03 20:15:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [EB84F3CF-3D56-43EB-91B7-E6DEA64BF794] [2019-03-03 20:15:25 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : OEn6trBQUdcNg9RVpzkU_A, user002, $2a$10$/s2z2CobwGy5lYDb21H8F.ZaKCF3WGcUbCwLp2VZcOxnYZnfGGkYm
+[INFO] [5E1379F0-E018-45E4-8C65-0748B06C4AAB] [2019-03-03 20:15:25 GMT+08:00] Error msg: 
+[INFO] [05A3CACB-50B2-4C7E-939B-56374CE42B9F] [2019-03-03 20:15:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [6DCAC262-A6ED-4F36-8BF6-87814A0FB5A2] [2019-03-03 20:15:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [FBEE57C7-0947-4A8D-9335-84F82A9A670A] [2019-03-03 20:15:25 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : OEn6trBQUdcNg9RVpzkU_A, 用户eLpAdqlCBi, , 0, , , user002, , , , 男
+[INFO] [0A3662F4-1CB3-40F8-9072-EE331C195AE0] [2019-03-03 20:15:25 GMT+08:00] Error msg: 
+[INFO] [0C1D3A08-DC53-4996-86D0-63784F1DF7F1] [2019-03-03 20:15:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [CDA498E4-B40E-40DC-9CF4-1D3277AF8D17] [2019-03-03 20:15:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A534BD12-F9F2-4D9B-9CCA-1C757B3D8759] [2019-03-03 20:15:25 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user002
+[INFO] [7A28CC74-EE40-4EE8-8108-DF7CE08241F7] [2019-03-03 20:15:25 GMT+08:00] Error msg: 
+[INFO] [A0E59DDB-CB8F-4975-B7EB-D6989E83F7DF] [2019-03-03 20:15:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [1DAF7317-F66C-4E58-91AC-63EE99679695] [2019-03-03 20:15:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F886D46E-5F8B-45B0-AF2E-E2837FCC5F73] [2019-03-03 20:15:25 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user002
+[INFO] [9FBA0C1B-CB95-4EE1-8000-71AFB17EF924] [2019-03-03 20:15:25 GMT+08:00] Error msg: 
+[INFO] [F971514E-DCB4-41D1-94AC-9A3BFAC87F16] [2019-03-03 20:15:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [01B776F5-2942-4A71-BAC4-57CD959E46B3] [2019-03-03 20:15:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [621A7EB7-15DC-4CE5-8445-82292042A7D9] [2019-03-03 20:15:32 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : v9WGQT9y8Y0Bf075V6aACg, OEn6trBQUdcNg9RVpzkU_A, 573308132, 573308132, 315360000
+[INFO] [2E9C6B79-5EE7-4EC7-A5B9-239F8497F4AC] [2019-03-03 20:15:32 GMT+08:00] Error msg: 
+[INFO] [44548F65-5146-4432-92FD-E3A170F0C9C8] [2019-03-03 20:15:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [305A56B6-C9CB-46D9-8240-725583D216D4] [2019-03-03 20:15:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [FE20BA86-AD5F-4DF7-8165-F6D714584E89] [2019-03-03 20:15:32 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : OEn6trBQUdcNg9RVpzkU_A
+[INFO] [E6A0D400-80B7-437C-B8AF-B3F92C8E625D] [2019-03-03 20:15:32 GMT+08:00] Error msg: 
+[INFO] [6115C54B-928C-4767-B2BF-670219FFAC4F] [2019-03-03 20:15:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@localhost:5432/imserver
+[INFO] [4EDC9B32-3D86-46C9-ABB2-DA9C68897732] [2019-03-03 20:15:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [AD76C919-305F-4016-9B34-31432BD52424] [2019-03-03 20:15:32 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender" FROM users  WHERE uniqueid = $1  ORDER BY id LIMIT 50 : OEn6trBQUdcNg9RVpzkU_A
+[INFO] [6C2403B6-3C05-4F03-A15B-5373FEBEEF79] [2019-03-03 20:15:32 GMT+08:00] Error msg: 
+[INFO] [90AC01E2-0107-4EA7-93BC-10CBE5D72716] [2019-03-03 20:16:58 GMT+08:00] Running setup: test
+[INFO] [393F2AF8-1AA7-4900-9EE0-0D6BA853C047] [2019-03-03 20:16:58 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [1D72DC33-B8BE-4399-9BFE-FEAFE898F51E] [2019-03-03 20:16:58 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0B11FCB1-20DF-4640-ACAB-6F815759A6E5] [2019-03-03 20:16:58 GMT+08:00] Postgres conn state: ok
+[DEBUG] [BDC831CD-CCD6-41CB-A08C-79167A788E7C] [2019-03-03 20:16:58 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [66EE0BA9-9DCD-4EEC-9F52-30CB31686D37] [2019-03-03 20:16:58 GMT+08:00] Error msg: 
+[INFO] [CB9DE790-548D-4210-8AF6-2ADAA16B5B4E] [2019-03-03 20:16:58 GMT+08:00] Running setup: users
+[INFO] [B00C15EC-FFA2-468D-9A3C-E3B4F50F3551] [2019-03-03 20:16:58 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [DCEC4945-AE8D-46E6-8701-434BA3EEC492] [2019-03-03 20:16:58 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [8DADDE24-1605-4DC8-875B-FD582113C012] [2019-03-03 20:16:58 GMT+08:00] Postgres conn state: ok
+[DEBUG] [CE5A5AAD-6ECB-4076-B6FC-ACBFCBEB5897] [2019-03-03 20:16:58 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [358CEFD5-32C0-45A9-9608-2F7386219AC1] [2019-03-03 20:16:58 GMT+08:00] Error msg: 
+[INFO] [CFA54123-688A-4A93-A103-7934341D19D1] [2019-03-03 20:16:58 GMT+08:00] Running setup: tokens
+[INFO] [FC0BF29B-4A3E-45F0-B9D4-71FB8CACAF6F] [2019-03-03 20:16:58 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [2FA908B1-FD6F-4522-A13B-73E9272F4C96] [2019-03-03 20:16:58 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [5C75F4C3-391D-4F61-8842-DCF3CD9154A9] [2019-03-03 20:16:58 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A5FF3363-50ED-40D5-B696-214A2541D368] [2019-03-03 20:16:58 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [07CD4DDA-AA2A-4B19-B3AA-43C05F5FA8A6] [2019-03-03 20:16:58 GMT+08:00] Error msg: 
+[INFO] [E4EF35DF-C5CB-485E-8CDF-5FE7ADE2101A] [2019-03-03 20:16:58 GMT+08:00] Running setup: account
+[INFO] [059F9C5F-C9FA-46E8-AC80-3F25809A077A] [2019-03-03 20:16:59 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [359DE852-5C57-4FD9-A83C-E129917C0A4A] [2019-03-03 20:16:59 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [15CE7C51-9401-464C-A2D8-782E58EE1D3E] [2019-03-03 20:16:59 GMT+08:00] Postgres conn state: ok
+[DEBUG] [2E32DDE9-8550-42C0-AE11-3DE16C5A674D] [2019-03-03 20:16:59 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [4ADFE557-5002-41B3-9FB5-1C0D09398AD3] [2019-03-03 20:16:59 GMT+08:00] Error msg: 
+[INFO] [6A759435-EE18-443B-869E-10AE7259370F] [2019-03-03 20:17:39 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [4664C455-2A7F-40AF-986D-412BF6C5DF06] [2019-03-03 20:17:39 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B8A9D044-D00F-4417-AA23-14EDAF0111C8] [2019-03-03 20:17:39 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [23392578-1FAB-4ECF-B86E-1CD177DA8C37] [2019-03-03 20:17:39 GMT+08:00] Error msg: 
+[INFO] [EBB6F898-C596-47B7-B243-7CB8D960CB22] [2019-03-03 20:17:39 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [04FDF61D-E773-4DF4-81C8-13682FADC8D1] [2019-03-03 20:17:39 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7E65F46C-CADB-48F2-8E52-F9D73DD8128E] [2019-03-03 20:17:39 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [9131DB7A-74AB-4AAE-A0E8-64DDF0FA4218] [2019-03-03 20:17:39 GMT+08:00] Error msg: 
+[INFO] [4365B18C-42D3-4C82-8992-F52DCBCCFFCF] [2019-03-03 20:17:39 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [279F2FF3-20C3-4A4B-81CB-1AD4396D1CC4] [2019-03-03 20:17:39 GMT+08:00] Postgres conn state: ok
+[DEBUG] [16D4900F-25B5-459E-9368-28ED918CD399] [2019-03-03 20:17:39 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : OEn6trBQUdcNg9RVpzkU_A, 573308132, 573308259, 315360000, v9WGQT9y8Y0Bf075V6aACg
+[INFO] [68FD0AE6-85FE-4BB2-BBE3-3B5AFD5996B7] [2019-03-03 20:17:39 GMT+08:00] Error msg: 
+[INFO] [045427AB-91A3-4D25-B0FC-BB6C62ADC409] [2019-03-03 20:17:39 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [DFA22325-3747-472B-BFC5-156D6D1CB2EC] [2019-03-03 20:17:39 GMT+08:00] Postgres conn state: ok
+[DEBUG] [61256D30-5C50-4FCE-9464-2FF0337ECFB9] [2019-03-03 20:17:39 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user003
+[INFO] [99FF9CFF-2176-4136-A89C-06F5C6868EB3] [2019-03-03 20:17:39 GMT+08:00] Error msg: 
+[INFO] [F39A8250-BC6D-4D76-ADAD-6EE764A9BCAF] [2019-03-03 20:17:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [11858AE7-E163-43D1-BA24-A779DC655103] [2019-03-03 20:17:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [23BA8D44-4CFC-4671-8D26-AD8332CDF78C] [2019-03-03 20:17:47 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : qAt2yiOaA5EzrQJjVUuiow, user003, $2a$10$CNA7L9oaSObGFATUv/yBtOwMWJW9EL/4E5ILYXtKCKKoY4dIwvCs6
+[INFO] [5E1E6C1C-6D80-4B9B-8529-F0C3DE51F90A] [2019-03-03 20:17:47 GMT+08:00] Error msg: 
+[INFO] [84EC88C9-A3B6-48D1-A044-42C882088591] [2019-03-03 20:17:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [51B299FC-3B94-4D08-920C-A22B61C3D46F] [2019-03-03 20:17:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [09AA51CC-D1C6-435B-8826-2D0DE9624623] [2019-03-03 20:17:47 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : qAt2yiOaA5EzrQJjVUuiow, 用户DieDyxuzDU, , 0, , , user003, , , , 男
+[INFO] [BB32ABA4-5000-4898-A8D8-9BF0FF305900] [2019-03-03 20:17:47 GMT+08:00] Error msg: 
+[INFO] [D3848885-B039-482C-A976-D612E02EB8FC] [2019-03-03 20:18:45 GMT+08:00] Running setup: test
+[INFO] [69FA02CC-7C03-4FAA-A29B-F1014A8FC569] [2019-03-03 20:18:45 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [3C81FE81-4E1C-4DFD-9526-5105AB730404] [2019-03-03 20:18:45 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [15F738B5-30A8-4445-9B6D-739C615BDD3E] [2019-03-03 20:18:45 GMT+08:00] Postgres conn state: ok
+[DEBUG] [ED5DE7FF-8B2E-494D-A637-65306C979BFF] [2019-03-03 20:18:45 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [68284776-688F-47BE-95D9-840190C7C3B3] [2019-03-03 20:18:45 GMT+08:00] Error msg: 
+[INFO] [5F3EE4BC-916B-4E0C-8D46-395550B8CD40] [2019-03-03 20:18:45 GMT+08:00] Running setup: users
+[INFO] [D13F217F-4169-4D89-8E6C-14F388D00958] [2019-03-03 20:18:45 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [80126A45-07F6-4D27-B30F-6575D866437A] [2019-03-03 20:18:45 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [A2DA8325-F526-4EC5-A37E-F4E9B8331BDF] [2019-03-03 20:18:45 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E6ECDF62-3BF4-4527-A211-414A6088728D] [2019-03-03 20:18:45 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [F9565CEC-F8AC-4F85-993F-F434470E18BD] [2019-03-03 20:18:45 GMT+08:00] Error msg: 
+[INFO] [E21C785C-3979-4025-BFAE-B470F8C1ABF1] [2019-03-03 20:18:45 GMT+08:00] Running setup: tokens
+[INFO] [09BABD4A-9FB8-44CF-AF2C-AE0B973302E9] [2019-03-03 20:18:45 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [8DCA1714-1A38-404C-8E00-2ED5C699C08C] [2019-03-03 20:18:45 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [E42C9ED7-96CD-416C-A113-D8B3437A1317] [2019-03-03 20:18:45 GMT+08:00] Postgres conn state: ok
+[DEBUG] [9BBDA65C-0F1B-4B78-8C2B-9FCC3832D601] [2019-03-03 20:18:45 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [0ECC2BFF-A07D-4F5E-B363-251FA74828D3] [2019-03-03 20:18:45 GMT+08:00] Error msg: 
+[INFO] [E5ACE802-F0CB-4E79-9B54-E5605D0E3249] [2019-03-03 20:18:45 GMT+08:00] Running setup: account
+[INFO] [4D1EC65F-928C-408C-8F49-B56260A5B239] [2019-03-03 20:18:45 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [973B25A7-D9D1-4BD5-B2D3-D3D68AF215A9] [2019-03-03 20:18:45 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [9737520E-DB6E-4263-8BCC-66EBAE262B6A] [2019-03-03 20:18:45 GMT+08:00] Postgres conn state: ok
+[DEBUG] [53C8066F-7347-41B0-89BD-C120D9BCE293] [2019-03-03 20:18:45 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [C6D68D05-AB77-4181-9220-928BA146D7B0] [2019-03-03 20:18:45 GMT+08:00] Error msg: 
+[INFO] [356E29E3-1E60-4213-A951-4331A1D7357A] [2019-03-03 20:18:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D6973C30-0A74-46C1-B01C-D8FB97C0D75D] [2019-03-03 20:18:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [22F899AD-4C22-45F9-8722-FF084E520FD5] [2019-03-03 20:18:47 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [92B9F70D-475E-4F26-9459-E2F39E036476] [2019-03-03 20:18:47 GMT+08:00] Error msg: 
+[INFO] [DB6A656C-12D7-43B9-8075-EA569D782C73] [2019-03-03 20:18:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [B7ECDE29-4D32-4221-9D29-2C8A5894C5B4] [2019-03-03 20:18:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [34FE8FA0-7D54-48B4-832F-F1DCEBE0A5BF] [2019-03-03 20:18:47 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [BC3ABEA5-16B8-45AA-905D-1D287D429458] [2019-03-03 20:18:47 GMT+08:00] Error msg: 
+[INFO] [2AE44047-CF64-4390-B906-897C30994BD7] [2019-03-03 20:18:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [75D53C8F-F4CA-4D31-8154-666B5B94404B] [2019-03-03 20:18:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [BE918B55-381D-44C7-8D2D-719086DFF059] [2019-03-03 20:18:47 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : OEn6trBQUdcNg9RVpzkU_A, 573308132, 573308327, 315360000, v9WGQT9y8Y0Bf075V6aACg
+[INFO] [4B54C109-C5BA-467C-BC13-630822BEFD83] [2019-03-03 20:18:47 GMT+08:00] Error msg: 
+[INFO] [5B1BE8B7-1804-477D-9096-8809AAA2C0E8] [2019-03-03 20:18:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [B62792FD-0139-42F1-B2F9-5204DCD9611D] [2019-03-03 20:18:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F9CCCE15-42AE-41A9-AFA5-7EC6D294778B] [2019-03-03 20:18:47 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user004
+[INFO] [9C2DC08B-A309-4C68-872B-414E2B99D087] [2019-03-03 20:18:48 GMT+08:00] Error msg: 
+[INFO] [B86E7C4B-6A94-4F17-A690-5DC8FE823D1E] [2019-03-03 20:18:48 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [12CBC135-5E56-41A0-A95D-0F63560186D5] [2019-03-03 20:18:48 GMT+08:00] Postgres conn state: ok
+[DEBUG] [516AAE53-15A9-4742-B3EB-9DA448655CA4] [2019-03-03 20:18:48 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : 7nzDRZVsDAjWispsP0qfww, user004, user001
+[INFO] [C5CE6E0F-502A-41C9-9766-430D8FFE0526] [2019-03-03 20:18:48 GMT+08:00] Error msg: 
+[INFO] [9C10C5B7-8276-4881-8B3E-CD4D41775F70] [2019-03-03 20:18:48 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [EB2156C3-F0E8-4B14-8C3D-1F12AAA86E6F] [2019-03-03 20:18:48 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F3A62A4F-649B-4C64-ADBD-9529F4599EBF] [2019-03-03 20:18:48 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : 7nzDRZVsDAjWispsP0qfww, 用户kXZineyiUz, , 0, , , user004, , , , 男
+[INFO] [5CBD31B2-16C6-4265-8115-C27AC8F1B39C] [2019-03-03 20:18:48 GMT+08:00] Error msg: 
+[INFO] [67E94126-DBD1-4BE9-AE47-597E1078BCBF] [2019-03-03 20:18:48 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D651F94D-F773-4C9B-9746-B2C34A201AB0] [2019-03-03 20:18:48 GMT+08:00] Postgres conn state: ok
+[DEBUG] [3E5EA1D0-52FB-4FEF-84DB-E3BE0F35F170] [2019-03-03 20:18:48 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user004
+[INFO] [A851FD2A-C067-4ED4-B89D-71B9E52040E6] [2019-03-03 20:18:48 GMT+08:00] Error msg: 
+[INFO] [C0A1E18E-57B9-408E-BB79-2DA640E7918A] [2019-03-03 20:18:48 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [927194C8-8E3F-4EA0-B260-C66D0D23577C] [2019-03-03 20:18:48 GMT+08:00] Postgres conn state: ok
+[DEBUG] [713B620E-31E9-4CE0-841D-AD4F421CE844] [2019-03-03 20:18:48 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user004
+[INFO] [4A668869-05DC-4ABE-AED3-A5C4694D3A44] [2019-03-03 20:18:48 GMT+08:00] Error msg: 
+[INFO] [3850EE2E-DAC4-4E3F-B8D8-2D269C533D44] [2019-03-03 20:43:03 GMT+08:00] Running setup: test
+[INFO] [F20CBD5D-344A-47A8-BD15-D0F23C6E7EEF] [2019-03-03 20:43:03 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [531C1A97-2860-465C-80CD-FB32C7B1D40C] [2019-03-03 20:43:03 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [7B433A9E-977B-483E-A0E0-4A4C42CDCD65] [2019-03-03 20:43:03 GMT+08:00] Postgres conn state: ok
+[DEBUG] [54CFECA5-07DC-43EC-8DD2-FDD9AF3A33FC] [2019-03-03 20:43:03 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [FC0E446A-A492-4F06-B956-E791BA55B66F] [2019-03-03 20:43:04 GMT+08:00] Error msg: 
+[INFO] [6F9C85AC-6D24-4A53-8A04-F5544B8BA6B5] [2019-03-03 20:43:04 GMT+08:00] Running setup: users
+[INFO] [7BE9AB3C-D19B-4E0C-8821-2427F4439760] [2019-03-03 20:43:04 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [D97638D5-A571-4B53-B892-9E6C1C29B665] [2019-03-03 20:43:04 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D7690E16-98CC-41CD-9D25-55A16B302217] [2019-03-03 20:43:04 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C0E5083D-89A9-4DAE-9790-7323AF66DA9F] [2019-03-03 20:43:04 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [A7D35F7B-D86B-484D-9C28-F6DEF613EF29] [2019-03-03 20:43:04 GMT+08:00] Error msg: 
+[INFO] [3C4C2F1A-ECF8-4C15-856D-0D7D718BF58E] [2019-03-03 20:43:04 GMT+08:00] Running setup: tokens
+[INFO] [7D15A95D-BF17-4057-B6CD-92E81729A688] [2019-03-03 20:43:04 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [4EF01298-5A1E-465B-9AE1-5C09DC0D5AEB] [2019-03-03 20:43:04 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [8ECCBA5C-9611-4FDC-A560-3AF0B69F44EE] [2019-03-03 20:43:04 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C80902A8-4845-47C4-B7F8-A9F022BB21D8] [2019-03-03 20:43:04 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [71455449-2224-42CE-AF7B-6202DFE8B822] [2019-03-03 20:43:04 GMT+08:00] Error msg: 
+[INFO] [9C2C5357-C7B0-4397-AB93-FEEEF24E144B] [2019-03-03 20:43:04 GMT+08:00] Running setup: account
+[INFO] [C3B67003-CC41-4E00-B9C8-9C626CB589E0] [2019-03-03 20:43:04 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [C18A67E9-5701-447A-938F-316AA0F5271C] [2019-03-03 20:43:04 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [6E97FDA1-3587-4406-9012-9A0BD39A17E3] [2019-03-03 20:43:04 GMT+08:00] Postgres conn state: ok
+[DEBUG] [ECA956D9-A3B2-49D6-AAEA-92C33B794D12] [2019-03-03 20:43:04 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [5CF94DB1-19A2-4D03-B866-7B23F5F2DA06] [2019-03-03 20:43:04 GMT+08:00] Error msg: 
+[INFO] [5B3147AC-914C-48B9-A697-BCF13AA54743] [2019-03-03 20:43:09 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [02E808A3-DC51-4FC8-ABDB-1AB41AA8E194] [2019-03-03 20:43:09 GMT+08:00] Postgres conn state: ok
+[DEBUG] [9091DF61-7C0A-420B-8781-EF950693C841] [2019-03-03 20:43:09 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [BDE5FE6C-5E2B-4B65-8B9B-AA980BAADB0B] [2019-03-03 20:43:09 GMT+08:00] Error msg: 
+[INFO] [96E625D2-4C2B-4611-AF51-9B6004583157] [2019-03-03 20:43:09 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [497D0BA7-A4FB-4029-B235-0D9DE749FA1E] [2019-03-03 20:43:09 GMT+08:00] Postgres conn state: ok
+[DEBUG] [887B037C-E698-4E71-9B82-BBBDF82F8439] [2019-03-03 20:43:09 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [189D2A1F-CCF6-42AE-9498-570522EE4027] [2019-03-03 20:43:09 GMT+08:00] Error msg: 
+[INFO] [8E1C0303-253F-4474-A176-AB1422138754] [2019-03-03 20:43:09 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [8F005D32-60F5-4942-9011-F03AAC82D8F7] [2019-03-03 20:43:09 GMT+08:00] Postgres conn state: ok
+[DEBUG] [29FDEE0D-BFC3-4DF4-A722-81C1FAE05D65] [2019-03-03 20:43:09 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : OEn6trBQUdcNg9RVpzkU_A, 573308132, 573309789, 315360000, v9WGQT9y8Y0Bf075V6aACg
+[INFO] [39897EB4-8DFE-4DC9-A60F-DE8B0C8C5E94] [2019-03-03 20:43:09 GMT+08:00] Error msg: 
+[INFO] [E06F9309-CB9C-4B27-BBA8-79976D1159A1] [2019-03-03 20:43:09 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [71CE6CF6-7DE1-495A-AEF8-DB14BEE41458] [2019-03-03 20:43:09 GMT+08:00] Postgres conn state: ok
+[DEBUG] [9D906D16-8387-4E43-B57E-E2B20BD865BD] [2019-03-03 20:43:09 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user005
+[INFO] [FDE14825-1C78-41BD-9219-D58256B4F85F] [2019-03-03 20:43:09 GMT+08:00] Error msg: 
+[INFO] [7CD67D4C-30A4-45AE-8213-52A727839815] [2019-03-03 20:43:09 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [46F2C631-E91E-4020-B3B2-4087A7BD1DBE] [2019-03-03 20:43:09 GMT+08:00] Postgres conn state: ok
+[DEBUG] [FD1C4715-15E7-43DF-8218-72DCF08F9D04] [2019-03-03 20:43:09 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : 0D3NYC9hECZcBmtiszR_AA, user005, 84dfeba1ff7be5839f574c1c6555c2ae953c6656
+[INFO] [56916667-DDCC-4876-98AF-AE2D73B19011] [2019-03-03 20:43:09 GMT+08:00] Error msg: 
+[INFO] [D39EAB7B-15A1-4092-B8FE-E8C6ABBD9EAA] [2019-03-03 20:43:09 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [2A6AAB70-A854-4FE1-90CB-296C9B3728E3] [2019-03-03 20:43:09 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4D1A87FD-1842-41A3-81C5-711E86DA9EBE] [2019-03-03 20:43:09 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : 0D3NYC9hECZcBmtiszR_AA, 用户jNFnPeYemk, , 0, , , user005, , , , 男
+[INFO] [EDE727C7-D072-49DB-83F4-981FE2032D03] [2019-03-03 20:43:09 GMT+08:00] Error msg: 
+[INFO] [991AA6EA-EDFA-4F40-AB55-3792F4EEDCCA] [2019-03-03 20:43:09 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [122B2EEB-CB34-45AA-AB5F-8A126736072E] [2019-03-03 20:43:09 GMT+08:00] Postgres conn state: ok
+[DEBUG] [9BB62C85-300E-4151-9BBE-8FA4DEE1E90B] [2019-03-03 20:43:09 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user005
+[INFO] [E333EC97-F2ED-49B4-9543-2C18F9006759] [2019-03-03 20:43:09 GMT+08:00] Error msg: 
+[INFO] [D33A1492-6FF0-455C-8BCA-7B3E87E5778A] [2019-03-03 20:43:09 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0B8B1804-5514-41EF-8769-ADE947697141] [2019-03-03 20:43:09 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7FC95D23-944A-4EF8-AAF7-001478AB4EC1] [2019-03-03 20:43:09 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user005
+[INFO] [21F843F4-FF02-49CD-983B-C41E382114CC] [2019-03-03 20:43:09 GMT+08:00] Error msg: 
+[INFO] [21B18AF2-BD8A-4AFE-BF41-89B47A4C0C74] [2019-03-03 20:43:22 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [4F64081B-59C0-43DE-8CED-89B6BB6C7FCD] [2019-03-03 20:43:22 GMT+08:00] Postgres conn state: ok
+[DEBUG] [87A6EBD4-9749-4E00-B36B-ACF05DE3A182] [2019-03-03 20:43:22 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [4E14D709-5866-44A7-9C94-9788EC2F2FE8] [2019-03-03 20:43:22 GMT+08:00] Error msg: 
+[INFO] [F59F93CC-1DED-4E13-80AD-3570DED36BBF] [2019-03-03 20:43:22 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [904885E6-6981-475E-91DB-359E2095569F] [2019-03-03 20:43:22 GMT+08:00] Postgres conn state: ok
+[DEBUG] [12AC2641-3E21-4E75-99C4-B9FB5509FD2F] [2019-03-03 20:43:22 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [A9A948BD-E4B2-4114-A2FD-7C5C808E2FC8] [2019-03-03 20:43:22 GMT+08:00] Error msg: 
+[INFO] [638E1128-9203-416E-8CBE-365169C4A715] [2019-03-03 20:43:22 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CA35DFF8-5E58-410D-837A-BA31A7125203] [2019-03-03 20:43:22 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A46E6274-C799-442E-AB54-6B6B1A1C23A2] [2019-03-03 20:43:22 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : OEn6trBQUdcNg9RVpzkU_A, 573308132, 573309802, 315360000, v9WGQT9y8Y0Bf075V6aACg
+[INFO] [4772CFE2-D449-464B-83AB-16F2FB1404D5] [2019-03-03 20:43:22 GMT+08:00] Error msg: 
+[INFO] [01C6FDF1-1F7D-45B8-A5FE-1FEF700FBE79] [2019-03-03 20:43:22 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0DD59C1B-511C-430E-9236-C5C767A1010A] [2019-03-03 20:43:22 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5D28D337-D503-4222-A0A4-CF2B1D9FBE0A] [2019-03-03 20:43:22 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user006
+[INFO] [2C783A09-941A-4B8A-A645-2D3364B87410] [2019-03-03 20:43:22 GMT+08:00] Error msg: 
+[INFO] [515E823B-E259-40C7-A92C-5B42250A0ECB] [2019-03-03 20:43:22 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [29FB68F0-894C-46B2-8860-A090668942E6] [2019-03-03 20:43:22 GMT+08:00] Postgres conn state: ok
+[DEBUG] [25B70167-0ADD-4DB7-8CB4-EA05ECD39934] [2019-03-03 20:43:22 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : Cs5lVPU9_BaCznK1TEfMow, user006, 84dfeba1ff7be5839f574c1c6555c2ae953c6656
+[INFO] [7FEC0D46-2E19-40E1-B75A-620CFE6C090E] [2019-03-03 20:43:22 GMT+08:00] Error msg: 
+[INFO] [87ABF0D0-4AA2-4A76-AA19-A650D2A978D8] [2019-03-03 20:43:22 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [5DC71951-FA25-496B-AC44-446104625688] [2019-03-03 20:43:22 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5BEB4D58-90F6-4D5E-B07E-1BB9053D9A23] [2019-03-03 20:43:22 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : Cs5lVPU9_BaCznK1TEfMow, 用户MOGVGjcdnz, , 0, , , user006, , , , 男
+[INFO] [AAB2BE30-C329-4DA6-8877-126CA1AD9C01] [2019-03-03 20:43:22 GMT+08:00] Error msg: 
+[INFO] [120CCC35-B8FF-4929-BE51-54ADA355DD5C] [2019-03-03 20:43:22 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0CC39A68-3396-4DEF-9619-C5F258E93C9C] [2019-03-03 20:43:22 GMT+08:00] Postgres conn state: ok
+[DEBUG] [AAD7C516-3B23-4B18-8F79-E8F9A8F23A48] [2019-03-03 20:43:22 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user006
+[INFO] [2B52EBA5-F1C0-4673-AFCD-F17D4D508B76] [2019-03-03 20:43:22 GMT+08:00] Error msg: 
+[INFO] [C8BB0F25-803A-4D21-822C-3D2B385E38B9] [2019-03-03 20:43:22 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [EB7697EE-7D2F-4F36-98CA-A9D62782733A] [2019-03-03 20:43:22 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C72CFD4E-329F-4443-B29C-3BEC910631BA] [2019-03-03 20:43:22 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user006
+[INFO] [DAC51EE5-C567-4557-A589-C5B8E518B335] [2019-03-03 20:43:22 GMT+08:00] Error msg: 
+[INFO] [061C842B-6950-497A-A0B3-74C716F79819] [2019-03-03 20:43:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [9A1BEA72-3796-43DA-8844-F64D0AC072B0] [2019-03-03 20:43:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [60AE5FA5-FAFD-4E72-9975-3CB1EDE77068] [2019-03-03 20:43:31 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [7F7BBDAA-7188-4321-8C1D-22C3BFFE60A5] [2019-03-03 20:43:31 GMT+08:00] Error msg: 
+[INFO] [F30863D2-F103-498B-976B-2B7BC351F4F5] [2019-03-03 20:43:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [363C4894-EB44-4A9A-B18A-3D04CC01B9CF] [2019-03-03 20:43:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5FCDDAA0-5429-48A8-8122-CC3492DAF91D] [2019-03-03 20:43:31 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [7B8078EB-08F8-4DF9-BBC8-9995A170756F] [2019-03-03 20:43:31 GMT+08:00] Error msg: 
+[INFO] [6FADDD59-E1B1-488C-ADFC-311D34D5D219] [2019-03-03 20:43:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [90A112BA-9038-4D3F-959A-1BE8E3FB58FD] [2019-03-03 20:43:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C98C913A-08AD-4A97-8BF1-21A8CDADA9DF] [2019-03-03 20:43:31 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : OEn6trBQUdcNg9RVpzkU_A, 573308132, 573309811, 315360000, v9WGQT9y8Y0Bf075V6aACg
+[INFO] [2A867519-A719-4B71-B866-8043D9CAD003] [2019-03-03 20:43:31 GMT+08:00] Error msg: 
+[INFO] [29135C92-F0A1-4393-84AE-08287E0DC25F] [2019-03-03 20:43:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [2BFFD775-CE46-4632-8B1B-7AC56ED60C02] [2019-03-03 20:43:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C71364E2-DE78-4B5D-B170-E14AAE0C8FCD] [2019-03-03 20:43:31 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user006
+[INFO] [174BCCF4-3EC5-41C8-93B6-D7BAFEB003EF] [2019-03-03 20:43:31 GMT+08:00] Error msg: 
+[INFO] [192DA45B-2BE2-44B5-BEE4-CFB107586EDF] [2019-03-03 20:43:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [4441E347-639C-41B6-A015-BC66D06A430A] [2019-03-03 20:43:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5748CA7A-8414-4591-9A5B-94C282A4CF04] [2019-03-03 20:43:31 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user006
+[INFO] [29D1F377-EAB7-4476-A683-1DB62CBC39ED] [2019-03-03 20:43:31 GMT+08:00] Error msg: 
+[INFO] [53599554-21D7-4759-8BD2-3F52308DB684] [2019-03-03 20:43:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0EA0E05D-BBF4-4520-8016-4D7CF9FB4EFE] [2019-03-03 20:43:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E2622875-FB1A-40E3-B84B-030AC55B4DE2] [2019-03-03 20:43:35 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [104FFEDD-97BF-4D73-AB48-220CEB55A7B9] [2019-03-03 20:43:35 GMT+08:00] Error msg: 
+[INFO] [77AE6E59-B82A-4F47-AAD5-245DEBAE6B0F] [2019-03-03 20:43:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [FE2D28AD-CCB3-45A6-9AB6-62F4DBE9314C] [2019-03-03 20:43:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [DE61F2CC-D59D-4A7B-AFAF-D0D90621BD11] [2019-03-03 20:43:35 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [C5B95C41-F23B-4595-955F-BF573EE5ADA9] [2019-03-03 20:43:35 GMT+08:00] Error msg: 
+[INFO] [DD935B6E-A440-44BA-8FE3-9FD59D2DE47B] [2019-03-03 20:43:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [E1511758-9595-4566-A051-29ACC863C5A8] [2019-03-03 20:43:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [DFAE4749-ADE3-4E16-9213-28BA5AA3F5A8] [2019-03-03 20:43:35 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : OEn6trBQUdcNg9RVpzkU_A, 573308132, 573309815, 315360000, v9WGQT9y8Y0Bf075V6aACg
+[INFO] [CC2131F4-A1E1-49D3-9ABB-9BE8D6516D70] [2019-03-03 20:43:35 GMT+08:00] Error msg: 
+[INFO] [92EE33AD-7570-4177-8028-72E1E242FB21] [2019-03-03 20:43:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [994DEBBA-0443-4A2A-BBE6-4D1D7D1D6DE6] [2019-03-03 20:43:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [AE051AF5-B493-4F8E-9DD6-71E957463320] [2019-03-03 20:43:35 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user007
+[INFO] [A8EEA98C-ED70-4D35-91E1-57B16D911B72] [2019-03-03 20:43:35 GMT+08:00] Error msg: 
+[INFO] [BD9F6625-63DE-4422-BC99-332553B62A6B] [2019-03-03 20:43:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [2863D855-F5E7-45B1-94CD-4D21447EBC1B] [2019-03-03 20:43:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [6FD0C32E-E419-444D-8388-F3F59188CEDC] [2019-03-03 20:43:35 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : f03DlIsHDBMeO-OmnGmamQ, user007, 84dfeba1ff7be5839f574c1c6555c2ae953c6656
+[INFO] [A4E3D8AA-468E-4E89-B616-D98E0DF89356] [2019-03-03 20:43:35 GMT+08:00] Error msg: 
+[INFO] [1E11D9C8-E0B2-4AB4-AF22-FDC4419B5969] [2019-03-03 20:43:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [A697348E-F98B-4229-9882-DC312F47C0BA] [2019-03-03 20:43:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E8C733E6-D2FE-46B1-8451-CE4276399F69] [2019-03-03 20:43:35 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : f03DlIsHDBMeO-OmnGmamQ, 用户wLcbWELYJK, , 0, , , user007, , , , 男
+[INFO] [9B630BDD-7502-4CAC-A017-93C0CDD17B9B] [2019-03-03 20:43:35 GMT+08:00] Error msg: 
+[INFO] [9CC34073-5F95-45B7-A9EE-12579A70EE15] [2019-03-03 20:43:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [2B273DC7-4E6C-441D-AFBC-5465DCBD880B] [2019-03-03 20:43:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7C135E80-FDB8-41EF-9E9B-24C0CF343E93] [2019-03-03 20:43:35 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user007
+[INFO] [AABE2DAE-5E98-43EF-A214-8EAD3D7E805F] [2019-03-03 20:43:35 GMT+08:00] Error msg: 
+[INFO] [9A26A880-7F08-4D4F-B56B-073FD2A83094] [2019-03-03 20:43:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [C429C578-B49E-43B9-AA3E-C342FF3118DF] [2019-03-03 20:43:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [48B8F430-B286-443D-8FF3-C515E07D8EB0] [2019-03-03 20:43:35 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user007
+[INFO] [4E329915-3D40-41F4-BB40-A0A953F48F34] [2019-03-03 20:43:35 GMT+08:00] Error msg: 
+[INFO] [C2CFF842-3D96-46E3-8A89-638E23FFB1A3] [2019-03-03 20:45:44 GMT+08:00] Running setup: test
+[INFO] [ECD4FB74-F473-4530-9474-63DBDBEC8AFA] [2019-03-03 20:45:44 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [C20402E2-2794-4B05-A458-332EDBD8BAB1] [2019-03-03 20:45:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [A13C8695-1014-49E7-BA0B-2EDD7FBDDB5A] [2019-03-03 20:45:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7D322772-AA2C-4D9A-8E8A-452E386E3C84] [2019-03-03 20:45:44 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [DB09D352-7AE6-4186-BD98-C38127051F73] [2019-03-03 20:45:44 GMT+08:00] Error msg: 
+[INFO] [88626229-4DD7-4C0A-9B6A-D29CCAB4E820] [2019-03-03 20:45:44 GMT+08:00] Running setup: users
+[INFO] [1A3977A4-E3F6-44C6-A7AF-5E2541C048CF] [2019-03-03 20:45:44 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [BDD00525-A3A7-4244-A899-C035476B9822] [2019-03-03 20:45:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [C4985A76-2114-4986-83F9-636BAD86C4C3] [2019-03-03 20:45:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [95BB2A72-13A0-4047-A4C2-19200FBE767D] [2019-03-03 20:45:44 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [D7DA59BC-A657-40BE-AB98-1FA1C3A9F15B] [2019-03-03 20:45:44 GMT+08:00] Error msg: 
+[INFO] [D8AE4DD8-E4EC-47B9-9EDD-180D792B3248] [2019-03-03 20:45:44 GMT+08:00] Running setup: tokens
+[INFO] [91ED3587-88DB-43FE-A9A2-79B19197647C] [2019-03-03 20:45:44 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [F19C0C73-560D-4DF9-90B3-B76817686663] [2019-03-03 20:45:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [26767D52-E813-4DF3-B45C-8706B82607AC] [2019-03-03 20:45:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [0F3496DF-ECB2-4214-BD2C-A191A5B16044] [2019-03-03 20:45:44 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [E74C6AFD-9508-4372-8FE2-1DDF7F95E10D] [2019-03-03 20:45:44 GMT+08:00] Error msg: 
+[INFO] [82E51C02-7904-4B11-9ECF-C61DF7767770] [2019-03-03 20:45:44 GMT+08:00] Running setup: account
+[INFO] [C623D584-B28E-44A9-9F48-9B6769C05785] [2019-03-03 20:45:44 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [7AC526B2-7B63-416C-84FF-0A352F0F3431] [2019-03-03 20:45:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [60EADA8E-5429-4FCA-A3B4-546FC1D1522A] [2019-03-03 20:45:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7D317A40-9C0F-4036-BA9C-73DCA7341AD6] [2019-03-03 20:45:44 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [FA34889A-96D7-478B-BD88-45958FCEC791] [2019-03-03 20:45:44 GMT+08:00] Error msg: 
+[INFO] [B89F1CE1-3165-4277-8395-CECF5B7E1C25] [2019-03-03 20:45:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [A982B463-7593-4A99-9AC9-69EEF94FA6DC] [2019-03-03 20:45:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [BDF5461A-287A-46F0-9D75-1E55F8176A9D] [2019-03-03 20:45:46 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [9C717536-4B2A-4054-AB29-DA28E2A7A01A] [2019-03-03 20:45:46 GMT+08:00] Error msg: 
+[INFO] [91BD2933-7A6E-4F29-9F16-CE1F1BBB6ECB] [2019-03-03 20:45:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [81313046-32CD-442C-9E56-41CF39930963] [2019-03-03 20:45:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C13B68D1-BC61-4E93-9AA2-B687DA77D397] [2019-03-03 20:45:46 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : v9WGQT9y8Y0Bf075V6aACg
+[INFO] [26B5A3FB-6A9B-46EC-8DB7-5644D723B64D] [2019-03-03 20:45:46 GMT+08:00] Error msg: 
+[INFO] [C6A077AC-E742-4861-9F0D-525460906731] [2019-03-03 20:45:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0EF172B7-BCF3-4F26-A9EA-9C24349DB447] [2019-03-03 20:45:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A3287599-1056-4A36-B8F1-AC589EED4999] [2019-03-03 20:45:46 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : OEn6trBQUdcNg9RVpzkU_A, 573308132, 573309946, 315360000, v9WGQT9y8Y0Bf075V6aACg
+[INFO] [0A907678-E79E-42D0-9A8B-B39D6E5B77E9] [2019-03-03 20:45:46 GMT+08:00] Error msg: 
+[INFO] [48FC5B22-26A9-48B5-BE75-61FC5E900A19] [2019-03-03 20:45:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0612739F-FB17-4CAC-8659-3F49C19DE270] [2019-03-03 20:45:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [02B152C1-EEFC-4D0C-8F19-DA7E4B0919F3] [2019-03-03 20:45:46 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user008
+[INFO] [8E37F207-7C32-4668-8C63-603486D1A3A4] [2019-03-03 20:45:46 GMT+08:00] Error msg: 
+[INFO] [13D3D928-2332-4252-8E8F-59135F469240] [2019-03-03 20:45:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CD1DC693-61C3-4341-A0AB-28A187287A8F] [2019-03-03 20:45:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D4F50B4D-B665-499D-A489-D5404DC83577] [2019-03-03 20:45:46 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password") VALUES($1,$2,$3) RETURNING "uniqueid" : VPhFe14gDwVBbeUNGv25Hg, user008, 84dfeba1ff7be5839f574c1c6555c2ae953c6656
+[INFO] [D0061E67-C52D-4274-878A-56271168393F] [2019-03-03 20:45:46 GMT+08:00] Error msg: 
+[INFO] [89F41FE2-16C6-4408-B683-F39ECEA7402C] [2019-03-03 20:45:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [EB48D57B-A2F9-4846-9E11-023558F106D8] [2019-03-03 20:45:46 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5EBC7FB5-B95E-474A-A8EF-CDDB65B1083A] [2019-03-03 20:45:46 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id" : VPhFe14gDwVBbeUNGv25Hg, 用户EynSEgonpz, , 0, , , user008, , , , 男
+[INFO] [3FA4C257-99FE-4EA6-909A-DA89E0D9612A] [2019-03-03 20:45:46 GMT+08:00] Error msg: 
+[INFO] [99196EC6-DBF8-4628-8F26-1DD90BFB453A] [2019-03-03 20:45:46 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [7F95453E-428A-4267-9E90-A2F56FB6827F] [2019-03-03 20:45:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [276C8E08-425C-40DE-A0DA-AB0659219D72] [2019-03-03 20:45:47 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user008
+[INFO] [E550329C-5748-41F6-A108-E0D7D0D4F2A3] [2019-03-03 20:45:47 GMT+08:00] Error msg: 
+[INFO] [2453E311-900F-4012-A025-CE2FBBA8F525] [2019-03-03 20:45:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [56063A39-145F-47A8-8600-B62E00F8D402] [2019-03-03 20:45:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [FA632333-3B31-4FFA-BD47-7272D2D50AAB] [2019-03-03 20:45:47 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user008
+[INFO] [477A7DD7-3FDC-4931-9986-D9961E0D7F0A] [2019-03-03 20:45:47 GMT+08:00] Error msg: 
+[INFO] [0E5B0983-5E00-4AE7-B419-0B14267A93BB] [2019-03-03 20:45:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [C96583CE-0B47-4F0D-B3F7-57339DFAF755] [2019-03-03 20:45:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F366EF18-AAEC-460C-9DFC-D83C6AF0A88A] [2019-03-03 20:45:47 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : 0HSy0nasrOsoOwlabSlIEQ, VPhFe14gDwVBbeUNGv25Hg, 573309947, 573309947, 315360000
+[INFO] [53C2BCD3-5302-4D2E-8F8C-CD64CE69D75D] [2019-03-03 20:45:47 GMT+08:00] Error msg: 
+[INFO] [6C3E1CB8-5DBA-4792-BF70-CA58F3777CE6] [2019-03-03 20:45:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [B77DAE03-2EE7-4C2A-A9B5-D3D9A39E6D00] [2019-03-03 20:45:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D7092D3F-CEC1-41BF-8310-9B2EFF80F48E] [2019-03-03 20:45:47 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : VPhFe14gDwVBbeUNGv25Hg
+[INFO] [EBD6B004-5DEE-4E60-A9A4-7ED9D882CE61] [2019-03-03 20:45:47 GMT+08:00] Error msg: 
+[INFO] [9FB48898-095B-43F1-B4ED-F45E73BB2FBD] [2019-03-03 20:45:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [9F132C7F-76E9-4919-ACB6-F0B0272DAF15] [2019-03-03 20:45:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [49FB8976-B638-4173-8403-3371804BD446] [2019-03-03 20:45:47 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender" FROM users  WHERE uniqueid = $1  ORDER BY id LIMIT 50 : VPhFe14gDwVBbeUNGv25Hg
+[INFO] [FA8960BF-5683-4F48-AA01-B634FA4153EA] [2019-03-03 20:45:47 GMT+08:00] Error msg: 
+[INFO] [D8ABB45E-BF5E-41D0-8251-3C7F8A3C00B3] [2019-03-03 20:47:07 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D39D43A8-8567-4E4F-B0D1-3A236FC513D3] [2019-03-03 20:47:07 GMT+08:00] Postgres conn state: ok
+[DEBUG] [35830D3E-1B07-420D-BCAD-E22F065AB11B] [2019-03-03 20:47:07 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [7F6E23A9-22A8-46AE-80D9-267A9D24D0AB] [2019-03-03 20:47:07 GMT+08:00] Error msg: 
+[INFO] [A406FDF4-7B96-404A-BF20-6EF670A96700] [2019-03-03 20:47:07 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [A45BDA64-B10B-49F9-B2A8-DB7CFD58ABFE] [2019-03-03 20:47:07 GMT+08:00] Postgres conn state: ok
+[DEBUG] [EEB9CD33-16D8-43CA-B97D-F4F7E55CF8DA] [2019-03-03 20:47:07 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [5A13B2A9-E1EA-4458-BF84-6C84FFFA09EE] [2019-03-03 20:47:07 GMT+08:00] Error msg: 
+[INFO] [CA8F5808-FC3A-4724-BAFE-AB4A79443D9F] [2019-03-03 20:47:07 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [93FD6CD9-F605-4AE3-A752-5C17BD61B5BB] [2019-03-03 20:47:07 GMT+08:00] Postgres conn state: ok
+[DEBUG] [591F29DC-3980-461A-A3E9-ADF154579B03] [2019-03-03 20:47:07 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310027, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [D13197A8-DC8A-4265-9F02-66FCD3655A91] [2019-03-03 20:47:07 GMT+08:00] Error msg: 
+[INFO] [390CE80F-2A47-456B-B99A-2689F644DCDC] [2019-03-03 20:47:15 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [53174A7F-5086-4218-A056-0DD4DBD57935] [2019-03-03 20:47:15 GMT+08:00] Postgres conn state: ok
+[DEBUG] [8E8F8A74-3142-497A-9EA9-8367F28B66B3] [2019-03-03 20:47:15 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [6707FE33-EF35-4474-8364-A6A6A37DDC1A] [2019-03-03 20:47:15 GMT+08:00] Error msg: 
+[INFO] [E73507F4-CDD6-4587-A11A-C3F645C2CD88] [2019-03-03 20:47:15 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CEA04BA5-6B78-4C4C-8C32-BC36AB16F9B0] [2019-03-03 20:47:15 GMT+08:00] Postgres conn state: ok
+[DEBUG] [2223FBBE-3CC2-48DA-AA6C-0D4649491D09] [2019-03-03 20:47:15 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [2293CBF3-453D-413A-84B9-EB576DD664D7] [2019-03-03 20:47:15 GMT+08:00] Error msg: 
+[INFO] [D478F65C-1C73-4032-A73C-077ABA9AFB27] [2019-03-03 20:47:15 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0AE87921-E099-4AF4-9447-27AEA69272D2] [2019-03-03 20:47:15 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D7EE165C-DADA-40F6-96AF-BD0E6DBEEB00] [2019-03-03 20:47:15 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310035, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [3DE22617-2DEF-4D36-85B1-05FF0D855F8A] [2019-03-03 20:47:15 GMT+08:00] Error msg: 
+[INFO] [B3662EB8-B6B6-4DF1-AFA6-6102AE69FB2E] [2019-03-03 20:47:18 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [76B3BCE9-7D75-4BDE-85DA-8439A79CE366] [2019-03-03 20:47:18 GMT+08:00] Postgres conn state: ok
+[DEBUG] [6F75E6A3-D664-4C24-8B50-443221F280B8] [2019-03-03 20:47:18 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [D6627E6C-132D-45A0-A173-6DCCF74B0042] [2019-03-03 20:47:18 GMT+08:00] Error msg: 
+[INFO] [9F591226-106C-4D3A-BE51-F7ACE464CFE1] [2019-03-03 20:47:18 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D8633D18-4B5E-404C-90D3-89C82788BBD7] [2019-03-03 20:47:18 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D86E7139-CE08-4E40-8B3C-178EF1C2E2C9] [2019-03-03 20:47:18 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [9EE49A7A-F94F-4285-932E-6462307FBA17] [2019-03-03 20:47:18 GMT+08:00] Error msg: 
+[INFO] [E1DAD3EA-8F8C-4B61-B98C-FEDAEF467F8B] [2019-03-03 20:47:18 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [A6539700-E44C-4691-922A-6F4F3325E4C4] [2019-03-03 20:47:18 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5EE5B538-BD23-42B4-B8F0-F2B54D13BDE2] [2019-03-03 20:47:18 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310038, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [5D3218A5-30D8-4D98-834D-3A63C896D532] [2019-03-03 20:47:18 GMT+08:00] Error msg: 
+[INFO] [D5F12623-F2FD-4B25-8F2B-EAC145ED4EB0] [2019-03-03 20:47:21 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [3CC30AA3-9AFA-439C-A196-2593881EA792] [2019-03-03 20:47:21 GMT+08:00] Postgres conn state: ok
+[DEBUG] [22E535A0-9DD7-4833-8071-5ED3DC9CC8E4] [2019-03-03 20:47:21 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [F3AEBA91-1C77-4965-B77C-61005F74074C] [2019-03-03 20:47:21 GMT+08:00] Error msg: 
+[INFO] [62F87C88-1E75-4211-92D5-B557BE2A4B77] [2019-03-03 20:47:21 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [E883EAA9-A21F-41B6-A72E-73C60C76828E] [2019-03-03 20:47:21 GMT+08:00] Postgres conn state: ok
+[DEBUG] [2301ED67-FF78-4ABA-A80C-B25EEF0CB577] [2019-03-03 20:47:21 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [A3990542-B027-4DF0-8FA1-68876C8A3FF1] [2019-03-03 20:47:21 GMT+08:00] Error msg: 
+[INFO] [23B5828D-14B0-4FBC-880B-FBACA990C270] [2019-03-03 20:47:21 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [A705CAC1-720B-4CE2-A343-7824CA7F63E0] [2019-03-03 20:47:21 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A44B5203-CDD3-4D70-8887-5D26D32F5500] [2019-03-03 20:47:21 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310041, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [19443837-E0A1-437F-BDF1-BA24FCBFB3D1] [2019-03-03 20:47:21 GMT+08:00] Error msg: 
+[INFO] [69BDF238-7166-4EC1-A94B-4B7761489233] [2019-03-03 20:47:43 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [03F23313-39AC-485F-A0F3-AFD06D5FBB57] [2019-03-03 20:47:43 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E7CE4FF5-44DC-4FC0-A89A-86106A5ED138] [2019-03-03 20:47:43 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [ACAB9545-5C40-4CF7-B4E3-F47FF991815D] [2019-03-03 20:47:43 GMT+08:00] Error msg: 
+[INFO] [185982C5-006F-4D6E-9133-00755670B549] [2019-03-03 20:47:43 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D4102AA3-6E9B-47F5-8780-D94582FEF374] [2019-03-03 20:47:43 GMT+08:00] Postgres conn state: ok
+[DEBUG] [2B91413B-3D53-4E60-BB13-F7F4E35C0EF2] [2019-03-03 20:47:43 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [FED83D99-5220-4047-A53A-5B3D7B8C4F65] [2019-03-03 20:47:43 GMT+08:00] Error msg: 
+[INFO] [2E3390C9-B68B-476C-B3FB-D5B69A70A7FB] [2019-03-03 20:47:43 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CA6B3CBA-E1FB-4E46-A5F7-B1BBACA76B4E] [2019-03-03 20:47:43 GMT+08:00] Postgres conn state: ok
+[DEBUG] [408BB15B-010C-4057-B38C-E6675B6CB6E2] [2019-03-03 20:47:43 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310063, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [D0BB71B4-AC01-4216-AFBD-AE606420BBDB] [2019-03-03 20:47:43 GMT+08:00] Error msg: 
+[INFO] [83311A2F-34BA-4162-BD4B-B2CF2725D7A0] [2019-03-03 20:47:53 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D6927053-0784-47C6-8767-16BDA3547780] [2019-03-03 20:47:53 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F7EB9FE9-D52A-4229-B5B6-1465ECD4B5DE] [2019-03-03 20:47:53 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [36093EE1-6B7C-4C7A-998F-B6EE1C1C3B88] [2019-03-03 20:47:53 GMT+08:00] Error msg: 
+[INFO] [A09168E6-DFD7-4FBB-99A2-4DA13ECFB335] [2019-03-03 20:47:53 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [26A88CAC-B756-4103-990E-1EF8C4BE6EF3] [2019-03-03 20:47:53 GMT+08:00] Postgres conn state: ok
+[DEBUG] [8CE50EB2-D043-446C-ACE6-D35847865D1A] [2019-03-03 20:47:53 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [70F005FC-091A-4D58-9673-A2B76B60F764] [2019-03-03 20:47:53 GMT+08:00] Error msg: 
+[INFO] [1C0A9523-38F5-42F2-B879-06EA80FA92F4] [2019-03-03 20:47:53 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [C14733EF-3147-48BD-ACDB-D6B640764445] [2019-03-03 20:47:53 GMT+08:00] Postgres conn state: ok
+[DEBUG] [77CA7B26-8F81-4B70-93D3-46E74AD23146] [2019-03-03 20:47:53 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310073, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [DAB2E8BC-4077-4277-BE48-DE00F27CF729] [2019-03-03 20:47:53 GMT+08:00] Error msg: 
+[INFO] [E9D50640-6964-42CF-B859-A22C8ADDFB7B] [2019-03-03 20:47:53 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [DF33F0E4-BB1C-4214-A968-CA89E1500467] [2019-03-03 20:47:53 GMT+08:00] Postgres conn state: ok
+[DEBUG] [864607BC-76FA-42C3-AA7F-51606703F5E9] [2019-03-03 20:47:53 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [B871B78D-600F-4FF9-ABA1-5BC9AF3270C4] [2019-03-03 20:47:53 GMT+08:00] Error msg: 
+[INFO] [3E90CFC5-0EAD-4217-BBE2-888E01D5ED96] [2019-03-03 20:47:53 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [C6066DD5-BD41-4B04-9D55-FDB5AB22760A] [2019-03-03 20:47:53 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E2C9F955-1296-41F1-869F-B91327E611D9] [2019-03-03 20:47:53 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user001
+[INFO] [DF1CEDAB-7FE0-4DEF-8BB6-E49C68ED037E] [2019-03-03 20:47:53 GMT+08:00] Error msg: 
+[INFO] [6E8C5A57-EB4B-410D-A2A8-233462701C5D] [2019-03-03 20:48:04 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [2BB2E982-599F-40AA-B051-8ABA35DCDF30] [2019-03-03 20:48:04 GMT+08:00] Postgres conn state: ok
+[DEBUG] [51E979FF-A0C5-4F98-9A7C-364790232D92] [2019-03-03 20:48:04 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [1B9ECF16-36C6-4EDF-A0D7-8F46DD8A01DB] [2019-03-03 20:48:04 GMT+08:00] Error msg: 
+[INFO] [3E4256A4-BB30-4E75-ABA3-8E54C5C6123E] [2019-03-03 20:48:04 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [FB872C4A-7A02-4932-947D-5D582F587453] [2019-03-03 20:48:04 GMT+08:00] Postgres conn state: ok
+[DEBUG] [CB197845-DB69-4065-9984-2016852E5FCB] [2019-03-03 20:48:04 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [72C98A36-FA13-4662-B7FE-6C7E1705A99C] [2019-03-03 20:48:04 GMT+08:00] Error msg: 
+[INFO] [DA899F12-E6D2-4A35-A707-159D2182C789] [2019-03-03 20:48:04 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [321CAEE1-0774-4830-A6CF-3561C638A90E] [2019-03-03 20:48:04 GMT+08:00] Postgres conn state: ok
+[DEBUG] [38E36D62-5AE3-4935-96AD-D310F1F1CD7B] [2019-03-03 20:48:04 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310084, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [B460DBB2-15CF-4945-A812-1FCDE7E99AF4] [2019-03-03 20:48:04 GMT+08:00] Error msg: 
+[INFO] [B3F00994-CAE8-423D-9012-4D842AD94094] [2019-03-03 20:48:04 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [53801C26-3BFA-48AC-90AC-89C0BB187BD5] [2019-03-03 20:48:04 GMT+08:00] Postgres conn state: ok
+[DEBUG] [0E55755F-AB16-4C04-86BA-14BCD5CADAB3] [2019-03-03 20:48:04 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [D7DA0104-9281-4D97-A4C8-EA1F59E2CC69] [2019-03-03 20:48:04 GMT+08:00] Error msg: 
+[INFO] [DB8E6105-F488-4E1A-B348-3A77E46ABA9E] [2019-03-03 20:48:04 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [C2DD576A-C795-481F-84DF-E0074785DF32] [2019-03-03 20:48:04 GMT+08:00] Postgres conn state: ok
+[DEBUG] [14D9B726-BFC7-4F56-ABE6-0843BCB3B306] [2019-03-03 20:48:04 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user001
+[INFO] [FECB0357-92B3-4208-8453-05337E16BCA5] [2019-03-03 20:48:04 GMT+08:00] Error msg: 
+[INFO] [133E1130-5EAE-4E61-9B0E-98F9D03BCEFD] [2019-03-03 20:50:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [BE531965-182E-4904-A4E6-CDFAFFCA554A] [2019-03-03 20:50:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [06D055F0-1B22-452F-9174-BCC3290ECCF1] [2019-03-03 20:50:20 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [A5116949-EB0B-4D7E-A294-752EFED63EA8] [2019-03-03 20:50:20 GMT+08:00] Error msg: 
+[INFO] [5EF12691-25A4-467F-8D8B-E8BA0FB3FF30] [2019-03-03 20:50:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [4910FCFE-F2E3-4782-9AEB-04A21562AABF] [2019-03-03 20:50:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [CFBEEC5A-FE3F-4C61-B65A-4D97C595D25A] [2019-03-03 20:50:20 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [A7DCAD9B-4EDC-49EA-807C-03D16F2C148D] [2019-03-03 20:50:20 GMT+08:00] Error msg: 
+[INFO] [03C677E5-F1ED-4BF7-B3DD-1D7303E3EA6F] [2019-03-03 20:50:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [7B858C5F-0068-4B6A-881F-BA4AC0FB472A] [2019-03-03 20:50:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E0D87A45-99F7-4853-A37C-59895CD1AF96] [2019-03-03 20:50:20 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310220, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [424F86AE-BCB7-4D41-9375-BAA67D3BBD5C] [2019-03-03 20:50:20 GMT+08:00] Error msg: 
+[INFO] [B0D7B1BD-6BA1-412D-B160-CA3A2B428940] [2019-03-03 20:50:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [54F4109F-E4BA-4AED-9B60-A9D5FE8F2468] [2019-03-03 20:50:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [3CBFC519-BE24-4816-AF66-B12FDA650F9E] [2019-03-03 20:50:20 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [85AC28EF-E5BE-4540-BA2F-0B384FE30991] [2019-03-03 20:50:20 GMT+08:00] Error msg: 
+[INFO] [88E47803-3553-4EC6-BD68-A0670CDF0EDA] [2019-03-03 20:50:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [FA820015-B4CE-4F60-B225-B7EBF2B7893C] [2019-03-03 20:50:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [FE5D60F9-7DFD-41C7-AA31-DF05262B4312] [2019-03-03 20:50:20 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user001
+[INFO] [EA5BCD9E-E90C-4CFA-A476-5F48BAAE897D] [2019-03-03 20:50:20 GMT+08:00] Error msg: 
+[INFO] [6728AF2B-541F-4583-95FF-D48E4BD1EB6A] [2019-03-03 21:00:33 GMT+08:00] Running setup: test
+[INFO] [1B5D7E22-F510-454C-879A-3C343DC50CF9] [2019-03-03 21:00:33 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [8073FD49-B2CE-4E46-85B9-C741A0118C14] [2019-03-03 21:00:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [161D5254-9706-40FD-9CCC-CD75AB6AEE1C] [2019-03-03 21:00:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [22AD3EE3-47B3-4CE6-A901-B4B5EAD48B61] [2019-03-03 21:00:33 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [0DECFB0C-42D6-41B0-AE52-DE5857D4306E] [2019-03-03 21:00:33 GMT+08:00] Error msg: 
+[INFO] [E1B59102-64F8-4A52-A5E9-979DC48584CA] [2019-03-03 21:00:33 GMT+08:00] Running setup: users
+[INFO] [D08869DC-A2DF-4232-845B-4C940D670A1D] [2019-03-03 21:00:33 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [886DE479-9A6C-4F73-8942-F0E72A5EE53D] [2019-03-03 21:00:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [EBBBB2D5-9BDD-4DC7-BDEF-05793E5E60FE] [2019-03-03 21:00:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [96EA2B6C-FA7F-4A38-BC1B-90C3779896F7] [2019-03-03 21:00:33 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [F7FFA974-BB82-4B7A-9890-2EA1012DC029] [2019-03-03 21:00:33 GMT+08:00] Error msg: 
+[INFO] [73BCA1DD-DAC5-4C69-A733-084BE4BE2E17] [2019-03-03 21:00:33 GMT+08:00] Running setup: tokens
+[INFO] [CEA1D7F4-4FE5-4C0B-ABB7-11922776FAEC] [2019-03-03 21:00:33 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [FBF7F173-40D3-4CE9-801B-C1B738D72B95] [2019-03-03 21:00:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [9F54A21E-5A7E-4382-A8C8-6BB120EC8B0B] [2019-03-03 21:00:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [33116790-78DB-4AD7-946D-F17BE3C270C3] [2019-03-03 21:00:33 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [993555BA-07FB-4398-B86C-9FAFA11E2E3D] [2019-03-03 21:00:33 GMT+08:00] Error msg: 
+[INFO] [56C795C4-C865-4BE0-8582-4D9FD41138A7] [2019-03-03 21:00:33 GMT+08:00] Running setup: account
+[INFO] [4FDA524B-AB06-4CBB-B845-270111F930BD] [2019-03-03 21:00:33 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [A251AA1E-2CEE-4BCC-B410-A2CBE614A707] [2019-03-03 21:00:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [6A2EA918-A27D-4FDA-9EB4-D1652C6F927D] [2019-03-03 21:00:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C848D5A7-A029-4E26-9C26-03B0682A8335] [2019-03-03 21:00:33 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [FBCA1961-C087-4539-9AE7-F2669E9FEAD9] [2019-03-03 21:00:33 GMT+08:00] Error msg: 
+[INFO] [B1D8E074-CDA3-4A89-8770-5FBBE2B9A5CB] [2019-03-03 21:00:37 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [6A9D5282-E038-41A0-B325-F051CE2CA5D0] [2019-03-03 21:00:38 GMT+08:00] Postgres conn state: ok
+[DEBUG] [DAA60D27-CB0B-4279-93D6-38D7DFF6E7C4] [2019-03-03 21:00:38 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [F077F9BD-7DC6-4008-AAE0-C0A975267F5F] [2019-03-03 21:00:38 GMT+08:00] Error msg: 
+[INFO] [A944D4F1-DD7F-496F-BD1F-32004AE50809] [2019-03-03 21:00:38 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [EFEF7123-EA7D-4732-8CAE-098621F787B3] [2019-03-03 21:00:38 GMT+08:00] Postgres conn state: ok
+[DEBUG] [303A6916-B64C-4689-9BAC-9CF20348F5BE] [2019-03-03 21:00:38 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [0CCD9F78-BAAF-4F12-AEAD-CC574B9EFC46] [2019-03-03 21:00:38 GMT+08:00] Error msg: 
+[INFO] [5F0855CE-67C2-4A16-843E-4FE5D68DFEAF] [2019-03-03 21:00:38 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [1B9F7F2B-C286-43B0-8A59-C17DB897AB9B] [2019-03-03 21:00:38 GMT+08:00] Postgres conn state: ok
+[DEBUG] [21D5EFD5-D489-4746-9096-E3C15FEBFA59] [2019-03-03 21:00:38 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310838, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [CC115C72-FEAA-4692-B538-48CE1F517200] [2019-03-03 21:00:38 GMT+08:00] Error msg: 
+[INFO] [9239E1D3-B4FC-4369-A0F1-4A221F04694A] [2019-03-03 21:00:38 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [2E416856-9660-45E7-90E4-776E6CCFA1C2] [2019-03-03 21:00:38 GMT+08:00] Postgres conn state: ok
+[DEBUG] [93BE2B85-9757-46B6-80CB-4C89F7C8020A] [2019-03-03 21:00:38 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user001
+[INFO] [C8BF7462-4B7F-4B30-850D-B7AF54923A35] [2019-03-03 21:00:38 GMT+08:00] Error msg: 
+[INFO] [49998F4C-DDB5-4F36-91C2-533FF7D2F202] [2019-03-03 21:00:38 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [7FA1E64C-2A4A-471C-A8FA-C76E960620EF] [2019-03-03 21:00:38 GMT+08:00] Postgres conn state: ok
+[DEBUG] [54A2A6F0-3147-47FA-9CF8-FB96E0F694EA] [2019-03-03 21:00:38 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user001
+[INFO] [C81ABF10-0BA6-41C2-9BBE-2A1926FF74D6] [2019-03-03 21:00:38 GMT+08:00] Error msg: 
+[INFO] [6579D1FD-C5F5-4AE2-B86B-3F3722E80456] [2019-03-03 21:00:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [DFD9E533-37F9-4C25-B227-8F6D68D0216C] [2019-03-03 21:00:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B7CA25DB-5F36-4CC9-BBE9-D602BA84BA35] [2019-03-03 21:00:50 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [389A98B0-1774-43B9-B0AE-6820FAAD09E1] [2019-03-03 21:00:50 GMT+08:00] Error msg: 
+[INFO] [A943EEAD-0B48-4CB9-9ED6-72E99026F395] [2019-03-03 21:00:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CD08679D-0C3A-4C89-9EE7-A81DE57F00A1] [2019-03-03 21:00:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [65887810-57CD-4BD9-A193-5FC02F0DE9FD] [2019-03-03 21:00:50 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [7FB3237F-7828-4427-80E8-75BFBE9F4AEE] [2019-03-03 21:00:50 GMT+08:00] Error msg: 
+[INFO] [56769862-5C0B-4029-AD26-0651027D3BD6] [2019-03-03 21:00:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [5B441E4D-E9E8-41CE-A75A-ECC5EBB6B40F] [2019-03-03 21:00:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [91B7E701-9614-4A91-883E-F0615B5D4D70] [2019-03-03 21:00:50 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : VPhFe14gDwVBbeUNGv25Hg, 573309947, 573310850, 315360000, 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [38DFCF24-8CF2-40F7-812E-CC7AD1909006] [2019-03-03 21:00:50 GMT+08:00] Error msg: 
+[INFO] [26A15C49-3C3A-471E-B815-CC50D92B74AA] [2019-03-03 21:00:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [46DFBE95-A126-4124-BB2F-647B14023031] [2019-03-03 21:00:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C134C8B9-83D6-4DEF-AC29-AD59E64F5DB6] [2019-03-03 21:00:50 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user007
+[INFO] [883C8831-089B-4195-8EC4-65BEE7993C39] [2019-03-03 21:00:50 GMT+08:00] Error msg: 
+[INFO] [39D33486-9359-4493-80D2-8EC862786A4E] [2019-03-03 21:00:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [357ACBF7-797C-4235-8453-9BB1C8764780] [2019-03-03 21:00:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A8F84A14-01DA-42D3-8CE3-E07158E9EC68] [2019-03-03 21:00:50 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user007
+[INFO] [B69A1F2A-0C01-46EA-83E1-7D347F94E95C] [2019-03-03 21:00:50 GMT+08:00] Error msg: 
+[INFO] [26CEFE6A-8A64-4F5E-AA1D-8CB53F016390] [2019-03-03 21:00:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [440CCE78-8716-4344-A7A4-7276E061B12E] [2019-03-03 21:00:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B51E6F01-5A67-4272-90FD-ED5270E9BBE9] [2019-03-03 21:00:50 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : n4xNLJZ894huWJG5mD1htw, f03DlIsHDBMeO-OmnGmamQ, 573310850, 573310850, 315360000
+[INFO] [53ADA0B7-C33F-46BF-9B1B-522655804DDB] [2019-03-03 21:00:50 GMT+08:00] Error msg: 
+[INFO] [45D3D4EB-E5CE-469D-9794-17B5F7E3D909] [2019-03-03 21:00:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [19A3B1F7-CECA-4A7E-A711-33FADA21E893] [2019-03-03 21:00:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F4C3CD14-59F3-4EDF-B01C-CEDE50350DFD] [2019-03-03 21:00:50 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : f03DlIsHDBMeO-OmnGmamQ
+[INFO] [327C5EE3-46E0-476D-9EB2-98F2ED512F70] [2019-03-03 21:00:50 GMT+08:00] Error msg: 
+[INFO] [BED4256F-F22D-45E6-9E96-4E80C9B916A7] [2019-03-03 21:00:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [02C4BA1E-7B73-496D-9D7F-D443DCBA7D07] [2019-03-03 21:00:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [DCA6FCE0-6365-4E2E-998E-32E3A32FE178] [2019-03-03 21:00:50 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender" FROM users  WHERE uniqueid = $1  ORDER BY id LIMIT 50 : f03DlIsHDBMeO-OmnGmamQ
+[INFO] [2FCE2551-4D2D-4ED0-B86B-B5952F0C58A7] [2019-03-03 21:00:50 GMT+08:00] Error msg: 
+[INFO] [D4E67EA1-8071-4C1D-B363-D1A42B42B43A] [2019-03-03 21:03:39 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [4533B9D3-3930-42CA-8F61-D190CB92498A] [2019-03-03 21:03:39 GMT+08:00] Postgres conn state: ok
+[DEBUG] [12056704-8534-449F-9ACD-56AC4C44D9C9] [2019-03-03 21:03:39 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : 0HSy0nasrOsoOwlabSlIEQ
+[INFO] [12B8051B-B0CA-4A67-BB68-5631E321F4F1] [2019-03-03 21:03:39 GMT+08:00] Error msg: 
+[INFO] [EC5B0456-C3FA-4B37-BF69-153A347BD13F] [2019-03-03 21:03:39 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [86BD10DF-46CC-41DA-BA60-230F370A80CB] [2019-03-03 21:03:39 GMT+08:00] Postgres conn state: ok
+[DEBUG] [86122C88-B727-41E2-BB76-43CF9767DACF] [2019-03-03 21:03:39 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : f03DlIsHDBMeO-OmnGmamQ, 573310850, 573311019, 315360000, n4xNLJZ894huWJG5mD1htw
+[INFO] [344CCA79-421C-47B0-B38F-0180388DAAF1] [2019-03-03 21:03:39 GMT+08:00] Error msg: 
+[INFO] [96D2EF34-1BDF-400C-A46A-1FC7BFB56E08] [2019-03-03 21:05:02 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [6AD18452-BD36-4A9B-8B34-394FD9A2E38B] [2019-03-03 21:05:02 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7D12A0D0-6DAF-49D9-A921-21C9D63EE4B7] [2019-03-03 21:05:02 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user007
+[INFO] [27DAADA9-900A-4393-B0D2-62528BD6BACE] [2019-03-03 21:05:02 GMT+08:00] Error msg: 
+[INFO] [3CD7C684-2FC2-489F-B39B-C4824DA2A37C] [2019-03-03 21:05:02 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [668C987B-9E7B-4E06-8A02-C146922ED74F] [2019-03-03 21:05:02 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E0135152-09E6-473B-9C02-541933882957] [2019-03-03 21:05:02 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password" FROM account  WHERE username = $1  LIMIT 1 : user007
+[INFO] [0E587D49-E3BB-4EAD-93BA-66741B00B5BF] [2019-03-03 21:05:02 GMT+08:00] Error msg: 
+[INFO] [9943506D-2DAE-4914-92A1-9BAF82181849] [2019-03-03 21:05:02 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [CDB5586A-8B24-4756-AE87-B28386BC43A9] [2019-03-03 21:05:02 GMT+08:00] Postgres conn state: ok
+[DEBUG] [57994B66-9F23-44B9-96EB-D634BB6DC178] [2019-03-03 21:05:02 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : gWOt_vpVLPiAfayOCKFRbA, f03DlIsHDBMeO-OmnGmamQ, 573311102, 573311102, 315360000
+[INFO] [8048B2DC-A0BB-4AC1-A922-143115874D46] [2019-03-03 21:05:02 GMT+08:00] Error msg: 
+[INFO] [83EAFFC9-2DA7-4404-87B0-AAF20A8C6441] [2019-03-03 21:05:02 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0F1D4B2B-0CB7-4C1A-B358-208916B76FD9] [2019-03-03 21:05:02 GMT+08:00] Postgres conn state: ok
+[DEBUG] [AE6CF2D3-4919-4C92-9188-36C9C6C943D5] [2019-03-03 21:05:02 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : f03DlIsHDBMeO-OmnGmamQ
+[INFO] [EAB5475C-FE90-4035-BFB0-D20DBCFF6328] [2019-03-03 21:05:02 GMT+08:00] Error msg: 
+[INFO] [4D32CD45-8FCA-4C6F-B85D-2E4F0DE36E88] [2019-03-03 21:05:02 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [D69736B2-7B66-4BB5-B1E1-989B6377DC95] [2019-03-03 21:05:02 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E621A999-1E8C-41F8-9DF3-9623729A68D1] [2019-03-03 21:05:02 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender" FROM users  WHERE uniqueid = $1  ORDER BY id LIMIT 50 : f03DlIsHDBMeO-OmnGmamQ
+[INFO] [A8DADDC2-A8C5-4371-A5C8-30F45DD8ACB5] [2019-03-03 21:05:02 GMT+08:00] Error msg: 
+[INFO] [7B484654-0411-4CE6-B066-9EEC1347327F] [2019-03-03 21:20:08 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [6C3A2967-4B4A-41DD-93E2-D425EE8DE2A6] [2019-03-03 21:20:08 GMT+08:00] Postgres conn state: ok
+[DEBUG] [6A1FE0AD-F02D-4E07-86B0-E6A0B2AD2197] [2019-03-03 21:20:08 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : gWOt_vpVLPiAfayOCKFRbA
+[INFO] [3A4C4C43-F394-4E6B-9965-DCDDF1CC512B] [2019-03-03 21:20:08 GMT+08:00] Error msg: 
+[INFO] [4241313D-B0D4-4F3C-B01B-756E0392ED2D] [2019-03-03 21:20:08 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [90460C25-FECC-4834-8C8D-B8BBED847E90] [2019-03-03 21:20:08 GMT+08:00] Postgres conn state: ok
+[DEBUG] [0B1752B9-D2BD-4828-896F-B14CFB9A43C9] [2019-03-03 21:20:08 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : gWOt_vpVLPiAfayOCKFRbA
+[INFO] [29C5ED1D-157C-49A9-9A77-865C3A00ABC2] [2019-03-03 21:20:08 GMT+08:00] Error msg: 
+[INFO] [FA5492B5-F166-46C8-9A3D-AE80166FFCBE] [2019-03-03 21:20:08 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [75287FAD-3C1F-4AF0-954B-A7A8157552BF] [2019-03-03 21:20:08 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A2588B84-A464-456A-B0AA-CDE69BE6A6A6] [2019-03-03 21:20:08 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : f03DlIsHDBMeO-OmnGmamQ, 573311102, 573312008, 315360000, gWOt_vpVLPiAfayOCKFRbA
+[INFO] [1E716099-59D7-4437-BB37-AB1B82A3320F] [2019-03-03 21:20:08 GMT+08:00] Error msg: 
+[INFO] [1DC8C9DF-678D-4400-864A-24F12E8E3CDA] [2019-03-03 21:20:39 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [174B902A-EBAA-4C11-81EF-864C5314F5F5] [2019-03-03 21:20:39 GMT+08:00] Postgres conn state: ok
+[DEBUG] [614B04B6-AFCF-436D-95A0-36990DE277FC] [2019-03-03 21:20:39 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : gWOtvpVLPiAfayOCKFRbA
+[INFO] [406AD91A-5FBB-4CC8-A84F-DAF8863DA0F6] [2019-03-03 21:20:39 GMT+08:00] Error msg: 
+[INFO] [546F8974-B403-4E2F-A006-A187FF28408F] [2019-03-03 21:20:39 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [E249F77D-628A-4F9D-A9E2-7BD7EE9321DB] [2019-03-03 21:20:39 GMT+08:00] Postgres conn state: ok
+[DEBUG] [CA3E2098-3DAD-4B79-8087-9AF6739689A4] [2019-03-03 21:20:39 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : f03DlIsHDBMeO-OmnGmamQ, 573311102, 573312039, 315360000, gWOt_vpVLPiAfayOCKFRbA
+[INFO] [56ED3FE7-1743-4494-AC0F-D37A549096C5] [2019-03-03 21:20:39 GMT+08:00] Error msg: 
+[INFO] [08FA494A-F93A-43C6-A046-60ACF0FA51F4] [2019-03-03 21:21:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [775AB22E-0952-46E0-86D2-DD7602B00E91] [2019-03-03 21:21:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [070CEEE6-059D-4397-986E-D31D10D4568A] [2019-03-03 21:21:31 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : gWOtv22pVLPiAfayOCKFRbA
+[INFO] [1DE9AA85-D09F-4A27-83CE-D2FE48CD95CE] [2019-03-03 21:21:31 GMT+08:00] Error msg: 
+[INFO] [8DC113FD-1CF8-4104-9151-9A0B29C0457C] [2019-03-03 21:21:31 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [F82A76D4-BB8B-41D2-914A-C6A9EA2C065E] [2019-03-03 21:21:31 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C0E1DC38-2DE6-4638-BA7A-E6C26BC7330E] [2019-03-03 21:21:31 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : f03DlIsHDBMeO-OmnGmamQ, 573311102, 573312091, 315360000, gWOt_vpVLPiAfayOCKFRbA
+[INFO] [85BC7D7E-1A31-4328-9214-7C15F243AFBF] [2019-03-03 21:21:31 GMT+08:00] Error msg: 
+[INFO] [CE1383FC-C974-4EC1-9103-6D1006F4E251] [2019-03-03 21:24:26 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [7B80FF72-151C-4BB5-A8AE-35167C28886C] [2019-03-03 21:24:26 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D1308C7E-81C8-458C-A8AB-B6C337617EFC] [2019-03-03 21:24:26 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : gWOtv22pVLPiAfayOCKFRbA
+[INFO] [BF4114A5-93EA-4575-BFDE-B8ED5E8C704D] [2019-03-03 21:24:26 GMT+08:00] Error msg: 
+[INFO] [F9F097D7-0549-430B-8FD0-ED1DF2CD3DFB] [2019-03-03 21:25:52 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [9C6622F2-9AC6-4EF6-B8BA-5FD96383BEB3] [2019-03-03 21:25:52 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C346E991-4493-41E3-9235-D682EB016BC4] [2019-03-03 21:25:52 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : f03DlIsHDBMeO-OmnGmamQ, 573311102, 573312352, 315360000, gWOt_vpVLPiAfayOCKFRbA
+[INFO] [6810845E-2013-4966-990C-B9D7B51F0342] [2019-03-03 21:25:52 GMT+08:00] Error msg: 
+[INFO] [D2CCCF75-CA45-433C-ACE4-C3DDDB67EE4F] [2019-03-03 21:29:47 GMT+08:00] Running setup: test
+[INFO] [14205B63-0841-431E-AA0F-7529FF653935] [2019-03-03 21:29:47 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [60E24E7D-2E29-4B71-ABA8-4E1E261F3F0C] [2019-03-03 21:29:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [17992C24-3B21-4D6A-8F3D-953AF13F3AF3] [2019-03-03 21:29:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4CB545ED-410B-4ABC-8759-37A602D2A7A7] [2019-03-03 21:29:47 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [9291800F-5EAA-4751-87DB-B7294E5E37ED] [2019-03-03 21:29:47 GMT+08:00] Error msg: 
+[INFO] [CCE94731-9ADE-447E-8C36-48632EB6821E] [2019-03-03 21:29:47 GMT+08:00] Running setup: users
+[INFO] [58F122ED-79A7-4C14-84DF-68B42C82D1F9] [2019-03-03 21:29:47 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [8EC9C608-A44A-447F-A575-838F799A2C0D] [2019-03-03 21:29:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [6262355A-9556-42D2-A60D-98A42F53A85A] [2019-03-03 21:29:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7611C2BF-F3FE-460F-AA73-662CA4FF643C] [2019-03-03 21:29:47 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [9B85F0C7-9A76-47E0-B6C6-97E88CEA9E83] [2019-03-03 21:29:47 GMT+08:00] Error msg: 
+[INFO] [8E45438A-7219-4B3A-A433-711B046CDFEA] [2019-03-03 21:29:47 GMT+08:00] Running setup: tokens
+[INFO] [E739A6E0-56F5-4023-8B65-4F06F48BA413] [2019-03-03 21:29:47 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [66A0AAF2-A119-43DE-BBEA-183AC51E6F60] [2019-03-03 21:29:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [67CA3AA7-695F-4E94-B45A-8716E8DA3177] [2019-03-03 21:29:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [52518E58-7BB1-4F81-A7D0-BFF396964DBA] [2019-03-03 21:29:47 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [26A40DB5-44C8-46EF-912F-52575F03E280] [2019-03-03 21:29:47 GMT+08:00] Error msg: 
+[INFO] [BDFF4C2B-C0F7-4727-A33B-525D6403D70B] [2019-03-03 21:29:47 GMT+08:00] Running setup: account
+[INFO] [49BE63E6-7410-4F08-8DC0-EACF16EEB75C] [2019-03-03 21:29:47 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [63A59542-F02B-4403-B33F-D3CDE0948046] [2019-03-03 21:29:47 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [0A259082-9123-4E06-9120-BD2915A1B030] [2019-03-03 21:29:47 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F6B76F97-E0B9-4FB9-856E-CD0C8C78C6B9] [2019-03-03 21:29:47 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [44056C27-102B-4D6C-97FD-E8B406DB64C7] [2019-03-03 21:29:47 GMT+08:00] Error msg: 
+[INFO] [8E8FDFA4-F783-4004-B185-5C394C4642D5] [2019-03-03 21:30:16 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [4BD5F2BA-500E-44F1-AC65-2F51B958DB39] [2019-03-03 21:30:16 GMT+08:00] Postgres conn state: ok
+[DEBUG] [75573B18-13BE-412E-91DE-B891FCC4DA60] [2019-03-03 21:30:16 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : gWOtv22pVLPiAfayOCKFRbA
+[INFO] [43D5E13F-9F3E-42C2-A115-D3EE7EF4669E] [2019-03-03 21:30:16 GMT+08:00] Error msg: 
+[INFO] [62BE5B2E-3A11-40D3-99B6-C67C30024C1D] [2019-03-03 21:31:02 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [DDECA572-E789-490A-9E98-6EDFCC5B6036] [2019-03-03 21:31:02 GMT+08:00] Postgres conn state: ok
+[DEBUG] [9B52FEE0-FCE5-4FF6-BAB0-45ECFDFC8286] [2019-03-03 21:31:02 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : gWOtv22pVLPiAfayOCKFRbA
+[INFO] [F69E0717-586B-424F-BCAE-C60447229A48] [2019-03-03 21:31:02 GMT+08:00] Error msg: 
+[INFO] [772829F9-D4EA-4A2C-BE00-D034C7FCD6A5] [2019-03-03 21:31:15 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.4:5432/imserver
+[INFO] [F6113036-34FC-4425-B096-24593A8782C1] [2019-03-03 21:31:15 GMT+08:00] Postgres conn state: ok
+[DEBUG] [EDC7A24D-C73D-4D70-B1C8-8CD4871E0263] [2019-03-03 21:31:15 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : gWOtv22pVLPiAfayOCKFRbA
+[INFO] [8D6B8C23-B99E-43B8-8FA8-C6D542B4F284] [2019-03-03 21:31:15 GMT+08:00] Error msg: 

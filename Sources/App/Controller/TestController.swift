@@ -18,8 +18,8 @@ class TestController : BaseController {
         super.init()
         
         //MARK: - 路由
-        self.route.add(method: .post, uri: "\(baseRoute)/getpassword", handler: self.getPassword())
-        self.route.add(method: .get, uri: "\(baseRoute)/getpassword", handler: self.getPassword())
+        self.route.add(method: .post, uri: "\(baseRoute)/test/getpassword", handler: self.getPassword())
+        self.route.add(method: .get, uri: "\(baseRoute)/test/getpassword", handler: self.getPassword())
     }
 }
 
@@ -39,6 +39,7 @@ extension TestController {
                 }
                 response.callback(result)
             } catch {
+                print(error)
                 response.callback(ResultSet.serverError)
             }
         }

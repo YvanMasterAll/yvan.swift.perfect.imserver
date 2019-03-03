@@ -39,6 +39,26 @@ extension String {
         }
         return subs
     }
+    
+    /// 生成随机字母串
+    ///
+    /// - Parameter length: 字母串长度
+    /// - Returns: 字母串
+    static func randomLetters(_ length: Int) -> String {
+        var output = ""
+        for _ in 0..<length {
+            if (Util.randomNumber(min: 1, max: 2)) == 1 {
+                let rnumber = Util.randomNumber(min: 65, max: 90)
+                let randomChar = Character(UnicodeScalar(rnumber)!)
+                output.append(randomChar)
+            } else {
+                let rnumber = Util.randomNumber(min: 97, max: 122)
+                let randomChar = Character(UnicodeScalar(rnumber)!)
+                output.append(randomChar)
+            }
+        }
+        return output
+    }
 }
 
 

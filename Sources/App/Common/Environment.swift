@@ -6,6 +6,7 @@
 //
 
 import PostgresStORM
+import TurnstilePerfect
 
 struct Environment {
     
@@ -35,5 +36,10 @@ struct Environment {
     fileprivate static func initializeTables() {
         //MARK: - 测试模块
         try? TestModel.init().setup()
+        
+        //MARK: - 用户模块
+        try? User.init().setup()
+        try? BaseTokenStore().setup()
+        try? BaseAccount().setup()
     }
 }

@@ -6,23 +6,26 @@
 //
 
 import PerfectHTTP
+import TurnstilePerfect
 import PerfectRequestLogger
 
 //MARK: - 请求过滤器
-func baseRequestFilter() -> [(HTTPRequestFilter, HTTPFilterPriority)] {
+func baseRequestFilter(turnstile: TurnstilePerfect) -> [(HTTPRequestFilter, HTTPFilterPriority)] {
     var filter = [(HTTPRequestFilter, HTTPFilterPriority)]()
     //MARK: - 请求过滤器初始化
-    filter.append((basePreferredFilter(), .high))   //首要响应
+    filter.append(turnstile.requestFilter)          //请求认证
     filter.append((RequestLogger(), .high))         //请求日志
+    filter.append((basePreferredFilter(), .high))   //首要响应
     return filter
 }
 
 //MARK: - 响应过滤器
-func baseResponseFilter() -> [(HTTPResponseFilter, HTTPFilterPriority)] {
+func baseResponseFilter(turnstile: TurnstilePerfect) -> [(HTTPResponseFilter, HTTPFilterPriority)] {
     var filter = [(HTTPResponseFilter, HTTPFilterPriority)]()
     //MARK: - 响应过滤器初始化
-    filter.append((basePreferredFilter(), .high))   //首要响应
+    filter.append(turnstile.responseFilter)         //请求认证
     filter.append((RequestLogger(), .low))          //请求日志
+    filter.append((basePreferredFilter(), .high))   //首要响应
     
     return filter
 }

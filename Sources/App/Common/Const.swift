@@ -27,6 +27,9 @@ var baseURL        = "http://192.168.1.6:8181"
 var baseDomain     = ""
 var baseDocument   = "webroot"
 
+//MARK: - 用户信息
+let baseNickname = "用户"
+
 //MARK: - 枚举类型
 protocol BaseType { }
 public enum Gender: BaseType {      //性别
@@ -68,3 +71,8 @@ public enum Status {                //状态
     }
 }
 
+//MARK: - 异常类型
+public enum BaseError: Error {
+    
+    case invalidDigestString        //无效的加密字串
+}

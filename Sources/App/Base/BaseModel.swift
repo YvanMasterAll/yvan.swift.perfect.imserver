@@ -26,6 +26,12 @@ class BaseModel: PostgresStORM, BaseModelProtocol {
         super.init()
     }
     
+    override open func to(_ this: StORMRow) {
+        if let v = DateUtil.getDate(this.data["createtime"] as? String) { createtime  = v }
+        if let v = DateUtil.getDate(this.data["updatetime"] as? String) { updatetime  = v }
+        if let k = this.data["status"] as? String, let v = Status.init(k) { status = v }
+    }
+    
     public func _rows<T>(model: T) -> [T] where T: BaseModel {
         var rows = [T]()
         for i in 0..<model.results.rows.count {
