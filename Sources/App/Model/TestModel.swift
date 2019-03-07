@@ -36,7 +36,9 @@ extension TestModel {
     //MARK: -  获取密码
     public func getPassword(username: String) throws -> String? {
         let t = TestModel()
-        try t.find([("username", username)])
+        let params = ["username": username,
+                      "status": Status.normal.value]
+        try t.find(params)
         for row in t.rows() {
             return row.password
         }

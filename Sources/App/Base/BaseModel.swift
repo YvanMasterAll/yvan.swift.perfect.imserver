@@ -11,25 +11,11 @@ import PostgresStORM
 
 protocol BaseModelProtocol {
     
-    var createtime: Date    { get set }
-    var updatetime: Date    { get set }
-    var status:     Status  { get set }
 }
 class BaseModel: PostgresStORM, BaseModelProtocol {
     
-    //MARK: - 默认字段
-    var createtime: Date    = Date()
-    var updatetime: Date    = Date()
-    var status:     Status  = .normal
-    
     required override init() {
         super.init()
-    }
-    
-    override open func to(_ this: StORMRow) {
-        if let v = DateUtil.getDate(this.data["createtime"] as? String) { createtime  = v }
-        if let v = DateUtil.getDate(this.data["updatetime"] as? String) { updatetime  = v }
-        if let k = this.data["status"] as? String, let v = Status.init(k) { status = v }
     }
     
     public func _rows<T>(model: T) -> [T] where T: BaseModel {

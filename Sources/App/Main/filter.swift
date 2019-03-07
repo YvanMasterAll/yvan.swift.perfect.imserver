@@ -36,6 +36,16 @@ open class basePreferredFilter: HTTPRequestFilter, HTTPResponseFilter {
     public func filterHeaders(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> ()) {
         //MARK: - 响应头配置
         response.setHeader(.accessControlAllowOrigin, value: "*")
+//        //yTest
+//        response.addCookie(HTTPCookie(name: "TurnstileSession",
+//                                      value: "sSss7uyWmnj8aVPcL30A5A",
+//            //value: "VK_hyq9whMDLs8JWphRmWA",
+//            domain: nil,
+//            expires: .relativeSeconds(60*60*24*365),
+//            path: "/",
+//            secure: nil,
+//            httpOnly: true))
+        
         callback(.continue)
     }
     
@@ -46,8 +56,15 @@ open class basePreferredFilter: HTTPRequestFilter, HTTPResponseFilter {
     public func filter(request: HTTPRequest,
                        response: HTTPResponse,
                        callback: (HTTPRequestFilterResult) -> ()) {
-        //TODO: 请求预处理
-
+        //身份映射
+        if let uniqueID = request.user.authDetails?.account.uniqueID {
+            let user = User()
+            try? user.get(uniqueID: uniqueID)
+            request.scratchPad["userid"] = user.id
+        } else {
+            request.scratchPad.removeValue(forKey: "userid")
+        }
+        
         callback(.continue(request, response))
     }
 }

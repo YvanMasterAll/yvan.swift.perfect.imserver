@@ -17,16 +17,25 @@ import PerfectLib
 class BaseAccount : BaseModel, Account, JSONConvertible {
     
     /// The User account's Unique ID
-    public var uniqueID: String = ""
+    public var uniqueID         : String    = ""
     
     /// The username with which the user will log in with
-    public var username: String = ""
+    public var username         : String    = ""
     
     /// The password to be set for the user
-    public var password: String = ""
+    public var password         : String    = ""
     
     /// Internal container variable for the current Token object
-    public var internal_token: BaseTokenStore = BaseTokenStore()
+    public var internal_token   : BaseTokenStore = BaseTokenStore()
+    
+    // create time
+    public var createtime       : Date      = Date()
+    
+    // update time
+    public var updatetime       : Date      = Date()
+    
+    // account status
+    public var status           : Status    = .normal
     
     /// The table to store the data
     override open func table() -> String {

@@ -38,8 +38,11 @@ struct Environment {
         try? TestModel.init().setup()
         
         //MARK: - 用户模块
-        try? User.init().setup()
+        try? User().setup()
         try? BaseTokenStore().setup()
         try? BaseAccount().setup()
+        try? ChatDialog().setup()
+        try? ChatMessage().setup()
+        try? ChatParticipant().setup()
     }
 }

@@ -146,6 +146,15 @@
         }
       },
       {
+        "package": "PerfectWebSockets",
+        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-WebSockets.git",
+        "state": {
+          "branch": null,
+          "revision": "30df21244dfbdccd9d6ea09033fb6dc2b7a84ab4",
+          "version": "3.1.0"
+        }
+      },
+      {
         "package": "PerfectLib",
         "repositoryURL": "https://github.com/PerfectlySoft/PerfectLib.git",
         "state": {

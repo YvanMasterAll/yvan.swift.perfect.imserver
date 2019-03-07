@@ -54,6 +54,7 @@ struct ResultSet {
     
     static let requestIllegal  = Result.init(code: .requestIllegal)
     static let serverError     = Result.init(code: .serverError)
+    static let unknown         = Result.init(code: .unknown)
 }
 enum ResultCode: Int {
     
@@ -64,10 +65,14 @@ enum ResultCode: Int {
     case requestIllegal     = 401
     case failure            = 499
     case userExists         = 411
-    case signinFailure      = 412
+    case userNotExists      = 412
+    case signinFailure      = 413
     
     //MARK: - 500
     case serverError        = 500
+    
+    //MARK: - 900
+    case unknown            = 900
     
     func value() -> Int {
         return self.rawValue
@@ -81,9 +86,12 @@ enum ResultCode: Int {
         case .requestIllegal:   return "非法请求"
         case .failure:          return "请求失败"
         case .userExists:       return "用户已存在"
+        case .userNotExists:    return "用户不存在"
         case .signinFailure:    return "登陆失败"
         //MARK: - 500
         case .serverError:      return "服务器异常"
+        //MARK: - 900
+        case .unknown:          return "未知错误"
         }
     }
 }

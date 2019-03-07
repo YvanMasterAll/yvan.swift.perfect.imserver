@@ -15,7 +15,8 @@ let package = Package(
 		.package(url: "https://github.com/YvanMasterAll/SwiftValidators.git", from: "9.0.0"),
 		.package(url: "https://github.com/stormpath/Turnstile.git", from: "1.0.0"),
         .package(url: "https://github.com/PerfectlySoft/Perfect-Mustache.git", from: "3.0.2"),
-        .package(url: "https://github.com/YvanMasterAll/Turnstile-Perfect.git", from: "2.0.0")
+        .package(url: "https://github.com/YvanMasterAll/Turnstile-Perfect.git", from: "2.0.0"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-WebSockets.git", from: "3.1.0")
 	],
 	targets: [
 		.target(name: "App", dependencies: [
@@ -27,7 +28,8 @@ let package = Package(
 			"SwiftValidators",			//输入验证
 			"Turnstile",				//请求认证
 			"TurnstilePerfect",
-			"PerfectMustache"			//模板引擎
+			"PerfectMustache",			//模板引擎
+			"PerfectWebSockets"			//通信协议
 			]),
         .target(
             name: "Run",

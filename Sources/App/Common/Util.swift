@@ -94,9 +94,9 @@ public class TypeUtil {
     /// - Returns: 若传入对象非类型, 返回自身
     public static func value(_ type: Any) -> Any {
         switch type {
-        case let kType as Gender       : return kType.value
+        case let kType as BaseType     : return kType.value
         case let kType as Date         : return DateUtil.getString(from: kType)
-        default                         : return type
+        default                        : return type
         }
     }
 }

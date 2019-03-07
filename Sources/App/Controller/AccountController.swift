@@ -74,11 +74,11 @@ extension AccountController {
                 try request.user.register(credentials: credential)
                 //persist: true, 创建新的令牌, Token
                 try request.user.login(credentials: credential, persist: true)
-                guard let _ = request.user.authDetails?.account.uniqueID  else {
+                guard let _ = request.user.authDetails?.sessionID  else {
                     response.callback(ResultSet.serverError)
                     return
                 }
-                let identifier = (request.user.authDetails?.account.uniqueID)!
+                let identifier = (request.user.authDetails?.sessionID)!
                 let user = User()
                 let params = ["uniqueid": identifier]
                 try user.find(params)
