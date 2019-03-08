@@ -25,6 +25,10 @@ struct Result {
         self.code = code
         self.dataDict = data
     }
+    init(code: ResultCode, data: [[String: Any]]) {
+        self.code = code
+        self.dataDicts = data
+    }
     init(code: ResultCode, msg: String, data: [Any]) {
         self.code = code
         self.msg = msg
@@ -34,6 +38,11 @@ struct Result {
         self.code = code
         self.msg = msg
         self.dataDict = data
+    }
+    init(code: ResultCode, msg: String, data: [[String: Any]]) {
+        self.code = code
+        self.msg = msg
+        self.dataDicts = data
     }
     
     func toDict() -> [String: Any] {
@@ -45,10 +54,12 @@ struct Result {
         return dict
     }
     
-    fileprivate var code: ResultCode!
-    fileprivate var msg: String?
-    fileprivate var dataArray: [Any]?
-    fileprivate var dataDict: [String: Any]?
+    //MARK: - 私有成员
+    fileprivate var code        : ResultCode!
+    fileprivate var msg         : String?
+    fileprivate var dataArray   : [Any]?
+    fileprivate var dataDict    : [String: Any]?
+    fileprivate var dataDicts   : [[String: Any]]?
 }
 struct ResultSet {
     
