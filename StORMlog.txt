@@ -4599,3 +4599,737 @@ LINE 1: SELECT "chat_participant.id","chat_participant.dialogid","ch...
 [INFO] [BB009E6A-664B-4DF7-98AE-B54F50ABDCA2] [2019-03-07 22:10:46 GMT+08:00] Postgres conn state: ok
 [DEBUG] [B48F7717-F964-48B4-B9DC-46163DCF7730] [2019-03-07 22:10:46 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : UccaGp_bJBHPb2UeoPz9gw
 [INFO] [FD7A36C0-0115-48E2-9E08-130285F49544] [2019-03-07 22:10:46 GMT+08:00] Error msg: 
+[INFO] [F97AABD8-5058-47B2-B345-66549EE3141B] [2019-03-08 22:05:42 GMT+08:00] Running setup: test
+[INFO] [7D213876-0E14-47FA-9526-755BAE325F1B] [2019-03-08 22:05:42 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [AA5D95A3-C483-499C-8E4F-4AD1C00D072A] [2019-03-08 22:05:42 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [8E43001C-313A-4C01-BEF6-715B009B604B] [2019-03-08 22:05:42 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [A5DA5B40-692F-4FBE-AA83-7EFBAD3579BA] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [56BEA4A5-C191-4985-944C-E889C89C7553] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [5D51C19C-F2A0-4DA9-917D-AFACA8B781F3] [2019-03-08 22:05:42 GMT+08:00] Running setup: users
+[INFO] [FDFAE3A9-3A2A-40DD-9C0E-0A46581D320B] [2019-03-08 22:05:42 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [43F607E9-DBDE-4E9C-90E3-A6BAB150A33D] [2019-03-08 22:05:42 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [5BAF188B-4E32-4F91-BC75-A0164DB53C65] [2019-03-08 22:05:42 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [69640A5A-9F1D-4D6A-896B-EA39C120C5A9] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [97BF7D2C-6C2C-4460-9011-8044901D9F6D] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [88686BF4-DF99-4683-98D0-524E232D76C4] [2019-03-08 22:05:42 GMT+08:00] Running setup: tokens
+[INFO] [96CFE974-0110-4BC5-99E3-231C313BA5A1] [2019-03-08 22:05:42 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [8765EFA4-FE5C-4E3C-9493-147C7CD6BB45] [2019-03-08 22:05:42 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [9FD24688-A964-460B-84EF-A788C241D760] [2019-03-08 22:05:42 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [C73C9C5E-4BAE-4538-BB7F-21A965356BE5] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [F6614DC4-1DE0-4C30-BCEB-A3375197D809] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [FC40B551-49C9-4B2A-8D11-5D87DD03E88D] [2019-03-08 22:05:42 GMT+08:00] Running setup: account
+[INFO] [B6090C8A-C4A8-43B2-BEE6-109115921CC5] [2019-03-08 22:05:42 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [C95870BF-B630-4DF2-88D6-DED00A156292] [2019-03-08 22:05:42 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [BA70B4F5-419B-4705-BD7C-2AB1DF5CE1CE] [2019-03-08 22:05:42 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [DF5CB61F-0729-4B75-BED5-2E0EEADA908C] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [34784814-B47E-452B-A93D-7E9610E7048E] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [7EFC05D8-113C-49EB-9A95-44C7ACFB511B] [2019-03-08 22:05:42 GMT+08:00] Running setup: chat_dialog
+[INFO] [DBE5AB58-CCB3-46D5-B08E-485379140C9E] [2019-03-08 22:05:42 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [5D2C2724-57E5-47E5-AFAE-9005AAE77E61] [2019-03-08 22:05:42 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [F7B0EB62-23B8-427B-945B-52F35B155734] [2019-03-08 22:05:42 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [511D8FEC-D4CB-42B4-B8B6-5C7B1648AB48] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [17631150-474C-4F7C-94DF-7E8CC20B62D9] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [BB1C83C2-71AB-48E9-881D-A6BC1DE44C6A] [2019-03-08 22:05:42 GMT+08:00] Running setup: chat_message
+[INFO] [D35C2562-7CB0-48C9-9B8D-793893AA91E2] [2019-03-08 22:05:42 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [C4F503D9-3DE3-49F0-A245-FF5C28F436F7] [2019-03-08 22:05:42 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [04127763-36FE-4153-9253-251A5A4F91AE] [2019-03-08 22:05:42 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [FBE426B0-3F8A-4E6C-99D4-FC9457990ED4] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [EDE9A742-BF49-47AE-83B3-9739566ACA22] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [D9910546-3378-4278-BA4B-7DE216E3C0BB] [2019-03-08 22:05:42 GMT+08:00] Running setup: chat_participant
+[INFO] [2F629822-0052-49E9-816B-7FFB64588F84] [2019-03-08 22:05:42 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [27AB0091-DD8E-4327-A080-BB4799D9B0B4] [2019-03-08 22:05:42 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [4656F1FE-0D3F-49F4-AECE-00846F5A1C63] [2019-03-08 22:05:42 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [03CAA274-9C32-4675-A837-393183A5A3CC] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [95819382-EB1E-4630-8425-A20C95820E58] [2019-03-08 22:05:42 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [BB687C6D-1CF3-4566-9F55-7C9FE9FD46FF] [2019-03-08 22:15:55 GMT+08:00] Running setup: test
+[INFO] [611564DB-5EA0-44D5-A909-F2F81AE2FF92] [2019-03-08 22:15:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [A12304F2-337C-4626-BAC4-565A9C6AA638] [2019-03-08 22:15:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [E9654E5E-AF5F-4B14-89BA-F7166114BBAF] [2019-03-08 22:15:55 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [992219D3-E82B-4E59-9E23-8DA8FACB206F] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [0760846F-A492-4EBE-937B-34C654B4CD1B] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [6E3C8634-17C8-4D45-8DB1-469483526A3B] [2019-03-08 22:15:55 GMT+08:00] Running setup: users
+[INFO] [600D7BD3-D00F-4C69-AB71-9BE3971D0047] [2019-03-08 22:15:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [EC5C3AF5-270B-41DB-9FC0-277DBE840300] [2019-03-08 22:15:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [4DC06C99-BBF7-4CA6-B2FD-0503C41823E6] [2019-03-08 22:15:55 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [649215F7-BF68-4AF0-B387-EE0FA94C313E] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [8D1BC2A4-36D4-4195-A588-C189EB3241BB] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [941DE24B-EDC6-4199-B795-DDA651F06FEE] [2019-03-08 22:15:55 GMT+08:00] Running setup: tokens
+[INFO] [BCD581BB-1F69-460B-A0D2-C9291E9C4CAE] [2019-03-08 22:15:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [AEA6062E-7DCE-4FD7-B6D0-B06504E11A9F] [2019-03-08 22:15:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [795231C7-97A3-4660-A8C0-0227E6BC8EA1] [2019-03-08 22:15:55 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [C0E0B648-3242-4AF6-BE42-D61A0063E3E6] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [F969264A-BDEA-4DEA-8B2F-6C6647B9994B] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [481D51BA-2BD2-4438-A66A-6CD0745B50FF] [2019-03-08 22:15:55 GMT+08:00] Running setup: account
+[INFO] [410F516E-204D-4991-B18A-8EF2ACADAC5D] [2019-03-08 22:15:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [0B822B03-4A38-4BA3-A927-7844D0DB0059] [2019-03-08 22:15:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [357FE1FF-0476-4248-9AA3-B41461BEB276] [2019-03-08 22:15:55 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [97A61B1D-3C6D-433B-8BA7-2EE43698B1DF] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [F8748AA4-F431-4D57-85AF-EFD197DB20D8] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [975AAD3A-225C-4069-8E88-DFDE55545293] [2019-03-08 22:15:55 GMT+08:00] Running setup: chat_dialog
+[INFO] [55E59A10-4679-4607-9764-989183F5E84C] [2019-03-08 22:15:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [16B06693-1E5C-4F4F-8B4A-76EDFE9A30F7] [2019-03-08 22:15:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [ABC6F5AC-C066-4994-B5D5-AC3E05015B01] [2019-03-08 22:15:55 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [625EAEB4-485F-4192-9807-8BB8DCEC204F] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [05359F68-036A-4793-9ACC-14BA56EB2262] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [F9448B09-B884-480F-8747-B333B4336BE6] [2019-03-08 22:15:55 GMT+08:00] Running setup: chat_message
+[INFO] [5BF89546-B707-4A20-A08C-82F587A88272] [2019-03-08 22:15:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [A657BBB8-80FF-42B0-A74A-16EA93D3F5AE] [2019-03-08 22:15:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [5AED8CC1-7BC9-41A0-8E67-05DE34B5A350] [2019-03-08 22:15:55 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [9DDB4A68-7C3F-4D14-9C5A-74B9FB30ABBB] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [02711A83-4923-4299-8AE7-7834C8745D69] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [914F7B44-761D-4105-B1FC-3AF172FFBC49] [2019-03-08 22:15:55 GMT+08:00] Running setup: chat_participant
+[INFO] [5D98E533-378C-4362-8B06-17C4E45EAE69] [2019-03-08 22:15:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [BB926F7D-982C-4F95-B0DB-B0BD863CCDAA] [2019-03-08 22:15:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[ERROR] [7AB4B7BE-F2B4-4A50-8DE1-9F0CD629A930] [2019-03-08 22:15:55 GMT+08:00] Postgres conn error: could not connect to server: Connection refused
+	Is the server running on host "192.168.1.6" and accepting
+	TCP/IP connections on port 5432?
+
+[ERROR] [D6EB4A74-0451-4FEF-BDBA-3C06309C7521] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[ERROR] [D497F3AF-AB58-41AA-AA44-160DB00D97BA] [2019-03-08 22:15:55 GMT+08:00] Error msg: error("Connection Error")
+[INFO] [CBF619C9-FB35-4EA2-A734-0A6635F7E08E] [2019-03-08 22:33:05 GMT+08:00] Running setup: test
+[INFO] [D317C0A7-2CFF-4A2D-988A-912C4E53DEA4] [2019-03-08 22:33:05 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [87DCA040-024E-4E99-BFC0-C221070EF839] [2019-03-08 22:33:05 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [0FDAE345-4866-415A-86C4-869C0F7F438D] [2019-03-08 22:33:05 GMT+08:00] Postgres conn state: ok
+[DEBUG] [45F8368B-FB55-4CB2-B6D1-2FBCF4A74D50] [2019-03-08 22:33:05 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [81A9D893-3F5B-4CAB-88DB-B673B6C5815F] [2019-03-08 22:33:05 GMT+08:00] Error msg: 
+[INFO] [8B9392C3-ABD1-4E53-8B79-6B3EF2112BEC] [2019-03-08 22:33:05 GMT+08:00] Running setup: users
+[INFO] [FA4D9DD2-2115-4628-A54F-23B3212D903F] [2019-03-08 22:33:05 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [6628DF31-5D8D-4331-B97B-BADCA7EF74F4] [2019-03-08 22:33:05 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [B6FE6EB1-8AA4-433B-8B47-1B9A86AA91AC] [2019-03-08 22:33:06 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5663A50C-DD8A-43A9-ACF1-C742D8EE7D5A] [2019-03-08 22:33:06 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [AC4A4844-BE6B-412D-A084-1F72DB777282] [2019-03-08 22:33:06 GMT+08:00] Error msg: 
+[INFO] [AD72BA83-3DA6-4B99-94E0-14FFEAE4E7BA] [2019-03-08 22:33:06 GMT+08:00] Running setup: tokens
+[INFO] [164E6FFA-1E38-43ED-AC23-8B687D37FEC4] [2019-03-08 22:33:06 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [829740A8-7950-471D-BCEC-5BD1DEDDBE30] [2019-03-08 22:33:06 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [E5A174AE-E02E-4FBB-B8F6-54B7B4F1D8FE] [2019-03-08 22:33:06 GMT+08:00] Postgres conn state: ok
+[DEBUG] [0A253E57-BBA2-4C5E-82B5-54396B1AB88B] [2019-03-08 22:33:06 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [0ACFF762-9DE2-4F76-ACC8-A53D5A06C18E] [2019-03-08 22:33:06 GMT+08:00] Error msg: 
+[INFO] [6902049B-6DAA-4905-8BB8-7EF1C1F7DABD] [2019-03-08 22:33:06 GMT+08:00] Running setup: account
+[INFO] [766B7095-CC27-4405-9888-844119737492] [2019-03-08 22:33:06 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [A01C19D0-F604-4915-BD68-3C4E4737E870] [2019-03-08 22:33:06 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [8F4D6CEF-BCC8-433E-A41B-AFA8F578CC9F] [2019-03-08 22:33:06 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C9E87B9C-9220-4211-BE77-74853222ACF3] [2019-03-08 22:33:06 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [763675A5-D30D-41C8-B5CA-25EB10BBF0E1] [2019-03-08 22:33:06 GMT+08:00] Error msg: 
+[INFO] [976E0B76-B2EF-4369-8876-CCEA24C88E8E] [2019-03-08 22:33:06 GMT+08:00] Running setup: chat_dialog
+[INFO] [82911B01-0995-4A74-8E60-97B78165E032] [2019-03-08 22:33:06 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [A95DB5D6-45E3-4649-BAC3-073AF5207F62] [2019-03-08 22:33:06 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [18C4D225-B945-4158-80AC-B12079E5213A] [2019-03-08 22:33:06 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F37ACA66-9971-4275-8D37-12DB3104E174] [2019-03-08 22:33:06 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [0C2E7416-D006-416A-855F-FF6C440BFC66] [2019-03-08 22:33:06 GMT+08:00] Error msg: 
+[INFO] [3B1A7FC6-A8D0-47E7-A219-66C34E0D64C5] [2019-03-08 22:33:06 GMT+08:00] Running setup: chat_message
+[INFO] [F2FC13DE-8755-4D8F-982E-E7B50A23BF25] [2019-03-08 22:33:06 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [E230B1E8-F4DA-4FA3-875B-B463E3047015] [2019-03-08 22:33:06 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [85E0040F-213E-469A-B71F-DC99DA2EEF2F] [2019-03-08 22:33:06 GMT+08:00] Postgres conn state: ok
+[DEBUG] [FB3BC21B-04F6-4A77-9C2D-121F4D77A664] [2019-03-08 22:33:06 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [4224C59B-8D4E-431E-A751-894572A2BB13] [2019-03-08 22:33:06 GMT+08:00] Error msg: 
+[INFO] [71543963-830B-4AFE-946F-B70508B709E3] [2019-03-08 22:33:06 GMT+08:00] Running setup: chat_participant
+[INFO] [8D529D54-1912-4B55-8B45-313634652CBC] [2019-03-08 22:33:06 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [8EEE353E-7BA6-4070-9683-3A16B780859D] [2019-03-08 22:33:06 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [9E45266F-CEE9-4775-9B69-6DDDD67AF433] [2019-03-08 22:33:06 GMT+08:00] Postgres conn state: ok
+[DEBUG] [704BFAEA-A434-4F61-9638-BFED9780CE50] [2019-03-08 22:33:06 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [CBAA3EAB-E7EA-4A05-BABE-A164DF0E889C] [2019-03-08 22:33:06 GMT+08:00] Error msg: 
+[INFO] [53316B91-FCE4-4C35-ADB3-422C79A762F1] [2019-03-08 22:40:54 GMT+08:00] Running setup: test
+[INFO] [3C00B69D-B121-4D85-8C9C-C352CBD62CA1] [2019-03-08 22:40:54 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [3F4487E2-3AA5-405A-8F25-FE20504E1745] [2019-03-08 22:40:54 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [C3CC323B-FE47-46F5-BFD1-6E2CE18AE862] [2019-03-08 22:40:54 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A0D1415A-A8FC-4FB6-AB34-85B314946887] [2019-03-08 22:40:54 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [110F2D94-F036-40A2-82ED-553EDC7DB68B] [2019-03-08 22:40:54 GMT+08:00] Error msg: 
+[INFO] [700BE07C-2BC1-4F28-A975-B7C4B50B9D4A] [2019-03-08 22:40:54 GMT+08:00] Running setup: users
+[INFO] [DF97F1B0-B7D5-4680-9BE9-7C156ACCF1C1] [2019-03-08 22:40:54 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [86CB0D53-C0C3-453B-9FB4-D4902B521629] [2019-03-08 22:40:54 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [4FD1B7ED-573C-4724-9101-DE896D738E8C] [2019-03-08 22:40:54 GMT+08:00] Postgres conn state: ok
+[DEBUG] [36018B2E-CCA6-44D0-BF0D-61F6D66FBB54] [2019-03-08 22:40:54 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [49D73845-EA49-4966-AAD5-796B73377837] [2019-03-08 22:40:54 GMT+08:00] Error msg: 
+[INFO] [747CA562-639C-4330-9472-BA888376AC70] [2019-03-08 22:40:54 GMT+08:00] Running setup: tokens
+[INFO] [4E20CC0A-D2FA-4A6A-90FC-927368EA82B7] [2019-03-08 22:40:54 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [5CA35097-B854-48F6-A29F-C7A37CEAD6C7] [2019-03-08 22:40:54 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [7683905E-AF94-4A48-A179-9E50BA96AD87] [2019-03-08 22:40:54 GMT+08:00] Postgres conn state: ok
+[DEBUG] [CAAC1D2F-8549-462B-A366-87198F86DAB7] [2019-03-08 22:40:54 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [ED420F25-312A-4689-90DC-91D08FF901B5] [2019-03-08 22:40:54 GMT+08:00] Error msg: 
+[INFO] [32C98A34-DF1C-49BD-830A-06B50C015268] [2019-03-08 22:40:54 GMT+08:00] Running setup: account
+[INFO] [9A58A735-F9A8-46F1-82FC-542B03F823D2] [2019-03-08 22:40:54 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [D5F15998-3820-4D86-ADEE-3B30C63FB74D] [2019-03-08 22:40:54 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [ECB73FE6-9313-4DFA-A5CB-15141243CB9A] [2019-03-08 22:40:54 GMT+08:00] Postgres conn state: ok
+[DEBUG] [1639D274-D20D-438B-992D-CE9B9BBE8F13] [2019-03-08 22:40:54 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [25F5D8B4-789D-4738-AFC6-117EB0F8F520] [2019-03-08 22:40:54 GMT+08:00] Error msg: 
+[INFO] [EF99FFDE-060A-412F-93B3-693607955345] [2019-03-08 22:40:54 GMT+08:00] Running setup: chat_dialog
+[INFO] [F25537B4-0200-4DCF-929F-917A8C2B0170] [2019-03-08 22:40:54 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [8C940E94-7080-4E56-A75B-47AF02BB06D1] [2019-03-08 22:40:54 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [604E0B4A-BCF3-42C0-92B5-2F06751BAF01] [2019-03-08 22:40:54 GMT+08:00] Postgres conn state: ok
+[DEBUG] [3083803A-EB9B-450F-8AD2-3D27ABB16EF5] [2019-03-08 22:40:54 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [6FD1357C-02B2-4F3D-8EAA-A970C5BDAB29] [2019-03-08 22:40:54 GMT+08:00] Error msg: 
+[INFO] [EB24524D-8296-42AB-9D67-814ADB7BBE4C] [2019-03-08 22:40:54 GMT+08:00] Running setup: chat_message
+[INFO] [272BCCCD-02B7-415A-8038-CB71B785FE19] [2019-03-08 22:40:54 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [BF9CC40E-C693-4EC9-92E4-E70900F046AF] [2019-03-08 22:40:54 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [DB0956B9-9485-45C6-AD38-2E2D870E102F] [2019-03-08 22:40:54 GMT+08:00] Postgres conn state: ok
+[DEBUG] [1231A68B-7C8F-4D95-96BA-7F09BFB85567] [2019-03-08 22:40:54 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [10F3B300-4AC4-45EE-AF38-42AD671509CC] [2019-03-08 22:40:54 GMT+08:00] Error msg: 
+[INFO] [80F29CE7-6C47-4771-8C26-82AFB07C0260] [2019-03-08 22:40:54 GMT+08:00] Running setup: chat_participant
+[INFO] [D08CFACF-1CAC-4523-8DD8-707B9C790957] [2019-03-08 22:40:54 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [B03220CC-1316-4E5F-B137-5B82B40778AB] [2019-03-08 22:40:54 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [A00D0859-999B-49E1-BAFB-D31DD091E478] [2019-03-08 22:40:54 GMT+08:00] Postgres conn state: ok
+[DEBUG] [1DD6723B-055C-4B58-A505-2755BF0A4389] [2019-03-08 22:40:54 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [5FBFB7D4-D4D1-4076-9B83-AE8D024D73B2] [2019-03-08 22:40:54 GMT+08:00] Error msg: 
+[INFO] [C3E27F7B-2F2F-4758-BBBC-75B25731B849] [2019-03-08 22:41:32 GMT+08:00] Running setup: test
+[INFO] [D9C9B012-7EF4-421C-889C-EADF5EF2A5CD] [2019-03-08 22:41:32 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [941F31E3-3282-4674-B91A-296EFD521D92] [2019-03-08 22:41:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [683BCF95-7681-4E48-B2BD-D556F410CE7F] [2019-03-08 22:41:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C7E1287A-456B-465C-AB0E-1B769B5EF7C7] [2019-03-08 22:41:32 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [DE44E1A5-C45F-49F2-AAC2-99941EC7C124] [2019-03-08 22:41:32 GMT+08:00] Error msg: 
+[INFO] [E8FB377B-39E7-4B7F-968F-070DF0A1D352] [2019-03-08 22:41:32 GMT+08:00] Running setup: users
+[INFO] [3DDE9643-19DD-4D8E-B098-DD4554517C5B] [2019-03-08 22:41:32 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [50BBF513-F439-4078-B284-32C7ADA81261] [2019-03-08 22:41:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [E7F64E85-B6CC-42C7-9AC0-33C5155E7200] [2019-03-08 22:41:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [9DD97CF7-2F14-48B6-97C0-6C630F33892C] [2019-03-08 22:41:32 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [3C33A6DC-C5AF-4790-BAA9-5C77D6885F85] [2019-03-08 22:41:32 GMT+08:00] Error msg: 
+[INFO] [63B42AB2-3D1D-4484-8BE9-C978E8DE5C47] [2019-03-08 22:41:32 GMT+08:00] Running setup: tokens
+[INFO] [01370709-F14E-4EB7-B6CA-2643BC33969B] [2019-03-08 22:41:32 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [C7A4C4DB-79B6-4DEB-83B7-14CF9EF0B3CE] [2019-03-08 22:41:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [62D1943C-457B-4960-BBB5-FA1845EEC45B] [2019-03-08 22:41:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D73A2284-E254-4A11-8083-6C075894B602] [2019-03-08 22:41:32 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [60BB4CF9-400C-4811-9A81-D897C2590745] [2019-03-08 22:41:32 GMT+08:00] Error msg: 
+[INFO] [2E6578BA-9C21-4250-A7FB-AF3901AD381F] [2019-03-08 22:41:32 GMT+08:00] Running setup: account
+[INFO] [B3BD86EB-0092-4C50-87EA-484A6E6D9043] [2019-03-08 22:41:32 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [D1A652AA-7A7D-409F-9FBA-385671219EDD] [2019-03-08 22:41:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [0F8405F7-46E7-4BA7-98F4-3A9B8447E8D7] [2019-03-08 22:41:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [531B6887-FB5E-4F11-B200-19D17E073D0A] [2019-03-08 22:41:32 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [B8F09734-986E-4CD1-AB82-9C6506432F6C] [2019-03-08 22:41:32 GMT+08:00] Error msg: 
+[INFO] [26A78D0C-2D30-4467-97A2-3C0777E9D9BE] [2019-03-08 22:41:32 GMT+08:00] Running setup: chat_dialog
+[INFO] [6EA4992C-325E-4B5F-B62C-35A0D9CE4CBB] [2019-03-08 22:41:32 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [F815490E-1225-4222-94B0-F54E41BEC722] [2019-03-08 22:41:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [3DC45031-6068-4146-84C5-8AB3082D8608] [2019-03-08 22:41:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [AB6D7B77-1D93-4B0D-8CCC-F483E362E84A] [2019-03-08 22:41:32 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [5598D0AA-5860-47E9-87A9-DD9C06C2B9AE] [2019-03-08 22:41:32 GMT+08:00] Error msg: 
+[INFO] [379EF43D-0F63-43AF-99CB-164F965170F8] [2019-03-08 22:41:32 GMT+08:00] Running setup: chat_message
+[INFO] [0A70BD5D-957B-49E3-81E9-61C4CD145D4A] [2019-03-08 22:41:32 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [5073FFBE-4DF7-433A-AE50-26BCF3D49DCE] [2019-03-08 22:41:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [BEFEA8B7-808D-4127-BB3F-ACB2E8EB10DE] [2019-03-08 22:41:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [65B56DA3-425E-406A-B1C0-5A8F4DF7C3D0] [2019-03-08 22:41:32 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [569FBF58-D847-4B59-BAA9-A068D64B3FBC] [2019-03-08 22:41:32 GMT+08:00] Error msg: 
+[INFO] [B40FC4BB-F950-4327-899A-21A9DA846F4C] [2019-03-08 22:41:32 GMT+08:00] Running setup: chat_participant
+[INFO] [C5C995B2-C331-4ED5-A814-566A20878AC4] [2019-03-08 22:41:32 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [F4AE672C-8243-4938-AE14-5D4D038421B3] [2019-03-08 22:41:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [EF172753-E789-4D39-9B59-372A161946AA] [2019-03-08 22:41:32 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C345C46A-4387-46D5-AA42-D908B11F8388] [2019-03-08 22:41:32 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [224DF06F-5E8D-4CE0-9DAF-B5B470EABADD] [2019-03-08 22:41:32 GMT+08:00] Error msg: 
+[INFO] [4D294A53-E8D1-4A5A-B6D1-DE0C0FE9A40D] [2019-03-08 22:44:25 GMT+08:00] Running setup: test
+[INFO] [FBC44A8E-3D91-411C-9AC2-CE30D21B0ED0] [2019-03-08 22:44:25 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [6AA6947B-DDA3-4693-B557-6CBB90F01F5E] [2019-03-08 22:44:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [8577CD5B-60F4-4185-8F94-7BF36513EE8D] [2019-03-08 22:44:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [1D76BC30-2615-4D17-BFC3-C4507CD98DD1] [2019-03-08 22:44:25 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [A4360E63-3EA2-491A-9B34-D73F1E1FB331] [2019-03-08 22:44:25 GMT+08:00] Error msg: 
+[INFO] [71CF6F1C-0288-4F30-91AB-43AF6DF83758] [2019-03-08 22:44:25 GMT+08:00] Running setup: users
+[INFO] [7DB78CA9-63C0-42CA-8A10-D3BE7F969BD4] [2019-03-08 22:44:25 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [2E1C2436-D619-425F-8943-059F39A99A6D] [2019-03-08 22:44:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [513CF6A1-D78A-492E-BC05-66D3EEFC26C0] [2019-03-08 22:44:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5F80C93F-183A-4396-932E-76496B1630F4] [2019-03-08 22:44:25 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [18B9D25B-178F-4CC9-996C-D7D9D086A759] [2019-03-08 22:44:25 GMT+08:00] Error msg: 
+[INFO] [9D584D3E-778D-4FB5-9CF4-D213EF04DD01] [2019-03-08 22:44:25 GMT+08:00] Running setup: tokens
+[INFO] [F628E64F-CD99-4F4D-BA9D-168AE89975E4] [2019-03-08 22:44:25 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [F09C2267-D8BC-4929-B05E-98DC6B982E1B] [2019-03-08 22:44:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [FA6CDBD3-7C19-462A-88EC-5FFB7172517E] [2019-03-08 22:44:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E11E7221-5F71-4765-BC4B-C9872DD5745F] [2019-03-08 22:44:25 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [AEB02248-7779-4310-9390-3986987E06E1] [2019-03-08 22:44:25 GMT+08:00] Error msg: 
+[INFO] [FADB4C61-114E-459C-BCB3-A9577FDBBF60] [2019-03-08 22:44:25 GMT+08:00] Running setup: account
+[INFO] [B6ADBCB2-113F-449D-AD89-04442EA0E450] [2019-03-08 22:44:25 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [D28C1C38-DA7D-4320-837C-E75D8DCB4A13] [2019-03-08 22:44:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [EFE225C7-5BB6-41A9-A035-2EEE5C90C1E2] [2019-03-08 22:44:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B8C185B3-0964-4BD4-878D-CC380A81B828] [2019-03-08 22:44:25 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [AE067797-7A5A-48EE-8F83-EA4893B9A1A4] [2019-03-08 22:44:25 GMT+08:00] Error msg: 
+[INFO] [50C77297-1651-4462-9834-C4535A782E41] [2019-03-08 22:44:25 GMT+08:00] Running setup: chat_dialog
+[INFO] [27C2D22B-E72B-4E0D-A26B-B3CAFD62B5DF] [2019-03-08 22:44:25 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [C3D6F4DF-4639-4382-BF3F-A3FFC92321D6] [2019-03-08 22:44:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [82EAA70A-9884-487F-B2B5-EE6EE9360E3F] [2019-03-08 22:44:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A6A56695-F688-49F0-813C-340C7E5DBF66] [2019-03-08 22:44:25 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [93A6CA6F-F17B-4832-97FA-3973F88D6F2E] [2019-03-08 22:44:25 GMT+08:00] Error msg: 
+[INFO] [222CED9A-2A12-48E2-A147-1A0088AB2FA1] [2019-03-08 22:44:25 GMT+08:00] Running setup: chat_message
+[INFO] [EF2B80CE-F071-4198-955F-F1286616C3E2] [2019-03-08 22:44:25 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [0BE1D808-7851-41DE-98E3-3BEF65A2226E] [2019-03-08 22:44:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [185702E0-0449-42E8-90B8-B2A5AC222D94] [2019-03-08 22:44:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [22D661C3-C483-4285-BC81-C26DDB4AF2FA] [2019-03-08 22:44:25 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [53C6767E-A82F-4F19-9FF9-745F148B8A05] [2019-03-08 22:44:25 GMT+08:00] Error msg: 
+[INFO] [28AFAF12-21FA-4A8C-98A3-97FE866C6290] [2019-03-08 22:44:25 GMT+08:00] Running setup: chat_participant
+[INFO] [84FA638C-A5BA-4831-90A2-39296087BB2B] [2019-03-08 22:44:25 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [6CE12102-E209-4AFD-8E08-20317548ACA3] [2019-03-08 22:44:25 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [CBE83D84-38F2-4E5C-B2D9-196EFF70E114] [2019-03-08 22:44:25 GMT+08:00] Postgres conn state: ok
+[DEBUG] [84F30117-F4FC-4C0E-A160-785889B68D13] [2019-03-08 22:44:25 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [E3DE596A-B2D6-4615-BE48-2F3ED4794920] [2019-03-08 22:44:25 GMT+08:00] Error msg: 
+[INFO] [D18D7D95-E313-4A4F-9DB3-DA8C9B5B28EF] [2019-03-08 22:44:43 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [4EFEC7C5-F2F9-4C47-B480-2F9F1484A93B] [2019-03-08 22:44:43 GMT+08:00] Postgres conn state: ok
+[DEBUG] [02056C36-5730-416A-8336-639FEE15A3C2] [2019-03-08 22:44:43 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user0012
+[INFO] [8B9DAE1F-FB78-44EB-8B03-11EC4A5F2D5B] [2019-03-08 22:44:43 GMT+08:00] Error msg: 
+[INFO] [AE54DE93-93D1-406B-8E55-84CA38320EF7] [2019-03-08 22:44:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [117D2BFD-52FE-4052-B5B8-EB2B075D11EA] [2019-03-08 22:44:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B94AE673-A06D-41CA-AF63-71B66C19B997] [2019-03-08 22:44:44 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password","createtime","updatetime","status") VALUES($1,$2,$3,$4,$5,$6) RETURNING "uniqueid" : 1NNLtF8QxZ0YrVKomdRGww, user0012, 40bd001563085fc35165329ea1ff5c5ecbdbbeef, 2019-03-08 10:44:44, 2019-03-08 10:44:43, 正常
+[INFO] [123E5E58-23A5-4CBC-9353-9DDAF6A07E3E] [2019-03-08 22:44:44 GMT+08:00] Error msg: 
+[INFO] [8DA74F8B-C4DA-4015-86A5-79495DCA9C7A] [2019-03-08 22:44:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [1ECDA614-93B5-4E2B-8CB0-52F15D16BC21] [2019-03-08 22:44:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E1A2F882-318C-4133-9F03-76E0504211EE] [2019-03-08 22:44:44 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender","createtime","updatetime","status") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING "id" : 1NNLtF8QxZ0YrVKomdRGww, 用户kTwsAfwJFl, , 0, , , user0012, , , , 男, 2019-03-08 10:44:44, 2019-03-08 10:44:44, 正常
+[INFO] [44833DCD-4417-4D11-8473-9D70016E6AAC] [2019-03-08 22:44:44 GMT+08:00] Error msg: 
+[INFO] [B25B122C-BDA4-49A3-93DB-B129091C9C36] [2019-03-08 22:44:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [57C5C9F5-9C18-42FD-8FEC-9808EA96F281] [2019-03-08 22:44:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4F052189-BE45-4FED-B399-1D25D18175A3] [2019-03-08 22:44:44 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user0012
+[INFO] [F1056440-6083-4566-8634-65D46B9E6ED4] [2019-03-08 22:44:44 GMT+08:00] Error msg: 
+[INFO] [4E3B956B-9813-45F5-8C3F-8C00BC82D327] [2019-03-08 22:44:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [D9D60B99-8C49-49AA-BB5C-110CB3C790B0] [2019-03-08 22:44:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5E9CAAD3-2CA2-48F3-BBC6-A5D9D5CDCD5C] [2019-03-08 22:44:44 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password","createtime","updatetime","status" FROM account  WHERE username = $1  LIMIT 1 : user0012
+[INFO] [83CCE56D-6DA6-4688-B9D4-451F4D33661E] [2019-03-08 22:44:44 GMT+08:00] Error msg: 
+[INFO] [02041147-8661-4A8F-9D58-10E155F34DF2] [2019-03-08 22:44:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [8EE9AF9D-D078-4443-86E0-7469E6797861] [2019-03-08 22:44:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [37D89180-7C83-4B2A-AF7F-51FA907C9343] [2019-03-08 22:44:44 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : LKrEx2EyPgpbpEhPrHYo8A, 1NNLtF8QxZ0YrVKomdRGww, 573749084, 573749084, 315360000
+[INFO] [BA0210EF-16BD-4084-A498-CEA739102B68] [2019-03-08 22:44:44 GMT+08:00] Error msg: 
+[INFO] [A2C3132C-A06B-4815-9C85-929097DEBFEC] [2019-03-08 22:44:44 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [4A1851ED-5D22-4427-B744-51274EBE70AC] [2019-03-08 22:44:44 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D053A03D-F7F7-46E2-9A2A-32BD87A2B228] [2019-03-08 22:44:44 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [BE35BD27-763E-45BC-85FD-4E3E6C767F40] [2019-03-08 22:44:44 GMT+08:00] Error msg: 
+[INFO] [E318ECB1-3500-4F2C-8A6D-9F48855F600B] [2019-03-08 22:45:50 GMT+08:00] Running setup: test
+[INFO] [6EC2DF82-398C-48DF-9039-DB8A4006F5FB] [2019-03-08 22:45:50 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [4BCAEFCE-6574-4A3E-8A89-7EAE0C6705DB] [2019-03-08 22:45:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [F77CEC85-85FB-495B-899F-7C073D8D178F] [2019-03-08 22:45:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [149FF668-C4EC-42F8-8CFC-4D8555B3015B] [2019-03-08 22:45:50 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [C39BA822-1181-4FF1-A588-1B46AEA80CDF] [2019-03-08 22:45:50 GMT+08:00] Error msg: 
+[INFO] [778EF073-403A-402B-930B-6DF3FE30D94D] [2019-03-08 22:45:50 GMT+08:00] Running setup: users
+[INFO] [6881AF92-F55C-4688-895D-580D4D26121F] [2019-03-08 22:45:50 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [68017F0B-6C1F-48A7-B6C2-D8666A11048E] [2019-03-08 22:45:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [F569B29E-D9E2-47E9-993A-7E405053E8EB] [2019-03-08 22:45:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [ABF15CAB-9C51-4648-B749-0D7B72A34082] [2019-03-08 22:45:50 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [3E6FE67E-0EAB-4CC5-9DFA-08E9E52C18BC] [2019-03-08 22:45:50 GMT+08:00] Error msg: 
+[INFO] [F66FBB43-110D-4065-98AF-7608C948C99F] [2019-03-08 22:45:50 GMT+08:00] Running setup: tokens
+[INFO] [7841F5C3-1AE3-418B-9D62-27A9C9DB2808] [2019-03-08 22:45:50 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [71B3C631-B266-4E41-84DC-B5871C1F2880] [2019-03-08 22:45:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [45B22F8B-B1E7-49BE-B2FD-DED25343F623] [2019-03-08 22:45:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [28AAB7E4-7B05-4710-9247-450FD068765C] [2019-03-08 22:45:50 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [648AEBD7-1FE1-467C-A48D-8E4EC600863B] [2019-03-08 22:45:50 GMT+08:00] Error msg: 
+[INFO] [91F7705E-E6CA-4104-8522-D5FF24D5DF7E] [2019-03-08 22:45:50 GMT+08:00] Running setup: account
+[INFO] [000B056C-BC72-431B-844B-D0A03B2209C8] [2019-03-08 22:45:50 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [AF11AD59-E208-4328-B0A5-979521855166] [2019-03-08 22:45:50 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [C971FDDA-1774-47FE-A06E-3849770B914C] [2019-03-08 22:45:50 GMT+08:00] Postgres conn state: ok
+[DEBUG] [932ECF6E-482E-469D-BA4D-A8A70CAB6577] [2019-03-08 22:45:50 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [8DDE0D63-60BB-48ED-A911-26776C75C48D] [2019-03-08 22:45:50 GMT+08:00] Error msg: 
+[INFO] [5E6F8DFA-8036-4022-9DA7-835763ED19A2] [2019-03-08 22:45:50 GMT+08:00] Running setup: chat_dialog
+[INFO] [93642A98-14FE-4249-96E9-CFBD0AEA2BA1] [2019-03-08 22:45:50 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [2EE4B22D-0F41-4CDA-8F21-FAEFEB092E57] [2019-03-08 22:45:51 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [8B0E6129-F0A5-498D-B165-1BCD375C6247] [2019-03-08 22:45:51 GMT+08:00] Postgres conn state: ok
+[DEBUG] [39A2EEF8-32BB-4D48-9AF9-47FABDE2FF72] [2019-03-08 22:45:51 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [F1F5BFD7-5105-4038-A85D-797B115F86CD] [2019-03-08 22:45:51 GMT+08:00] Error msg: 
+[INFO] [3A10BF08-761A-4ECB-9AC4-70286127A1B7] [2019-03-08 22:45:51 GMT+08:00] Running setup: chat_message
+[INFO] [FC9AE49C-5BC4-466E-B9B4-372A64E42AC8] [2019-03-08 22:45:51 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [5CCFEE8C-EAD4-4BC1-9F6C-26B9262B9D7F] [2019-03-08 22:45:51 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [A313FE3B-7647-4C8E-9160-31C6D4968B8D] [2019-03-08 22:45:51 GMT+08:00] Postgres conn state: ok
+[DEBUG] [BDC2E605-1070-49F9-9809-620A92E45927] [2019-03-08 22:45:51 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [793A1814-0586-41D6-A892-1C42B247A44D] [2019-03-08 22:45:51 GMT+08:00] Error msg: 
+[INFO] [D57B11B8-0841-40D2-ACB8-5F62B737036A] [2019-03-08 22:45:51 GMT+08:00] Running setup: chat_participant
+[INFO] [F692C772-103B-40F4-BEA9-3A74ADA8B33B] [2019-03-08 22:45:51 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [20DCE17E-B646-4973-A386-4DAF66A63459] [2019-03-08 22:45:51 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [8B50DFE4-E5AB-4737-A44E-A5F6888F20F3] [2019-03-08 22:45:51 GMT+08:00] Postgres conn state: ok
+[DEBUG] [15019354-AA0A-4362-AAC2-400A3AFDCB95] [2019-03-08 22:45:51 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [AEA19FD1-3391-4BEE-87DB-B19863384F81] [2019-03-08 22:45:51 GMT+08:00] Error msg: 
+[INFO] [80B91A2A-1250-4686-9274-6813E03EBE85] [2019-03-08 22:46:16 GMT+08:00] Running setup: test
+[INFO] [39376882-A119-485D-B1EF-0EE9B8B9EC45] [2019-03-08 22:46:16 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [14EAFBED-8508-41EF-8326-CC1F335811F8] [2019-03-08 22:46:16 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [DC64F4EB-0EB1-44F1-9215-EAEEB664B180] [2019-03-08 22:46:16 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F2480C27-6E7F-4F44-8AA4-6B05FBFCCD38] [2019-03-08 22:46:16 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [CDDE3797-0859-4378-A9E4-146CC6D3181E] [2019-03-08 22:46:16 GMT+08:00] Error msg: 
+[INFO] [8E9A43EE-0F9E-4A9E-9E9A-52D57FAA98E2] [2019-03-08 22:46:16 GMT+08:00] Running setup: users
+[INFO] [72544E50-7CB4-4E2E-B8BB-552C77799F55] [2019-03-08 22:46:16 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [BB1C506C-D4E9-413E-8674-552E8317F58E] [2019-03-08 22:46:16 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [57FD97E8-FC08-4352-B619-17209481A7DF] [2019-03-08 22:46:16 GMT+08:00] Postgres conn state: ok
+[DEBUG] [6EFF31E4-FDD3-495B-94E0-436BA26847A3] [2019-03-08 22:46:16 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [32747ACE-5B68-4BFA-87EC-0A3BDEAB21C7] [2019-03-08 22:46:16 GMT+08:00] Error msg: 
+[INFO] [EE2A3B08-D09C-40E0-8FFF-B3CAFA92A899] [2019-03-08 22:46:16 GMT+08:00] Running setup: tokens
+[INFO] [D48C73F7-8ED3-4ECA-B609-C05E1B7C75AB] [2019-03-08 22:46:16 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [279B2FE7-2C31-47A6-8553-9B07D2B472EE] [2019-03-08 22:46:16 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [47532045-CB95-487F-B3C1-E158FEE17728] [2019-03-08 22:46:16 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4830D739-CEF8-4546-9CF1-1AFCDA0BA64B] [2019-03-08 22:46:16 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [EDD53AB1-93E3-40F1-9DB7-B0C1F0CD1A37] [2019-03-08 22:46:16 GMT+08:00] Error msg: 
+[INFO] [F5C26E8C-885F-45D3-91EA-7B4CBA0D403A] [2019-03-08 22:46:16 GMT+08:00] Running setup: account
+[INFO] [03EC3E1C-BA22-4F82-9933-474E8FDE712A] [2019-03-08 22:46:16 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [3BBA8392-A2F1-4A4B-BD23-741EC58E4A68] [2019-03-08 22:46:16 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [5B66CE78-5024-48F4-94BD-547D9236BB8B] [2019-03-08 22:46:16 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7B6FECF0-2223-4659-BAD4-5A3D3272B1D1] [2019-03-08 22:46:16 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [49230BB4-71C6-4EA9-A387-36DB6CAA37E8] [2019-03-08 22:46:16 GMT+08:00] Error msg: 
+[INFO] [F7EE5E0C-6621-40D1-B098-DE96A23C1460] [2019-03-08 22:46:16 GMT+08:00] Running setup: chat_dialog
+[INFO] [A4913FA9-CC73-4352-B7EB-FB6CC8BF0AAD] [2019-03-08 22:46:16 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [BC9AD551-DB7E-449B-BE85-70D5BA2218B4] [2019-03-08 22:46:16 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [1DD72E5F-0C49-49E1-A5D7-D80FC88779E3] [2019-03-08 22:46:16 GMT+08:00] Postgres conn state: ok
+[DEBUG] [25207BD8-1C26-47A2-A86D-3F333D2D856B] [2019-03-08 22:46:16 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [2DCA7ADC-5FA4-406D-A935-F9333D1A39A2] [2019-03-08 22:46:16 GMT+08:00] Error msg: 
+[INFO] [0B102CE8-D27B-4029-B673-5DDEFB3B277B] [2019-03-08 22:46:16 GMT+08:00] Running setup: chat_message
+[INFO] [738AB557-ED1C-4EAD-B8E8-37282A923B52] [2019-03-08 22:46:16 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [B8B3F449-3B69-4BE7-A0D4-DB46A40417B3] [2019-03-08 22:46:16 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [A8B13446-1536-43E1-B678-AE22D9B19067] [2019-03-08 22:46:16 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F8110373-B457-4FB5-B515-386D1B84398F] [2019-03-08 22:46:16 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [A2A7DBEA-7ECF-44EB-951D-65638C19F470] [2019-03-08 22:46:16 GMT+08:00] Error msg: 
+[INFO] [9AAA01C4-6AE9-438C-89A1-CABE9AADA1E6] [2019-03-08 22:46:16 GMT+08:00] Running setup: chat_participant
+[INFO] [ACE5A808-6B74-4BE9-9AFC-E064B7E2F000] [2019-03-08 22:46:16 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [668DCB35-C1E4-41A9-B17C-D98D5C4D86C2] [2019-03-08 22:46:16 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [369EA248-FA85-4E20-9529-091810E919D5] [2019-03-08 22:46:16 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A5F07A28-1EAB-4095-94C6-277B65841137] [2019-03-08 22:46:16 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [26726D0F-5657-4414-BABA-6DF39B07A4D2] [2019-03-08 22:46:16 GMT+08:00] Error msg: 
+[INFO] [283763AA-2F2B-4FA2-AD20-BFCEBD439DC9] [2019-03-08 22:50:01 GMT+08:00] Running setup: test
+[INFO] [8CD6E396-7749-46DA-81D6-D8DDA2AD640E] [2019-03-08 22:50:01 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [BC765447-7C91-4B00-A599-4624E8B80DFC] [2019-03-08 22:50:01 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [76A48BD1-F3DF-4780-A2D2-A05FE4ECF561] [2019-03-08 22:50:01 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C6804076-1AF6-4DBE-AFB5-7D984CBC43B5] [2019-03-08 22:50:01 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [75400995-0A54-4E31-9F4C-974BCEE8900C] [2019-03-08 22:50:01 GMT+08:00] Error msg: 
+[INFO] [A11E6C23-D0CC-4B17-B007-3422DC8E883C] [2019-03-08 22:50:01 GMT+08:00] Running setup: users
+[INFO] [3C9940C1-C0D5-472F-ADC6-AD24B7DF7756] [2019-03-08 22:50:01 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [472B9243-644E-4190-85DA-ADCE92C03FCF] [2019-03-08 22:50:01 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [40EE8C5E-2EAF-4051-BC3E-E97FF2EF8380] [2019-03-08 22:50:01 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4E17568B-2189-45FD-94BF-C3630010D719] [2019-03-08 22:50:01 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [6FBA8D31-B15C-438C-8F8A-292B091C4E33] [2019-03-08 22:50:01 GMT+08:00] Error msg: 
+[INFO] [014829E5-0EF3-4DAA-8A75-36E7BEB1AD7D] [2019-03-08 22:50:01 GMT+08:00] Running setup: tokens
+[INFO] [F2A5C9E7-12F8-4669-80D9-CF99765FDE12] [2019-03-08 22:50:01 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [440723BC-80D4-4844-98AE-DD08E4760D05] [2019-03-08 22:50:01 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [742D6288-6CFF-42F8-B07C-BB2405499EF8] [2019-03-08 22:50:01 GMT+08:00] Postgres conn state: ok
+[DEBUG] [16DDF1C4-4F9C-4AD9-995E-D8BBE2CCAB18] [2019-03-08 22:50:01 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [C54D434A-48BB-496D-B2F8-8868AD1BF1E6] [2019-03-08 22:50:01 GMT+08:00] Error msg: 
+[INFO] [4A9E4CEB-78A6-4D9F-804D-5F7238C2FEA9] [2019-03-08 22:50:01 GMT+08:00] Running setup: account
+[INFO] [3DF6886A-444A-462B-A36A-42E842F072A9] [2019-03-08 22:50:01 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [227F511F-8AEF-45F4-8D9D-F1ADFEBCE1C5] [2019-03-08 22:50:01 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [709239C0-0923-4467-9A8A-418FCEEB97A8] [2019-03-08 22:50:01 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A81EC93F-BEBE-408C-808A-95797327710C] [2019-03-08 22:50:01 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [0112DF1E-5533-45F9-9D47-3F54D2FCF6DF] [2019-03-08 22:50:01 GMT+08:00] Error msg: 
+[INFO] [43AA861C-6C85-418C-BA19-0982301170C9] [2019-03-08 22:50:01 GMT+08:00] Running setup: chat_dialog
+[INFO] [98A00C66-65FC-46D8-999E-84AA0AE913A6] [2019-03-08 22:50:01 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [9B13ECF1-FD6B-4A28-B894-3FB9C137D8C4] [2019-03-08 22:50:01 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [A9902AFB-E4B7-44A3-851D-69E728CB82EC] [2019-03-08 22:50:01 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7BE0542C-D802-4DB4-AA59-DBC6F64ECA6A] [2019-03-08 22:50:01 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [0BFE7966-5F7A-40A6-AFC3-C736B4699958] [2019-03-08 22:50:01 GMT+08:00] Error msg: 
+[INFO] [84D53EB3-3529-45E7-AE92-A3B9FA2622B7] [2019-03-08 22:50:01 GMT+08:00] Running setup: chat_message
+[INFO] [2DD18D76-9003-4CEB-BF37-6ED9EEA0885D] [2019-03-08 22:50:01 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [376260D2-EC7C-44C4-82DB-98C207B323C1] [2019-03-08 22:50:01 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [547B1DAA-6069-4D53-91F7-1129109432EF] [2019-03-08 22:50:01 GMT+08:00] Postgres conn state: ok
+[DEBUG] [DFDA0DD1-1ADF-4707-8C64-8BFE4339109A] [2019-03-08 22:50:01 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [CD99E7F9-6C2B-452B-9A31-3A9CBE490838] [2019-03-08 22:50:01 GMT+08:00] Error msg: 
+[INFO] [F3FB233B-A381-4983-874E-4696E72523B2] [2019-03-08 22:50:01 GMT+08:00] Running setup: chat_participant
+[INFO] [9C6CBF91-F2E4-4A2B-9401-AD6F9A223FD6] [2019-03-08 22:50:01 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [041341DC-EA40-4B1B-834C-BA6637B618C2] [2019-03-08 22:50:01 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [468FEDCE-557E-4405-99F9-84A31E384A4A] [2019-03-08 22:50:01 GMT+08:00] Postgres conn state: ok
+[DEBUG] [BE8E0A42-992C-4AEC-9F35-2A3479CC0086] [2019-03-08 22:50:01 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [AB52378A-5D37-4C79-9934-402FA9623B08] [2019-03-08 22:50:01 GMT+08:00] Error msg: 
+[INFO] [0B6D86FA-28E1-4B7D-91D8-DF36AA84D6C7] [2019-03-08 22:50:10 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [1C62EAE0-96B0-4B6B-B0D4-FB97AF255AD6] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [68112AAB-8BCD-4C51-AF45-02CBB735C9C0] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [253BFA18-71AB-447F-984A-C01CCAA3803C] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [A153BCBA-18EB-4394-B195-1DFA2CDD3442] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [95A82872-159B-4D84-B700-70178B557ACD] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [E1A3B0E3-AA48-4BBF-B4C4-B7F9FC06B0DA] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [D2FA27EB-8365-4302-B0EE-B003253350BC] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [09739D5F-F023-4A67-B7E4-93EC2175CAEF] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [3FAA0C96-CB2D-4680-84A0-7BC62BCB1C5D] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [59A46CF0-702A-4F8C-A61B-EC7AEB941A89] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : 1NNLtF8QxZ0YrVKomdRGww, 573749084, 573749411, 315360000, LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [30F70820-A2A5-4FD3-A62F-11F1650C31EB] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [392C83D7-3287-4803-9489-3B2EDA86CD45] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [EA6E2100-626A-4D9F-B856-D4FF0CB3BAF2] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [69AAC185-2B59-4A65-AA50-26FDD57DE790] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE  uniqueID = $1  : 1NNLtF8QxZ0YrVKomdRGww
+[INFO] [A1E3A5F4-E931-45ED-9D76-9A5AF3418DF0] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [40BE690E-96F3-4F0A-A0CB-2FA610D9B660] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [9DDE46B7-A652-44C2-9B9D-0719F56CE816] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [3E52AD54-E10F-429E-8E06-1FD05E18DC1E] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender","createtime","updatetime","status" FROM users  WHERE  uniqueID = $1   LIMIT 50 : 1NNLtF8QxZ0YrVKomdRGww
+[INFO] [2FB148C6-F397-4D00-9B88-11A08CCA11A1] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [EA898BD9-6275-44EF-8EBE-E9E4F2ECF4B6] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [F62B2A2B-F8B0-4B3C-9796-D50FD026E834] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [B5088F24-5514-4A49-925F-DF0094EAE7E4] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user0013
+[INFO] [1A5FCA8F-EF1B-41C5-B1CA-FE748D46F4A9] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [BE040E8C-6643-49B6-8BA2-8C219C1187CA] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [EB1844E0-06CB-4210-939A-910947261A0B] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [708209FF-F6FD-47EF-A81F-E42CCCD3E045] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password","createtime","updatetime","status") VALUES($1,$2,$3,$4,$5,$6) RETURNING "uniqueid" : B9poKJNne5e0Mv_gh9Ub0w, user0013, 40bd001563085fc35165329ea1ff5c5ecbdbbeef, 2019-03-08 10:50:11, 2019-03-08 10:50:11, 正常
+[INFO] [3E1887F0-4527-497B-93EC-B65E08474817] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [0EE945BC-ABA2-4FBB-B272-336D413EFE27] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [748718A5-8450-4D2D-A1AC-A2428579A2D1] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [275B522E-E51A-4588-86FA-BF8ED401DE2B] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender","createtime","updatetime","status") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING "id" : B9poKJNne5e0Mv_gh9Ub0w, 用户eQuGZSCzOv, , 0, , , user0013, , , , 男, 2019-03-08 10:50:11, 2019-03-08 10:50:11, 正常
+[INFO] [E19C5655-C945-4E6C-9FFF-4CF6E7EE9EC2] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [08997B3F-66FE-435E-8250-BCEE1A7B22A1] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [B5144FE3-7F5D-453B-AAEA-2993B4CB5FA4] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [2EE61422-59B2-45A0-920A-D6B04CD3D4AD] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user0013
+[INFO] [BE21A4A6-869D-4A46-90B0-635528EA681D] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [477885F7-434B-4062-B1A3-C820CD54FD25] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [D658C4FF-4D3A-490C-9FF1-3CDB1BAF2A2C] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [543FA565-1ED0-4963-899A-8F9EFC8824F9] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password","createtime","updatetime","status" FROM account  WHERE username = $1  LIMIT 1 : user0013
+[INFO] [AEBA1247-7172-4FD3-AAEF-FE6CDDC94E8D] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [4FAE3C11-02DA-4E24-B4BC-D93C449B862D] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [196D1E9B-AEC4-421D-8787-11B444B4B006] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [707CDF1F-C05D-4089-90B2-7D45AE1D6A83] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : 4JIGU0ahdwsgANV7R5hiZw, B9poKJNne5e0Mv_gh9Ub0w, 573749411, 573749411, 315360000
+[INFO] [56F342DD-78F8-4CFA-9D86-B50A61F2C5D3] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [C4E679CF-BDB6-4955-9EBD-D23E5863BD66] [2019-03-08 22:50:11 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [A6E51901-C286-48D6-A48F-F4C900DA359F] [2019-03-08 22:50:11 GMT+08:00] Postgres conn state: ok
+[DEBUG] [650881CF-0FCD-43EC-9BE7-240D5BC1AD9C] [2019-03-08 22:50:11 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : 4JIGU0ahdwsgANV7R5hiZw
+[INFO] [6F069180-2867-404D-89FA-5B86A4327D92] [2019-03-08 22:50:11 GMT+08:00] Error msg: 
+[INFO] [BBD34C7A-47C5-45CD-B706-5456DA0755C4] [2019-03-08 22:52:20 GMT+08:00] Running setup: test
+[INFO] [2778D55C-7878-4A59-97F5-89111114605E] [2019-03-08 22:52:20 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [929B7064-5C28-4269-95F2-364A61B4BB7D] [2019-03-08 22:52:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [D4EB3853-162A-4708-AB96-586011D5576B] [2019-03-08 22:52:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7D9ED6ED-610B-4307-9E68-EF4375F3077C] [2019-03-08 22:52:20 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [6090476E-C986-48DF-A9BB-A0DCDEF45C13] [2019-03-08 22:52:20 GMT+08:00] Error msg: 
+[INFO] [BA3B8383-2A6F-434E-A1D4-D24E52327B29] [2019-03-08 22:52:20 GMT+08:00] Running setup: users
+[INFO] [484D6640-A30C-4F43-BEFB-EF4D4EA5D5D2] [2019-03-08 22:52:20 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [280EDC63-FAFA-4B0B-9908-B53087959099] [2019-03-08 22:52:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [3E60B740-C98B-468A-8974-E697D9FCADFF] [2019-03-08 22:52:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [35D5B917-B4AC-40F3-B0A8-1CE49CEAEE10] [2019-03-08 22:52:20 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [16E0EDFB-DD05-4F7A-A4AF-1B43606F01C4] [2019-03-08 22:52:20 GMT+08:00] Error msg: 
+[INFO] [517E1607-E50C-4D88-829F-BF5795F15CB6] [2019-03-08 22:52:20 GMT+08:00] Running setup: tokens
+[INFO] [A863593E-E99A-4E24-B25B-53F25B419F2A] [2019-03-08 22:52:20 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [6077469D-B341-4F43-91D6-E5F39C6C6BCD] [2019-03-08 22:52:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [5016DBAD-CBDF-46F5-9677-3F30A0E2427B] [2019-03-08 22:52:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [26288181-9816-4FA6-A7C2-646C28CEB74B] [2019-03-08 22:52:20 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [F7925511-1429-4812-8374-20F52B1337B2] [2019-03-08 22:52:20 GMT+08:00] Error msg: 
+[INFO] [E44F9CE1-51B6-4675-856D-AD5D0B36D281] [2019-03-08 22:52:20 GMT+08:00] Running setup: account
+[INFO] [4AE972AD-41C0-4293-830C-50620F04704C] [2019-03-08 22:52:20 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [AB092B3E-D2D8-4DDB-8885-F1395950C64E] [2019-03-08 22:52:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [C611286F-6F8E-4550-8940-3350F8644F22] [2019-03-08 22:52:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7915FC7E-ED77-44FE-B2D6-418C7C821288] [2019-03-08 22:52:20 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [161705A1-001D-4529-B00A-F4239412B36D] [2019-03-08 22:52:20 GMT+08:00] Error msg: 
+[INFO] [3FAF8096-62FE-43E7-AAAE-8536E476B573] [2019-03-08 22:52:20 GMT+08:00] Running setup: chat_dialog
+[INFO] [53216AA7-AD37-4A68-BE90-76FC4F028D5A] [2019-03-08 22:52:20 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [690BE427-4271-426D-9D9B-53CCFC63EF4A] [2019-03-08 22:52:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [0224025A-5710-4D34-9063-C9723FCC8A63] [2019-03-08 22:52:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [CB3D3041-C4BA-457D-A3F6-AE0D067811A0] [2019-03-08 22:52:20 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [2464B42B-F019-4806-A744-0435358FF996] [2019-03-08 22:52:20 GMT+08:00] Error msg: 
+[INFO] [8751556E-0401-42A6-ADA1-AE0C6E6D347F] [2019-03-08 22:52:20 GMT+08:00] Running setup: chat_message
+[INFO] [005889A2-46F0-4B9E-862F-FD29B42E4599] [2019-03-08 22:52:20 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [144B267A-AA08-40AF-911F-B8D8E82EB07F] [2019-03-08 22:52:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [15036F1F-7FDD-4806-8084-7767D55D9F91] [2019-03-08 22:52:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A5262562-2107-4ADA-9396-E9C078E631D9] [2019-03-08 22:52:20 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [40CC008E-704B-4D7A-A61C-BCB2A340470D] [2019-03-08 22:52:20 GMT+08:00] Error msg: 
+[INFO] [1FF5DC9B-8231-4EDB-A189-A38F2A6A6CD2] [2019-03-08 22:52:20 GMT+08:00] Running setup: chat_participant
+[INFO] [3B38E9B1-756E-4E7C-BDE0-8C57E9620615] [2019-03-08 22:52:20 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [4BB96646-4A45-44D1-849C-06A27AC1CEC3] [2019-03-08 22:52:20 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [D8BC08E7-9977-4A11-8FCB-4FC93BF67415] [2019-03-08 22:52:20 GMT+08:00] Postgres conn state: ok
+[DEBUG] [F3AE8793-BD5C-4788-A775-8E4940C750FC] [2019-03-08 22:52:20 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [07C3CB81-C814-42CC-B5A4-471A73AEA8A4] [2019-03-08 22:52:20 GMT+08:00] Error msg: 
+[INFO] [56B0029E-538B-4255-AD0B-C2C29854DA2D] [2019-03-08 22:52:30 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [1B4122AF-C2D0-413A-9D81-D7B2B122D03E] [2019-03-08 22:52:30 GMT+08:00] Postgres conn state: ok
+[DEBUG] [157C86E6-B79F-43DE-B2FF-987DF1891F43] [2019-03-08 22:52:30 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [85F4901B-EFFE-4B96-A7F4-3ADC993A7DB7] [2019-03-08 22:52:30 GMT+08:00] Error msg: 
+[INFO] [E5272E04-83DB-45D9-ADCB-FE9F7C3E90EF] [2019-03-08 22:52:30 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [F4818C75-433D-4D58-A478-1BF305D67BF6] [2019-03-08 22:52:30 GMT+08:00] Postgres conn state: ok
+[DEBUG] [17091543-2C7E-4D49-928E-EADD3CFD5115] [2019-03-08 22:52:30 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [049D20D1-4981-4D39-A5C4-BD28BBA48A6A] [2019-03-08 22:52:30 GMT+08:00] Error msg: 
+[INFO] [B5C16976-A5E5-4893-B7FA-EEB44B37CEEE] [2019-03-08 22:52:30 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [8095AF03-1CC2-44A2-924F-AB8187839A6F] [2019-03-08 22:52:30 GMT+08:00] Postgres conn state: ok
+[DEBUG] [17D84F10-E22A-43DC-A770-FFABE0A2CFC1] [2019-03-08 22:52:30 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : 1NNLtF8QxZ0YrVKomdRGww, 573749084, 573749550, 315360000, LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [6D125567-89C8-4AB6-BAC2-B716C17C34EC] [2019-03-08 22:52:30 GMT+08:00] Error msg: 
+[INFO] [B2D14F28-8A57-411F-9FC7-DBBBB5689A4C] [2019-03-08 22:52:55 GMT+08:00] Running setup: test
+[INFO] [8929CDD0-A4E7-41DC-9DA6-CE71ADC48A88] [2019-03-08 22:52:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [2163F622-4ADD-44C9-AF97-3D7788E5B6B6] [2019-03-08 22:52:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [44CEB503-C8F2-4423-8E02-6CFAD80CF2AD] [2019-03-08 22:52:55 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C8EA11B3-82BC-46E6-857A-5773A9F2FE09] [2019-03-08 22:52:55 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [576858D3-93E0-4506-A0BF-EA6FCBE7F656] [2019-03-08 22:52:55 GMT+08:00] Error msg: 
+[INFO] [31F4D89F-6F55-4263-AD3C-01F2749A0418] [2019-03-08 22:52:55 GMT+08:00] Running setup: users
+[INFO] [2D3AFD28-387B-4C31-AC4D-BEE731B840F4] [2019-03-08 22:52:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [0112A0D4-6023-459F-BB04-BA3171B8AD88] [2019-03-08 22:52:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [14EC0537-9AAE-4F29-AD4D-2D876D162F2F] [2019-03-08 22:52:55 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A44DDE35-7322-4874-9091-A2420F5F8781] [2019-03-08 22:52:55 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [2B1AB529-19BC-4566-972C-32C8BDEA5A45] [2019-03-08 22:52:55 GMT+08:00] Error msg: 
+[INFO] [CFADC3DF-2EBF-49D0-8246-41CE79130171] [2019-03-08 22:52:55 GMT+08:00] Running setup: tokens
+[INFO] [BA26EE9E-EA8B-4428-8C9B-D18AE3395900] [2019-03-08 22:52:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [1422DEB8-0EC6-49C8-864B-7287289BF7A5] [2019-03-08 22:52:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [5822C652-B18C-4617-B320-EC539E5E3215] [2019-03-08 22:52:55 GMT+08:00] Postgres conn state: ok
+[DEBUG] [45F3B2A3-D193-4E3B-A253-2F911D91E70C] [2019-03-08 22:52:55 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [E2D235D7-2638-45EC-AD9B-23878EA741D0] [2019-03-08 22:52:55 GMT+08:00] Error msg: 
+[INFO] [8EA71AA8-2F94-4A7A-B6A9-2E7C2B40A7AD] [2019-03-08 22:52:55 GMT+08:00] Running setup: account
+[INFO] [9C799191-A07B-43C8-9242-84E8157A8DD0] [2019-03-08 22:52:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [ACBC50ED-C480-4C7D-9161-18E90CB4592D] [2019-03-08 22:52:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [0653DC01-2271-45F4-8CC9-0A6E92997B3F] [2019-03-08 22:52:55 GMT+08:00] Postgres conn state: ok
+[DEBUG] [7B1B569A-5E9C-470F-999C-D583CBC29547] [2019-03-08 22:52:55 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [D30C224F-1F3C-44DF-B8AB-9140CBA7AAC7] [2019-03-08 22:52:55 GMT+08:00] Error msg: 
+[INFO] [DCAC0BE4-749B-4098-ACB5-C590A75427C7] [2019-03-08 22:52:55 GMT+08:00] Running setup: chat_dialog
+[INFO] [5D6BBF1E-B6B4-46D1-A997-2138D76CEDD1] [2019-03-08 22:52:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [9F754120-52F3-44A0-BFD6-240048F56AAF] [2019-03-08 22:52:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [E2CDA016-92E2-4298-A7EE-35CDE75BF036] [2019-03-08 22:52:55 GMT+08:00] Postgres conn state: ok
+[DEBUG] [26214444-71F8-4D91-9AC0-4172C14B9B70] [2019-03-08 22:52:55 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [FA170BB4-E210-4827-9E6A-C5878C40AFEA] [2019-03-08 22:52:55 GMT+08:00] Error msg: 
+[INFO] [020EFC22-1C6D-443B-9CE4-D0339C0234C3] [2019-03-08 22:52:55 GMT+08:00] Running setup: chat_message
+[INFO] [CEB1C2EA-A347-4CE0-8B29-908F0B6839E1] [2019-03-08 22:52:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [29B7083C-7EDD-484D-BD1D-37AD04113AE5] [2019-03-08 22:52:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [9283B787-7088-4F6D-807C-4E9DEA0C64EF] [2019-03-08 22:52:55 GMT+08:00] Postgres conn state: ok
+[DEBUG] [0FF62D3E-0833-42A2-905B-2B44733CB8A9] [2019-03-08 22:52:55 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [2DC6C3D1-1EF4-4597-9EDF-4337B374DC9A] [2019-03-08 22:52:55 GMT+08:00] Error msg: 
+[INFO] [6AE99CCC-4CB3-4031-BDD5-116DD89E5167] [2019-03-08 22:52:55 GMT+08:00] Running setup: chat_participant
+[INFO] [E1637A79-F6A8-4271-A2E1-5C343356B2F8] [2019-03-08 22:52:55 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [91402367-1095-4CAF-9B57-9B70D0C0BB0B] [2019-03-08 22:52:55 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [EFCBA445-0F18-46DD-AE99-ABE9878D179A] [2019-03-08 22:52:55 GMT+08:00] Postgres conn state: ok
+[DEBUG] [60EB82C2-69A4-4A4D-B354-17CC60908434] [2019-03-08 22:52:55 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [EF86E4C0-D14C-4952-A884-0806A8AB5C94] [2019-03-08 22:52:55 GMT+08:00] Error msg: 
+[INFO] [749FB6DD-A5B9-4E73-9C1A-E4EDDCA53552] [2019-03-08 22:53:00 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [76C862A1-30C2-4966-B672-77074020414D] [2019-03-08 22:53:00 GMT+08:00] Postgres conn state: ok
+[DEBUG] [579B665B-185E-4A3C-84DB-4F5BF1DC0A2B] [2019-03-08 22:53:00 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [1BFE7234-710B-4112-ACAB-43FD5279FC41] [2019-03-08 22:53:00 GMT+08:00] Error msg: 
+[INFO] [5EFEA073-029A-44DA-AF29-3BA05457003A] [2019-03-08 22:53:00 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [04E69B66-1689-4A9E-863F-F2EEB50D3036] [2019-03-08 22:53:00 GMT+08:00] Postgres conn state: ok
+[DEBUG] [83997726-374F-4E1C-B37D-641A99F42F8E] [2019-03-08 22:53:00 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [00B2E982-153C-418F-A365-C8702C250917] [2019-03-08 22:53:01 GMT+08:00] Error msg: 
+[INFO] [C44BB9D8-F17E-4060-A86E-0821EF7D074E] [2019-03-08 22:53:01 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [AB19DCA4-4852-4A4C-B739-899ED8BBA7FF] [2019-03-08 22:53:01 GMT+08:00] Postgres conn state: ok
+[DEBUG] [300F4F13-7696-440D-8D34-309FDFC5E3F7] [2019-03-08 22:53:01 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : 1NNLtF8QxZ0YrVKomdRGww, 573749084, 573749581, 315360000, LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [6A8133BE-1334-4739-965C-222780E5408A] [2019-03-08 22:53:01 GMT+08:00] Error msg: 
+[INFO] [9241813B-FDBA-4669-A164-965B484D5BD8] [2019-03-08 22:53:03 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [1AA304D8-8EB1-4F32-A09F-039D4EEF6AB5] [2019-03-08 22:53:03 GMT+08:00] Postgres conn state: ok
+[DEBUG] [232BD2AB-01B7-44B7-B449-D3316AE750BD] [2019-03-08 22:53:03 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE  uniqueID = $1  : 1NNLtF8QxZ0YrVKomdRGww
+[INFO] [AE6025C2-B3F0-43CB-8B5E-EB6A378D6FFC] [2019-03-08 22:53:03 GMT+08:00] Error msg: 
+[INFO] [D0DEC94A-2501-459F-8435-36B8D73CBBCD] [2019-03-08 22:53:03 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [F123F9CB-A040-4179-803A-E2E2016824C4] [2019-03-08 22:53:03 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4622EC7F-6423-4AC2-B377-7DA621D49B62] [2019-03-08 22:53:03 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender","createtime","updatetime","status" FROM users  WHERE  uniqueID = $1   LIMIT 50 : 1NNLtF8QxZ0YrVKomdRGww
+[INFO] [5691CF6D-A99D-4A74-9B88-858FFFA94593] [2019-03-08 22:53:03 GMT+08:00] Error msg: 
+[INFO] [E0396D69-4746-4151-BD4F-7522FD74E98A] [2019-03-08 22:53:03 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [814DFB69-322A-4A87-9C60-5928BD7D14EB] [2019-03-08 22:53:03 GMT+08:00] Postgres conn state: ok
+[DEBUG] [34AE5BE7-05C0-418B-A961-BE77F10EEC4C] [2019-03-08 22:53:03 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user0013
+[INFO] [3B735E02-5960-44EB-A5AD-2D03954D2F60] [2019-03-08 22:53:03 GMT+08:00] Error msg: 
+[INFO] [BC981D93-F8E3-43FB-9E17-EC68DB25E9CE] [2019-03-08 22:53:03 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [22F67981-D78B-4C04-9373-4DCB5D232176] [2019-03-08 22:53:03 GMT+08:00] Postgres conn state: ok
+[DEBUG] [6A3026B2-196B-4514-A72E-87ADF7E242C8] [2019-03-08 22:53:03 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password","createtime","updatetime","status" FROM account  WHERE username = $1  LIMIT 1 : user0013
+[INFO] [B61E0D50-0C6A-40B6-934E-94E63D18E85E] [2019-03-08 22:53:03 GMT+08:00] Error msg: 
+[INFO] [0D381350-1D8C-4D04-8E10-677AF91EE60C] [2019-03-08 23:15:14 GMT+08:00] Running setup: test
+[INFO] [8B878685-0339-4A53-B00C-165B7F26ADFA] [2019-03-08 23:15:14 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [58988A5D-92CE-4791-AA37-110DDEA550AD] [2019-03-08 23:15:14 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [FD51FFAB-B6A4-4235-A9B5-9781440F4E00] [2019-03-08 23:15:14 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C5A9EB75-DF51-4FBA-9B35-42F3300351C0] [2019-03-08 23:15:14 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS test (username text NOT NULL, password text, CONSTRAINT test_key PRIMARY KEY (username) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [13C49805-AD16-48DC-8339-28A5AE23DDC7] [2019-03-08 23:15:14 GMT+08:00] Error msg: 
+[INFO] [FFE023C5-674E-4E5D-A04C-92FBFDF8648B] [2019-03-08 23:15:14 GMT+08:00] Running setup: users
+[INFO] [4A4E669B-F4B2-4E3F-AE87-04A0151CEB7D] [2019-03-08 23:15:14 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [270DBF33-A0DD-4D34-8CCD-C649CF382356] [2019-03-08 23:15:14 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [6AE0C7F0-CC4E-4488-85F3-A7DA1E044B99] [2019-03-08 23:15:14 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C053026E-4246-4CED-8F93-43089EB4020E] [2019-03-08 23:15:14 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS users (id serial NOT NULL, uniqueid text, nickname text, realname text, age int8, avatar text, signature text, phone text, email text, address text, college text, gender text, createtime text, updatetime text, status text, CONSTRAINT users_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [76016AC0-C189-4865-8B8A-1AA081054327] [2019-03-08 23:15:14 GMT+08:00] Error msg: 
+[INFO] [689C2385-0E42-4970-A07E-5E8DFC5E4101] [2019-03-08 23:15:14 GMT+08:00] Running setup: tokens
+[INFO] [AD202670-9945-41E2-84A5-A53E82D743B0] [2019-03-08 23:15:14 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [F5D09DEF-758A-441D-AE93-FAACACC0A8DB] [2019-03-08 23:15:14 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [89766A7F-2CDC-4220-860F-E017D5FC653D] [2019-03-08 23:15:14 GMT+08:00] Postgres conn state: ok
+[DEBUG] [FFEBE4C0-9F73-4595-9F28-513FDA2932EA] [2019-03-08 23:15:14 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS tokens (token text NOT NULL, userid text, created int8, updated int8, idle int8, CONSTRAINT tokens_key PRIMARY KEY (token) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [D76BF8EE-59F1-472E-9CD7-8BC7EBECF999] [2019-03-08 23:15:14 GMT+08:00] Error msg: 
+[INFO] [7F5CC8CD-046E-47E7-BB1B-40E3AAE64952] [2019-03-08 23:15:14 GMT+08:00] Running setup: account
+[INFO] [627D690A-BECE-4B2B-8D89-225D33D4FFF5] [2019-03-08 23:15:14 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [21C0AA23-1F26-426E-8ADD-9E54A156165A] [2019-03-08 23:15:14 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [724580C6-7569-4E9F-A093-D695AED5B1A4] [2019-03-08 23:15:14 GMT+08:00] Postgres conn state: ok
+[DEBUG] [030D4A9B-B89D-4A50-B6FC-76474C0CECBA] [2019-03-08 23:15:14 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS account (uniqueid text NOT NULL, username text, password text, createtime text, updatetime text, status text, CONSTRAINT account_key PRIMARY KEY (uniqueID) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [C3BAD397-22EC-49C6-A3AD-61968AD9A105] [2019-03-08 23:15:14 GMT+08:00] Error msg: 
+[INFO] [87AE174B-FD59-4A28-BA72-65EDE37B9E4A] [2019-03-08 23:15:14 GMT+08:00] Running setup: chat_dialog
+[INFO] [E29AA9A0-6605-401F-9593-19187E817BCC] [2019-03-08 23:15:14 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [47CCB81A-15D2-4541-9C59-383FE828E272] [2019-03-08 23:15:14 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [B168934F-5C81-434D-9E96-05B164B02E66] [2019-03-08 23:15:14 GMT+08:00] Postgres conn state: ok
+[DEBUG] [3DFB7EEA-A866-45CC-B9DF-8CB246C335FC] [2019-03-08 23:15:14 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_dialog (id text NOT NULL, lastmessageid text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_dialog_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [0ED3CCB6-83EF-4587-9905-6DDFBB3A36FE] [2019-03-08 23:15:14 GMT+08:00] Error msg: 
+[INFO] [E5D6DD79-0B6D-43C9-A01F-E313B4495C7F] [2019-03-08 23:15:14 GMT+08:00] Running setup: chat_message
+[INFO] [A70C1AC4-61BF-487A-8E43-0EEDEDFC572B] [2019-03-08 23:15:14 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [F8781CD4-8538-4371-BD5F-CE88A25324F4] [2019-03-08 23:15:14 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [8382E2C3-7CD6-4AD0-950E-7B11097B3C67] [2019-03-08 23:15:14 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D48223DF-E0B2-472D-AC65-65889E2A24FD] [2019-03-08 23:15:14 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_message (id text NOT NULL, dialogid text, sender int8, receiver int8, message text, type text, createtime text, updatetime text, status text, CONSTRAINT chat_message_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [1A5A1BAD-845C-4A09-AB4D-8A211736189C] [2019-03-08 23:15:14 GMT+08:00] Error msg: 
+[INFO] [C8F99285-97D6-46DD-9D67-B6E214E960D4] [2019-03-08 23:15:14 GMT+08:00] Running setup: chat_participant
+[INFO] [082E2D15-9551-436D-A30F-8231C5378184] [2019-03-08 23:15:14 GMT+08:00] createStatement: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE);
+[INFO] [C3FB35BD-0BA4-442A-B1E6-C131F3907CA4] [2019-03-08 23:15:14 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [E19EE082-093E-4039-A2E5-2C669C6B65BE] [2019-03-08 23:15:14 GMT+08:00] Postgres conn state: ok
+[DEBUG] [105EB262-984A-4EEA-84C4-4BA7A3401CE6] [2019-03-08 23:15:14 GMT+08:00] StORM Debug: CREATE TABLE IF NOT EXISTS chat_participant (id serial NOT NULL, dialogid text, p1 int8, p2 int8, createtime text, updatetime text, status text, CONSTRAINT chat_participant_key PRIMARY KEY (id) NOT DEFERRABLE INITIALLY IMMEDIATE); : 
+[INFO] [D1B9C64D-73B1-43EA-93D5-F8F417050D8D] [2019-03-08 23:15:14 GMT+08:00] Error msg: 
+[INFO] [A2327938-B0F3-437F-8159-4140622C2875] [2019-03-08 23:15:19 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [D1A5A51B-8CE6-41FE-8E3E-3B00ABD6447B] [2019-03-08 23:15:19 GMT+08:00] Postgres conn state: ok
+[DEBUG] [0B4BE763-0F30-48DA-9DC9-D9DDB71C7235] [2019-03-08 23:15:19 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [0738D2D7-F1AD-4D89-AAF7-2ABDF6C05FC6] [2019-03-08 23:15:19 GMT+08:00] Error msg: 
+[INFO] [F4360AA1-7018-4482-9094-42BBD0819786] [2019-03-08 23:15:19 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [9E35B6CF-9666-4D48-862A-FCBD748F4116] [2019-03-08 23:15:19 GMT+08:00] Postgres conn state: ok
+[DEBUG] [0C38B525-A86C-4634-8332-AB8C7FC5BF1F] [2019-03-08 23:15:19 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [88AF7711-5978-4ABD-ACC9-7C4C9733E949] [2019-03-08 23:15:19 GMT+08:00] Error msg: 
+[INFO] [80BEF52C-477E-4498-B6BE-101959C9E6CB] [2019-03-08 23:15:19 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [41A16E11-50E2-4672-AAF7-97EF6BE12F12] [2019-03-08 23:15:19 GMT+08:00] Postgres conn state: ok
+[DEBUG] [13CE5D63-F580-4B97-B978-81FF955F15AC] [2019-03-08 23:15:19 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : 1NNLtF8QxZ0YrVKomdRGww, 573749084, 573750919, 315360000, LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [81B38719-F655-4042-B69F-800DCD96F24C] [2019-03-08 23:15:19 GMT+08:00] Error msg: 
+[INFO] [C7B8CBB5-C927-4BF7-A2BA-9A5AA8C54F09] [2019-03-08 23:15:23 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [B2BB04FE-99E5-43DB-870A-FCEAFB4EA227] [2019-03-08 23:15:24 GMT+08:00] Postgres conn state: ok
+[DEBUG] [EA34152F-6711-4E92-A84B-4B81F36EB293] [2019-03-08 23:15:24 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [207FE707-362B-4A44-AEF1-720E75013D69] [2019-03-08 23:15:24 GMT+08:00] Error msg: 
+[INFO] [FE0ACEDB-BC5D-44E9-ADD2-81B23FA5872A] [2019-03-08 23:15:24 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [6B6CB23C-9CAF-45BC-AA43-15CC08626F00] [2019-03-08 23:15:24 GMT+08:00] Postgres conn state: ok
+[DEBUG] [A083AD22-9A93-40B1-ABC2-90BB59794F5A] [2019-03-08 23:15:24 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [C45548E2-6875-402A-9026-6324EF4DEB9B] [2019-03-08 23:15:24 GMT+08:00] Error msg: 
+[INFO] [6946D5AC-F552-48B4-AC0B-2EA17E5DEEB4] [2019-03-08 23:15:24 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [A0E8FAC3-7172-404F-9FDD-FE1112751D7E] [2019-03-08 23:15:24 GMT+08:00] Postgres conn state: ok
+[DEBUG] [279B282C-EA38-42BF-8CF6-88AC42EBDE25] [2019-03-08 23:15:24 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : 1NNLtF8QxZ0YrVKomdRGww, 573749084, 573750924, 315360000, LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [9B152FAE-867F-4A01-A1AB-76E8FF4C8E09] [2019-03-08 23:15:24 GMT+08:00] Error msg: 
+[INFO] [CBB04B62-A186-4131-A6A3-8D15299CFEE6] [2019-03-08 23:15:32 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [BDEA894B-DB10-451E-AEC9-3F86F510EAB3] [2019-03-08 23:15:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [BE79CD22-D768-4018-9C98-036C977A0551] [2019-03-08 23:15:33 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM tokens  WHERE "token" = $1 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [632BDDE8-B92B-4AA9-9827-773B0281B59C] [2019-03-08 23:15:33 GMT+08:00] Error msg: 
+[INFO] [A22DF2CD-95A8-4416-8CB4-9CF9943DAE7F] [2019-03-08 23:15:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [4D848E7F-73A0-444B-B24E-B06441BFEAB8] [2019-03-08 23:15:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [C5DB76EA-BF99-44FA-B40B-618BEF3325C6] [2019-03-08 23:15:33 GMT+08:00] StORM Debug: SELECT "token","userid","created","updated","idle" FROM tokens  WHERE "token" = $1  LIMIT 50 : LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [C6D29D34-4F15-4FBB-932B-130939DD3252] [2019-03-08 23:15:33 GMT+08:00] Error msg: 
+[INFO] [F41E9B95-56AE-45C1-B272-825AB763B7C7] [2019-03-08 23:15:33 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [6AE3CD59-BFF6-4F79-A4EA-B8C8DBD361C4] [2019-03-08 23:15:33 GMT+08:00] Postgres conn state: ok
+[DEBUG] [BE4D7C3A-E477-46BA-9604-B24346162B7E] [2019-03-08 23:15:33 GMT+08:00] StORM Debug: UPDATE tokens SET "userid" = $1, "created" = $2, "updated" = $3, "idle" = $4 WHERE "token" = $5 : 1NNLtF8QxZ0YrVKomdRGww, 573749084, 573750933, 315360000, LKrEx2EyPgpbpEhPrHYo8A
+[INFO] [968F378D-4C49-4D41-B235-31B18D062B2B] [2019-03-08 23:15:33 GMT+08:00] Error msg: 
+[INFO] [0EDB24EC-54F0-47C2-AE00-89BAFE3B7233] [2019-03-08 23:15:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [E47A5FB1-9560-4D2F-81A6-C43BE461335D] [2019-03-08 23:15:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [2014F7A6-1D28-4A37-AFEE-A9AC4AF61BD3] [2019-03-08 23:15:35 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE  uniqueID = $1  : 1NNLtF8QxZ0YrVKomdRGww
+[INFO] [E16A9A58-1E63-4576-9268-42225BD20E8E] [2019-03-08 23:15:35 GMT+08:00] Error msg: 
+[INFO] [AB9CE49B-8A85-440C-8069-0C7EADAE136A] [2019-03-08 23:15:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [71760A8A-3E6F-446B-B64D-67B061E60AC6] [2019-03-08 23:15:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [1F25B723-47D2-4146-A718-FA68B8C38F3D] [2019-03-08 23:15:35 GMT+08:00] StORM Debug: SELECT "id","uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender","createtime","updatetime","status" FROM users  WHERE  uniqueID = $1   LIMIT 50 : 1NNLtF8QxZ0YrVKomdRGww
+[INFO] [02708E53-EB61-4D64-9430-B69FEC9B9A18] [2019-03-08 23:15:35 GMT+08:00] Error msg: 
+[INFO] [82ABACD5-556E-4B9E-B5E5-EB380E0DA03C] [2019-03-08 23:15:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [6A54FC1E-3AE4-4800-879C-1217EB9A6C5B] [2019-03-08 23:15:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [89A9780E-44A4-40CB-B46F-3E2144049D7F] [2019-03-08 23:15:35 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user0014
+[INFO] [46CB5853-33A2-4DCF-8E56-E7564B874025] [2019-03-08 23:15:35 GMT+08:00] Error msg: 
+[INFO] [01AF2516-CA67-4995-AC8F-27BDB215B89E] [2019-03-08 23:15:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [D30BBF52-2168-4BBD-974C-24515A04BE75] [2019-03-08 23:15:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [D59B93DE-1B81-48BB-AB96-7908BAAD9251] [2019-03-08 23:15:35 GMT+08:00] StORM Debug: INSERT INTO account ("uniqueid","username","password","createtime","updatetime","status") VALUES($1,$2,$3,$4,$5,$6) RETURNING "uniqueid" : 1JnKoXFMe7Z778V5RjqBSQ, user0014, 7c4a8d09ca3762af61e59520943dc26494f8941b, 2019-03-08 11:15:35, 2019-03-08 11:15:35, 正常
+[INFO] [AE16D475-7D72-499A-94A6-239383B894BE] [2019-03-08 23:15:35 GMT+08:00] Error msg: 
+[INFO] [34BAC061-5529-44E8-8752-91008037BF0B] [2019-03-08 23:15:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [AC18E516-6C80-4002-8140-CA8792785384] [2019-03-08 23:15:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [5C8EEF0B-6702-4A93-B56A-671CF3D18D2B] [2019-03-08 23:15:35 GMT+08:00] StORM Debug: INSERT INTO users ("uniqueid","nickname","realname","age","avatar","signature","phone","email","address","college","gender","createtime","updatetime","status") VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING "id" : 1JnKoXFMe7Z778V5RjqBSQ, 用户wPKaWIQsHy, , 0, , , user0014, , , , 男, 2019-03-08 11:15:35, 2019-03-08 11:15:35, 正常
+[INFO] [5838F30A-AD48-4B41-B755-4A345AC0ABC0] [2019-03-08 23:15:35 GMT+08:00] Error msg: 
+[INFO] [A677B52B-64D9-4268-AACA-337295CF7C6D] [2019-03-08 23:15:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [835E8F07-9080-4F3D-A0D8-4E29E9CED3E3] [2019-03-08 23:15:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [4AB4A7C5-EC71-4057-AF71-5A139BA6E62B] [2019-03-08 23:15:35 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM account  WHERE username = $1 : user0014
+[INFO] [0ED3957C-1120-4B96-ABD1-5F89ED2DBD9B] [2019-03-08 23:15:35 GMT+08:00] Error msg: 
+[INFO] [C5CCE9E3-F49C-4862-8A37-B21CA2FE0230] [2019-03-08 23:15:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [60DB55C3-AF8C-43D4-B532-263C0CE57693] [2019-03-08 23:15:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [23392703-B7C0-4C01-879D-8DC56A850EA4] [2019-03-08 23:15:35 GMT+08:00] StORM Debug: SELECT "uniqueid","username","password","createtime","updatetime","status" FROM account  WHERE username = $1  LIMIT 1 : user0014
+[INFO] [1D68DB95-D5CB-4E68-87BE-985CAAA1B803] [2019-03-08 23:15:35 GMT+08:00] Error msg: 
+[INFO] [873D74DE-AC7D-49B0-8F00-6BD35753A5A2] [2019-03-08 23:15:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [22DA9016-9878-4D46-A75E-F66928D1CDE7] [2019-03-08 23:15:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [93C35D9F-867F-4284-89B7-1D351C27FC48] [2019-03-08 23:15:35 GMT+08:00] StORM Debug: INSERT INTO tokens ("token","userid","created","updated","idle") VALUES($1,$2,$3,$4,$5) RETURNING "token" : EGs7LF4WgZzspOO4RVHgAw, 1JnKoXFMe7Z778V5RjqBSQ, 573750935, 573750935, 315360000
+[INFO] [9A5FF621-B97B-4AE8-8847-9DD22B100F44] [2019-03-08 23:15:35 GMT+08:00] Error msg: 
+[INFO] [D8A372F1-C94E-4FB4-B28E-BF2FDD588917] [2019-03-08 23:15:35 GMT+08:00] Postgres conn: postgresql://imserver:imserver@192.168.1.6:5432/imserver
+[INFO] [3095A4C2-9374-4BEB-BF5B-90C0803A8DE9] [2019-03-08 23:15:35 GMT+08:00] Postgres conn state: ok
+[DEBUG] [0148DDCB-50D4-43EC-8CF5-DCA2C42B7B63] [2019-03-08 23:15:35 GMT+08:00] StORM Debug: SELECT COUNT(*) AS counter FROM users  WHERE uniqueid = $1 : EGs7LF4WgZzspOO4RVHgAw
+[INFO] [AFC5C866-0B4F-4761-AAA7-1A99A3DB56A4] [2019-03-08 23:15:35 GMT+08:00] Error msg: 

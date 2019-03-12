@@ -121,7 +121,8 @@ class ChatSessionHandler: WebSocketSessionHandler {
                         ChatChannel.shared.addClient(client: ChatClient.init(clientId: "\(userid)", socket: socket))
                         socket.callback(Result(code: .success))
                     case .chat:
-                        if let message = ChatMessage.fromSocketMessage(sender: userid, data: messageDict) {
+                        if let message = ChatMessage.fromSocketMessage(sender: userid, data: messageDict),
+                            message.sender != message.receiver {
                             let result = self.handleChatMessage(message: message)
                             socket.callback(result)
                         } else {

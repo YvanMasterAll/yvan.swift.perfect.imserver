@@ -12,7 +12,8 @@ public typealias RequestHandler = (HTTPRequest, HTTPResponse) -> ()
 
 class BaseController {
     
-    public lazy var route : Routes = Routes()
+    public lazy var route: Routes = Routes()
+    public lazy var rules: [Rule_FP] = []
     
     init() { }
 }

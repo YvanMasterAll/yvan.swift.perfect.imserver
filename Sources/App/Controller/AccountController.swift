@@ -19,6 +19,8 @@ class AccountController : BaseController {
         self.route.add(method: .post, uri: "\(baseRoute)/user/signin", handler: self.signIn())
         self.route.add(method: .post, uri: "\(baseRoute)/user/signout", handler: self.signOut())
         self.route.add(method: .post, uri: "\(baseRoute)/user/register", handler: self.register())
+        //MARK: - 过滤
+        self.rules.append(("\(baseRoute)/user/register", "password", BaseValidator.password))
     }
 }
 

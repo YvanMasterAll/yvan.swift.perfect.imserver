@@ -13,8 +13,11 @@ func initializeRoute() -> Routes {
     
     //MARK: - 测试模块
     routes.add(TestController().route)
+    //MARK: - 用户模块
     routes.add(AccountController().route)
+    //MARK: - 聊天模块
     routes.add(ChatController().route)
     
     return routes
 }
+

@@ -15,7 +15,10 @@ func baseRequestFilter(turnstile: TurnstilePerfect) -> [(HTTPRequestFilter, HTTP
     //MARK: - 请求过滤器初始化
     filter.append(turnstile.requestFilter)          //请求认证
     filter.append((RequestLogger(), .high))         //请求日志
-    filter.append((basePreferredFilter(), .high))   //首要响应
+    filter.append((parameterFilter(rules:           //参数过滤
+        initializeRules()), .high))
+    filter.append((basePreferredFilter(), .high))   //偏好过滤
+    
     return filter
 }
 
@@ -25,7 +28,7 @@ func baseResponseFilter(turnstile: TurnstilePerfect) -> [(HTTPResponseFilter, HT
     //MARK: - 响应过滤器初始化
     filter.append(turnstile.responseFilter)         //请求认证
     filter.append((RequestLogger(), .low))          //请求日志
-    filter.append((basePreferredFilter(), .high))   //首要响应
+    filter.append((basePreferredFilter(), .high))   //偏好过滤
     
     return filter
 }
@@ -36,15 +39,6 @@ open class basePreferredFilter: HTTPRequestFilter, HTTPResponseFilter {
     public func filterHeaders(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> ()) {
         //MARK: - 响应头配置
         response.setHeader(.accessControlAllowOrigin, value: "*")
-//        //yTest
-//        response.addCookie(HTTPCookie(name: "TurnstileSession",
-//                                      value: "sSss7uyWmnj8aVPcL30A5A",
-//            //value: "VK_hyq9whMDLs8JWphRmWA",
-//            domain: nil,
-//            expires: .relativeSeconds(60*60*24*365),
-//            path: "/",
-//            secure: nil,
-//            httpOnly: true))
         
         callback(.continue)
     }
@@ -69,9 +63,46 @@ open class basePreferredFilter: HTTPRequestFilter, HTTPResponseFilter {
     }
 }
 
-//MARK: - 文件类型请求过滤器
+//MARK: - 参数过滤器
+open class parameterFilter: HTTPRequestFilter, HTTPResponseFilter {
+    
+    //MARK: - 过滤规则
+    let rules: [Rule_FP]
+    
+    init(rules: [Rule_FP]) {
+        self.rules = rules
+    }
+    
+    public func filterHeaders(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> ()) {
+        callback(.continue)
+    }
+    
+    public func filterBody(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> ()) {
+        callback(.continue)
+    }
+    
+    public func filter(request: HTTPRequest,
+                       response: HTTPResponse,
+                       callback: (HTTPRequestFilterResult) -> ()) {
+        //参数过滤
+        for rule in rules {
+            if rule.0 == request.path {
+                if let param = request.param(name: "\(rule.1)") {
+                    guard rule.2.validate(param) else {
+                        response.callback(Result(code: .requestIllegal))
+                        return
+                    }
+                }
+            }
+        }
+        callback(.continue(request, response))
+    }
+}
 
-//MARK: - 404响应过滤器
+//TODO: - 文件类型请求过滤器
+
+//TODO: - 404响应过滤器
+
 
 
 
