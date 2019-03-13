@@ -82,6 +82,7 @@ open class BaseRealm : Realm {
                     user.uniqueID = newAccount.uniqueID
                     user.phone = newAccount.username
                     user.nickname = "\(baseNickname)\(String.randomLetters(10))"
+                    user.avatar = baseAvatar
                     try user.save()
                 } catch {
                     print("REGISTER ERROR: \(error)")

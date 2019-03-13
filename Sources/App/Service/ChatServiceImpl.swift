@@ -12,15 +12,15 @@ class ChatServiceImpl: ChatService {
     lazy var user: User = {
         return User()
     }()
-    lazy var participant_dialog: ChatParticipant_Dialog = {
-        return ChatParticipant_Dialog()
+    lazy var participant_dialog: ChatDialog_Participant = {
+        return ChatDialog_Participant()
     }()
     
     /// 用户判断
     ///
     /// - Parameter id: 用户标识
-    func user_exists(id: Int) -> Bool {
-        return user.exists(id: id)
+    func user_exists(id: Int) throws -> Bool {
+        return try user.exists(id: id)
     }
     
     /// 会话判断
@@ -29,7 +29,7 @@ class ChatServiceImpl: ChatService {
     ///   - id1: 标识1
     ///   - id2: 标识2
     /// - Returns: 返回会话标识
-    func dialog_exists(id1: Int, id2: Int) -> String? {
-        return participant_dialog.exists(id1: id1, id2: id2)
+    func dialog_exists(id1: Int, id2: Int) throws -> String? {
+        return try participant_dialog.exists(id1: id1, id2: id2)
     }
 }

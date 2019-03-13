@@ -65,17 +65,13 @@ extension User {
     }
     
     //MARK: - 用户判断
-    func exists(id: Int) -> Bool {
-        do {
-            let params = ["id": "\(id)",
-                "status": Status.normal.value
-            ]
-            let count = try self.count(params)
-            if count == 1 {
-                return true
-            }
-        } catch {
-            print("Exists error: \(error)")
+    func exists(id: Int) throws -> Bool {
+        let params = ["id": "\(id)",
+            "status": Status.normal.value
+        ]
+        let count = try self.count(params)
+        if count == 1 {
+            return true
         }
         return false
     }

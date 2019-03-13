@@ -43,7 +43,7 @@ class BaseModel: PostgresStORM, BaseModelProtocol {
                 } else if value is [String] {
                     c[label] = modifyValue_AfterSQL((value as! [String]).joined(separator: ","), forKey: label)
                 } else {
-                    c[label] = modifyValue(value, forKey: label)
+                    c[label] = modifyValue_AfterSQL(value, forKey: label)
                 }
             }
             count += 1
@@ -58,7 +58,9 @@ class BaseModel: PostgresStORM, BaseModelProtocol {
     ///   - k: 字段
     /// - Returns: 返回变更数据
     func modifyValue_AfterSQL(_ v: Any, forKey k: String) -> Any {
-        //TODO: 读取数据变更
+        if k.elementsEqual("avatar"), let value = v as? String { //头像地址
+            return "\(baseURL)/\(value)"
+        }
         
         return TypeUtil.value(v)
     }

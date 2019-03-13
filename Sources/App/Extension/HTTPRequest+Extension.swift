@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import StORM
 import PerfectHTTP
 
 extension HTTPRequest {
@@ -16,5 +17,17 @@ extension HTTPRequest {
             return uid
         }
         return nil
+    }
+    
+    //MARK: - 分页指针
+    public func cursor() -> StORMCursor {
+        var cursor = StORMCursor(limit: basePageLimit, offset: 0)
+        if let limit =  self.param(name: "limit")?.toInt() {
+            cursor.limit = limit
+        }
+        if let page = self.param(name: "page")?.toInt() {
+            cursor.offset = (page - 1)*cursor.limit
+        }
+        return cursor
     }
 }

@@ -244,6 +244,10 @@ extension PostgresStORM {
             throw error
         }
     }
+    public func sql_ex(_ statement: String, params: [String]) throws {
+        results.rows = try execRows(statement, params: params)
+        if results.cursorData.totalRecords == 1 { makeRow() }
+    }
     @discardableResult
     fileprivate func execRows(_ statement: String, params: [String]) throws -> [StORMRow] {
         let thisConnection = PostgresConnect(

@@ -18,12 +18,12 @@ class ChatMessage: BaseModel {
     var dialogid    : String        = ""
     var sender      : Int           = 0
     var receiver    : Int           = 0
-    var message     : String        = ""
-    var type        : MessageType   = .normal
+    var body        : String        = ""
+    var type        : MessageType   = .text
     var createtime  : Date          = Date()
     var updatetime  : Date          = Date()
     var status      : Status        = .unread
-    var _dialogtype : DialogType    = .normal
+    var _dialogtype : DialogType    = .single
     
     override open func table() -> String {  return "chat_message"  }
     
@@ -34,7 +34,7 @@ class ChatMessage: BaseModel {
         if let v = this.data["dialogid"]    as? String { dialogid  = v }
         if let v = this.data["sender"]      as? Int    { sender    = v }
         if let v = this.data["receiver"]    as? Int    { receiver  = v }
-        if let v = this.data["message"]     as? String { message   = v }
+        if let v = this.data["body"]        as? String { body   = v }
         if let k = this.data["type"]        as? String,
             let v = MessageType.init(k) { type = v }
         if let v = DateUtil.getDate(this.data["createtime"] as? String)     { createtime  = v }
@@ -50,9 +50,8 @@ extension ChatMessage {
     
     //MARK: - 数据映射, WebSocket
     public static func fromSocketMessage(sender: Int, data: Dictionary<String, Any>) -> ChatMessage? {
-        guard let k1 = data["receiver"] as? String,
-            let receiver = k1.toInt() else { return nil }
-        guard let message = data["message"] as? String else { return nil }
+        guard let receiver = data["receiver"] as? Int else { return nil }
+        guard let message = data["body"] as? String else { return nil }
         guard let k2 = data["type"] as? String,
             let type = MessageType.init(k2) else { return nil }
         guard let k3 = data["dialogtype"] as? String,
@@ -60,7 +59,7 @@ extension ChatMessage {
         let chatMessage = ChatMessage.init()
         chatMessage.sender = sender
         chatMessage.receiver = receiver
-        chatMessage.message = message
+        chatMessage.body = message
         chatMessage.type = type
         chatMessage._dialogtype = dialogtype
         if let dialogid = data["dialogid"] as? String {

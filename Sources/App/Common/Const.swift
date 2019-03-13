@@ -28,7 +28,11 @@ var baseDomain     = ""
 var baseDocument   = "webroot"
 
 //MARK: - 用户信息
-let baseNickname = "用户"
+let baseNickname   = "用户"
+let baseAvatar     = "static/avatar.png"
+
+//MARK: - 页面配置
+let basePageLimit  = 10
 
 //MARK: - 枚举类型
 protocol BaseType {
@@ -95,34 +99,34 @@ public enum Whether: BaseType {     //是否
 }
 public enum MessageType: BaseType { //消息类型
     
-    case normal
+    case text
     
     public var value: String {
         switch self {
-        case .normal            : return "普通消息"
+        case .text               : return "文本"
         }
     }
     
     init?(_ value: String) {
         switch value {
-        case "普通消息", "normal"  : self = .normal
+        case "文本", "text"       : self = .text
         default                  : return nil
         }
     }
 }
 public enum DialogType: BaseType {  //会话类型
     
-    case normal
+    case single
     
     public var value: String {
         switch self {
-        case .normal             : return "普通会话"
+        case .single              : return "单聊"
         }
     }
     
     init?(_ value: String) {
         switch value {
-        case "普通会话", "normal"  : self = .normal
+        case "单聊", "single"      : self = .single
         default                   : return nil
         }
     }
