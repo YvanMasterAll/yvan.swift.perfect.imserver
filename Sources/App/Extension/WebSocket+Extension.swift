@@ -19,4 +19,14 @@ extension WebSocket {
             print(error)
         }
     }
+    func callback(_ _result: Result, cmd: SocketCmdType) {
+        do {
+            var result = _result
+            result.setCmd(cmd: cmd)
+            let messageStr = try result.toDict().jsonEncodedString()
+            self.sendStringMessage(string: messageStr, final: true, completion: { })
+        } catch {
+            print(error)
+        }
+    }
 }

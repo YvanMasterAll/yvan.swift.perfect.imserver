@@ -45,12 +45,18 @@ struct Result {
         self.dataDicts = data
     }
     
+    mutating func setCmd(cmd: SocketCmdType) {
+        self.cmd = cmd
+    }
+    
     func toDict() -> [String: Any] {
         var dict = [String: Any]()
         dict["code"] = code.value()
         dict["msg"] = msg ?? code.msg()
+        dict["cmd"] = cmd?.value
         dict["dataArray"] = dataArray
         dict["dataDict"] = dataDict
+        dict["dataDicts"] = dataDicts
         return dict
     }
     
@@ -60,6 +66,7 @@ struct Result {
     fileprivate var dataArray   : [Any]?
     fileprivate var dataDict    : [String: Any]?
     fileprivate var dataDicts   : [[String: Any]]?
+    fileprivate var cmd         : SocketCmdType?
 }
 struct ResultSet {
     
@@ -78,6 +85,7 @@ enum ResultCode: Int {
     case userExists         = 411
     case userNotExists      = 412
     case signinFailure      = 413
+    case dialogNotExists    = 421
     
     //MARK: - 500
     case serverError        = 500
@@ -99,6 +107,7 @@ enum ResultCode: Int {
         case .userExists:       return "用户已存在"
         case .userNotExists:    return "用户不存在"
         case .signinFailure:    return "登陆失败"
+        case .dialogNotExists:  return "会话不存在"
         //MARK: - 500
         case .serverError:      return "服务器异常"
         //MARK: - 900

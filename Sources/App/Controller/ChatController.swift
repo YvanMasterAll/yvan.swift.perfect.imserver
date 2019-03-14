@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import StORM
 import PerfectHTTP
 import PostgresStORM
 import PerfectWebSockets
@@ -81,15 +82,26 @@ class ChatSessionHandler: WebSocketSessionHandler {
                     switch cmd { //命令类型
                     case .register:
                         ChatChannel.shared.addClient(client: ChatClient.init(clientId: "\(userid)", socket: socket))
-                        socket.callback(Result(code: .success, data: dataDict))
+                        socket.callback(Result(code: .success), cmd: cmd)
                     case .chat:
-                        if let message = ChatMessage.fromSocketMessage(sender: userid, data: dataDict),
+                        if let message = ChatMessage.fromSocketMessage(cmd: cmd, data: dataDict),
                             message.sender != message.receiver {
                             let result = self.handleChatMessage(message: message, source: dataDict)
-                            socket.callback(result)
+                            socket.callback(result, cmd: cmd)
                         } else {
-                            socket.callback(ResultSet.requestIllegal)
+                            socket.callback(ResultSet.requestIllegal, cmd: cmd)
                         }
+                    case .list:
+                        if let pageindex = dataDict["pageindex"] as? Int,
+                            let message = ChatMessage.fromSocketMessage(cmd: cmd, data: dataDict) {
+                            let cursor: StORMCursor = request.cursor(pageindex: pageindex)
+                            let result = self.handleChatMessage(message: message, cursor: cursor)
+                            socket.callback(result, cmd: cmd)
+                        } else {
+                            socket.callback(ResultSet.requestIllegal, cmd: cmd)
+                        }
+                    default:
+                        throw BaseError.invalidSocketCMD
                     }
                 } else {
                     socket.callback(ResultSet.requestIllegal)
@@ -136,7 +148,8 @@ class ChatSessionHandler: WebSocketSessionHandler {
                             try dialog.save()
                             //消息通知
                             if let client = ChatChannel.shared.clients["\(data.receiver)"] {
-                                client.socket.callback(Result(code: .success, data: message.toDict()))
+                                client.socket.callback(Result(code: .success,
+                                                              data: message.toDict()), cmd: .receive)
                             }
                             //响应结果
                             var _source = source
@@ -175,7 +188,8 @@ class ChatSessionHandler: WebSocketSessionHandler {
                             try message.insert(message.asData())
                             //消息通知
                             if let client = ChatChannel.shared.clients["\(data.receiver)"] {
-                                client.socket.callback(Result(code: .success, data: message.toDict()))
+                                client.socket.callback(Result(code: .success,
+                                                              data: message.toDict()), cmd: .receive)
                             }
                             //响应结果
                             var _source = source
@@ -187,6 +201,29 @@ class ChatSessionHandler: WebSocketSessionHandler {
                     print(error)
                     return ResultSet.serverError
                 }
+            }
+        }
+    }
+    
+    //MARK: - 消息列表
+    func handleChatMessage(message _data: ChatMessage, cursor: StORMCursor) -> Result {
+        let data = _data
+        switch data._dialogtype {
+        case .single:
+            do {
+                if data.dialogid == "" {
+                    guard let _dialogid = try chatService
+                        .dialog_exists(id1: data.sender, id2: data.receiver) else {
+                        return Result(code: .dialogNotExists)
+                    }
+                    data.dialogid = _dialogid
+                }
+                let list = try chatService.message_list(dialogid: data.dialogid,
+                                                        userid: data.sender, cursor: cursor)
+                return Result(code: .success, data: list)
+            } catch {
+                print(error)
+                return ResultSet.serverError
             }
         }
     }

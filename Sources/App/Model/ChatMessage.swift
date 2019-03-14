@@ -46,25 +46,71 @@ class ChatMessage: BaseModel {
     }
 }
 
+//MARK: - 消息列表
 extension ChatMessage {
     
-    //MARK: - 数据映射, WebSocket
-    public static func fromSocketMessage(sender: Int, data: Dictionary<String, Any>) -> ChatMessage? {
-        guard let receiver = data["receiver"] as? Int else { return nil }
-        guard let message = data["body"] as? String else { return nil }
-        guard let k2 = data["type"] as? String,
-            let type = MessageType.init(k2) else { return nil }
-        guard let k3 = data["dialogtype"] as? String,
-            let dialogtype = DialogType.init(k3) else { return nil }
-        let chatMessage = ChatMessage.init()
-        chatMessage.sender = sender
-        chatMessage.receiver = receiver
-        chatMessage.body = message
-        chatMessage.type = type
-        chatMessage._dialogtype = dialogtype
-        if let dialogid = data["dialogid"] as? String {
-            chatMessage.dialogid = dialogid
+    public func list(dialogid: String, userid: Int, cursor: StORMCursor) throws -> [[String: Any]] {
+        let params = ["dialogid": dialogid]
+        let order = ["createtime desc"]
+        try self.sfind(params, cursor: cursor, order: order)
+        if self.results.cursorData.totalRecords > 0 {
+            let lasttime = self.rows().last!.createtime
+            print(lasttime)
+            let sets: [String: Any] = [
+                "updatetime": Date(),
+                "status": Status.read
+            ]
+            let params = [
+                SQLConditionModel("createtime", lasttime, t: .gt),
+                SQLConditionModel("dialogid", dialogid),
+                SQLConditionModel("receiver", userid),
+                SQLConditionModel("status", Status.unread)
+            ]
+            try self.supdate(sets: sets, data: params)
         }
-        return chatMessage
+        return self.rows().map{ $0.toDict() }
+    }
+}
+
+//MARK: - 数据映射, WebSocket
+extension ChatMessage {
+    
+    public static func fromSocketMessage(cmd: SocketCmdType,
+                                         data: Dictionary<String, Any>) -> ChatMessage? {
+        switch cmd {
+        case .chat:
+            guard let sender = data["sender"] as? Int else { return nil }
+            guard let receiver = data["receiver"] as? Int else { return nil }
+            guard let message = data["body"] as? String else { return nil }
+            guard let k2 = data["type"] as? String,
+                let type = MessageType.init(k2) else { return nil }
+            guard let k3 = data["dialogtype"] as? String,
+                let dialogtype = DialogType.init(k3) else { return nil }
+            let chatMessage = ChatMessage.init()
+            chatMessage.sender = sender
+            chatMessage.receiver = receiver
+            chatMessage.body = message
+            chatMessage.type = type
+            chatMessage._dialogtype = dialogtype
+            if let dialogid = data["dialogid"] as? String {
+                chatMessage.dialogid = dialogid
+            }
+            return chatMessage
+        case .list:
+            guard let sender = data["sender"] as? Int else { return nil }
+            guard let receiver = data["receiver"] as? Int else { return nil }
+            guard let k3 = data["dialogtype"] as? String,
+                let dialogtype = DialogType.init(k3) else { return nil }
+            let chatMessage = ChatMessage.init()
+            chatMessage.sender = sender
+            chatMessage.receiver = receiver
+            chatMessage._dialogtype = dialogtype
+            if let dialogid = data["dialogid"] as? String {
+                chatMessage.dialogid = dialogid
+            }
+            return chatMessage
+        default:
+            return nil
+        }
     }
 }

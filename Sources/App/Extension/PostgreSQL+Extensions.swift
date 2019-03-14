@@ -56,6 +56,58 @@ extension PostgresStORM {
             throw error
         }
     }
+
+    /// 查询优化, 更新语句
+    ///
+    /// - Parameters:
+    ///   - sets: 更新数据
+    ///   - data: 查询数据
+    open func supdate(sets: [String: Any], data: [String: Any]) throws {
+        let (conditions, params) = self.explain(data)
+        var setsString = [String]()
+        var paramsString = [String]()
+        var i = 1
+        sets.forEach({ (key, value) in
+            setsString.append("\"\(key.lowercased())\" = $\(i)")
+            paramsString.append(String(describing: TypeUtil.value(value)))
+            i += 1
+        })
+        params.forEach({ param in
+            paramsString.append(String(describing: param))
+            i += 1
+        })
+        let str = "UPDATE \(self.table()) SET \(setsString.joined(separator: ", ")) WHERE \(conditions.joined(separator: " AND "))"
+        
+        do {
+            try execRows(str, params: paramsString)
+        } catch {
+            LogFile.error("Error: \(error)", logFile: "./StORMlog.txt")
+            throw error
+        }
+    }
+    open func supdate(sets: [String: Any], data: [SQLConditionModel]) throws {
+        let (conditions, params) = self.explain(data)
+        var setsString = [String]()
+        var paramsString = [String]()
+        var i = 1
+        params.forEach({ param in
+            paramsString.append(String(describing: param))
+            i += 1
+        })
+        sets.forEach({ (key, value) in
+            setsString.append("\"\(key.lowercased())\" = $\(i)")
+            paramsString.append(String(describing: TypeUtil.value(value)))
+            i += 1
+        })
+        let str = "UPDATE \(self.table()) SET \(setsString.joined(separator: ", ")) WHERE \(conditions.joined(separator: " AND "))"
+        
+        do {
+            try execRows(str, params: paramsString)
+        } catch {
+            LogFile.error("Error: \(error)", logFile: "./StORMlog.txt")
+            throw error
+        }
+    }
     
     /// 查询记录数量
     ///

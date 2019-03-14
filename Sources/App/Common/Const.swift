@@ -59,13 +59,14 @@ public enum Gender: BaseType {      //性别
 }
 public enum Status: BaseType {      //状态
     
-    case normal, delete, unread
+    case normal, delete, unread, read
     
     public var value: String {
         switch self {
         case .normal            : return "正常"
         case .delete            : return "删除"
         case .unread            : return "未读"
+        case .read              : return "已读"
         }
     }
     
@@ -74,6 +75,7 @@ public enum Status: BaseType {      //状态
         case "正常"              : self = .normal
         case "删除"              : self = .delete
         case "未读"              : self = .unread
+        case "已读"              : self = .read
         default                  : return nil
         }
     }
@@ -133,12 +135,14 @@ public enum DialogType: BaseType {  //会话类型
 }
 public enum SocketCmdType {         //命令类型, WebSocket
     
-    case register, chat
+    case register, chat, receive, list
     
     public var value: String {
         switch self {
-            case .register       : return "注册"
-            case .chat           : return "聊天"
+        case .register          : return "注册"
+        case .chat              : return "聊天"
+        case .receive           : return "接收"
+        case .list               : return "列表"
         }
     }
     
@@ -146,6 +150,8 @@ public enum SocketCmdType {         //命令类型, WebSocket
         switch value {
         case "注册", "register"   : self = .register
         case "聊天", "chat"       : self = .chat
+        case "列表", "list"       : self = .list
+        case "接收", "receive"    : self = .receive
         default                   : return nil
         }
     }
@@ -155,4 +161,5 @@ public enum SocketCmdType {         //命令类型, WebSocket
 public enum BaseError: Error {
     
     case invalidDigestString        //无效的加密字串
+    case invalidSocketCMD           //无效的通讯命令
 }

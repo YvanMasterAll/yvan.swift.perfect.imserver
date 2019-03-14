@@ -30,4 +30,9 @@ extension HTTPRequest {
         }
         return cursor
     }
+    public func cursor(pageindex: Int) -> StORMCursor {
+        var cursor = StORMCursor(limit: basePageLimit, offset: 0)
+        cursor.offset = (pageindex - 1)*cursor.limit
+        return cursor
+    }
 }

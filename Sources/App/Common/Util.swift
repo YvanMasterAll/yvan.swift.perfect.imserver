@@ -40,6 +40,7 @@ struct Util {
 }
 
 //MARK: - 测试工具
+import StORM
 struct TestUtil {
     
     public static func setup() {
