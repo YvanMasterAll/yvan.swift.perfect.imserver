@@ -26,7 +26,7 @@
 			writeToScreen("Connecting");
 			valuetosend = {
 				"cmd": "register", 
-				"sender": userid.value, 
+				"sender": userid.value*1, 
 				"msg": "joining channel "+ws_params.channel, 
 				"channelid":ws_params.channel
 			};
@@ -49,9 +49,9 @@
 			if(data) {
 				ws_params.dialog_id = data["dialogid"]
 				if(userid.value == data["sender"]) {
-					writeToScreen('<span style="color: blue;">' + userid.value + ': ' + data["message"] +'<\/span>');
+					writeToScreen('<span style="color: blue;">' + userid.value + ': ' + data["body"] +'<\/span>');
 				} else if (userid.value == data["receiver"]) {
-					writeToScreen('<span style="color: blue;">' + data["sender"] + ': ' + data["message"] +'<\/span>');
+					writeToScreen('<span style="color: blue;">' + data["sender"] + ': ' + data["body"] +'<\/span>');
 				}
 			} else {
 				//register success
@@ -70,12 +70,12 @@
 		writeToScreen('<span style="color: red;">SENDING:<\/span> ' + input.value);
         valuetosend = {
         	"cmd": "chat", 
-        	"sender": userid.value, 
-        	"receiver": chatid.value,
-        	"message": input.value, 
+        	"sender": userid.value*1, 
+        	"receiver": chatid.value*1,
+        	"body": input.value, 
         	"dialogid": ws_params.dialog_id, 
-        	"dialogtype": "normal",
-        	"type": "normal",
+        	"dialogtype": "single",
+        	"type": "text",
         	"channelid": ws_params.channel
         };
         console.log(valuetosend);

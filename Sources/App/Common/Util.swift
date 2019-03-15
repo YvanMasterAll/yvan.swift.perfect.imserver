@@ -44,7 +44,6 @@ import StORM
 struct TestUtil {
     
     public static func setup() {
-        
         //self.test_RandomNumber()
     }
     

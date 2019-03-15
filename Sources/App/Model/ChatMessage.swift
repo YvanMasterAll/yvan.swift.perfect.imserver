@@ -53,7 +53,7 @@ extension ChatMessage {
         let params = ["dialogid": dialogid]
         let order = ["createtime desc"]
         try self.sfind(params, cursor: cursor, order: order)
-        if self.results.cursorData.totalRecords > 0 {
+        if self.results.rows.count > 0 {
             let lasttime = self.rows().last!.createtime
             print(lasttime)
             let sets: [String: Any] = [
@@ -81,7 +81,7 @@ extension ChatMessage {
         case .chat:
             guard let sender = data["sender"] as? Int else { return nil }
             guard let receiver = data["receiver"] as? Int else { return nil }
-            guard let message = data["body"] as? String else { return nil }
+            guard let body = data["body"] as? String else { return nil }
             guard let k2 = data["type"] as? String,
                 let type = MessageType.init(k2) else { return nil }
             guard let k3 = data["dialogtype"] as? String,
@@ -89,7 +89,7 @@ extension ChatMessage {
             let chatMessage = ChatMessage.init()
             chatMessage.sender = sender
             chatMessage.receiver = receiver
-            chatMessage.body = message
+            chatMessage.body = body
             chatMessage.type = type
             chatMessage._dialogtype = dialogtype
             if let dialogid = data["dialogid"] as? String {
