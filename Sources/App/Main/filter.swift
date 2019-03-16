@@ -17,6 +17,7 @@ func baseRequestFilter(turnstile: TurnstilePerfect) -> [(HTTPRequestFilter, HTTP
     filter.append((RequestLogger(), .high))         //请求日志
     filter.append((parameterFilter(rules:           //参数过滤
         initializeRules()), .high))
+    filter.append((authenticationFilter(), .high))  //认证过滤
     filter.append((basePreferredFilter(), .high))   //偏好过滤
     
     return filter
@@ -31,6 +32,14 @@ func baseResponseFilter(turnstile: TurnstilePerfect) -> [(HTTPResponseFilter, HT
     filter.append((basePreferredFilter(), .high))   //偏好过滤
     
     return filter
+}
+
+//MARK: - 认证过滤
+func authenticationFilter() -> HTTPRequestFilter {
+    var config = AuthenticationConfig.init()
+    config.include("/*")
+    config.exclude(excludeRoutes())
+    return AuthenticationFilter(config)
 }
 
 //MARK: - 首要过滤器

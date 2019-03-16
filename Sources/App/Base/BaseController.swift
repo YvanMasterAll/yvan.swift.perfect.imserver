@@ -14,6 +14,7 @@ class BaseController {
     
     public lazy var route: Routes = Routes()
     public lazy var rules: [Rule_FP] = []
+    public lazy var route_ex: [String] = []
     
     init() { }
 }

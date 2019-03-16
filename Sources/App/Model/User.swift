@@ -75,5 +75,12 @@ extension User {
         }
         return false
     }
+    
+    //MARK: - 用户列表
+    func list(cursor: StORMCursor) throws -> [[String: Any]] {
+        let params = ["status": Status.normal]
+        try self.sfind(params, cursor: cursor)
+        return self.rows().map{ $0.toDict() }
+    }
 }
 

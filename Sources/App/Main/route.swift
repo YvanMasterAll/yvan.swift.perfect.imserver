@@ -21,3 +21,17 @@ func initializeRoute() -> Routes {
     return routes
 }
 
+//MARK: - Straight Routes Without Authorization
+func excludeRoutes() -> [String] {
+    var routes: [String] = []
+    
+    //MARK: - 测试模块
+    routes.append(contentsOf: TestController().route_ex)
+    //MARK: - 用户模块
+    routes.append(contentsOf: AccountController().route_ex)
+    //MARK: - 聊天模块
+    routes.append(contentsOf: ChatController().route_ex)
+    
+    return routes
+}
+

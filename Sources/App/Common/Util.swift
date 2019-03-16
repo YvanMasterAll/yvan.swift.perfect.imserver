@@ -55,13 +55,13 @@ struct TestUtil {
     }
 }
 
-
 //MARK: - 日期工具
 public class DateUtil {
     
     static func getFormat(format: String = "yyyy-MM-dd hh:mm:ss") -> DateFormatter {
         let df = DateFormatter()
-        df.dateFormat = format
+        df.timeZone = NSTimeZone(abbreviation: "EST")! as TimeZone
+        df.locale = Locale.init(identifier: "zh_CN")
         df.locale = Locale.current
         return df
     }
