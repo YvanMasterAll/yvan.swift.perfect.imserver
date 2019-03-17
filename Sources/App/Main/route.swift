@@ -17,6 +17,8 @@ func initializeRoute() -> Routes {
     routes.add(AccountController().route)
     //MARK: - 聊天模块
     routes.add(ChatController().route)
+    //MARK: - 发现模块
+    routes.add(FindController().route)
     
     return routes
 }
@@ -31,6 +33,8 @@ func excludeRoutes() -> [String] {
     routes.append(contentsOf: AccountController().route_ex)
     //MARK: - 聊天模块
     routes.append(contentsOf: ChatController().route_ex)
+    //MARK: - 发现模块
+    routes.append(contentsOf: FindController().route_ex)
     
     return routes
 }

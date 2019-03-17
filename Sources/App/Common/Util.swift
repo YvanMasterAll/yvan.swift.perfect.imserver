@@ -55,36 +55,6 @@ struct TestUtil {
     }
 }
 
-//MARK: - 日期工具
-public class DateUtil {
-    
-    static func getFormat(format: String = "yyyy-MM-dd hh:mm:ss") -> DateFormatter {
-        let df = DateFormatter()
-        df.timeZone = NSTimeZone(abbreviation: "EST")! as TimeZone
-        df.locale = Locale.init(identifier: "zh_CN")
-        df.locale = Locale.current
-        return df
-    }
-    
-    static func getDate(_ ds: String?, format: String = "yyyy-MM-dd hh:mm:ss") -> Date? {
-        guard let d = ds else {
-            return nil
-        }
-        return getFormat(format: format).date(from: d)
-    }
-    
-    static func getString(from date: Date?) -> String {
-        guard let d = date else {
-            return "bad date format."
-        }
-        return getFormat().string(from: d)
-    }
-    
-    static func getCurrentTime() -> String {
-        return getFormat().string(from: Date())
-    }
-}
-
 //MARK: - 类型工具
 public class TypeUtil {
     
@@ -95,7 +65,7 @@ public class TypeUtil {
     public static func value(_ type: Any) -> Any {
         switch type {
         case let kType as BaseType     : return kType.value
-        case let kType as Date         : return DateUtil.getString(from: kType)
+        case let kType as Date         : return Date.toString(date: kType)
         default                        : return type
         }
     }

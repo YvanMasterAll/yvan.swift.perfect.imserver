@@ -37,7 +37,7 @@ func baseResponseFilter(turnstile: TurnstilePerfect) -> [(HTTPResponseFilter, HT
 //MARK: - 认证过滤
 func authenticationFilter() -> HTTPRequestFilter {
     var config = AuthenticationConfig.init()
-    config.include("/*")
+    config.include("\(baseRoute)/*")
     config.exclude(excludeRoutes())
     return AuthenticationFilter(config)
 }

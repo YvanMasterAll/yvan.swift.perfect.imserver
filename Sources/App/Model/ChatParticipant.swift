@@ -31,8 +31,8 @@ class ChatParticipant: BaseModel {
         if let v = this.data["dialogid"]        as? String { dialogid  = v }
         if let v = this.data["p1"]              as? Int    { p1        = v }
         if let v = this.data["p2"]              as? Int    { p2        = v }
-        if let v = DateUtil.getDate(this.data["createtime"] as? String)     { createtime  = v }
-        if let v = DateUtil.getDate(this.data["updatetime"] as? String)     { updatetime  = v }
+        if let v = this.data["createtime"] as? String      { createtime  = Date.toDate(dateString: v) }
+        if let v = this.data["updatetime"] as? String      { updatetime  = Date.toDate(dateString: v) }
         if let k = this.data["status"] as? String, let v = Status.init(k)   { status = v }
     }
     public func rows() -> [ChatParticipant] {

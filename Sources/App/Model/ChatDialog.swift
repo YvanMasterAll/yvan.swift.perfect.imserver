@@ -30,8 +30,8 @@ class ChatDialog: BaseModel {
         if let v = this.data["lastmessageid"]   as? String  { lastmessageid  = v }
         if let k = this.data["type"]            as? String,
             let v = DialogType.init(k) { type = v }
-        if let v = DateUtil.getDate(this.data["createtime"] as? String)     { createtime  = v }
-        if let v = DateUtil.getDate(this.data["updatetime"] as? String)     { updatetime  = v }
+        if let v = this.data["createtime"] as? String       { createtime  = Date.toDate(dateString: v) }
+        if let v = this.data["updatetime"] as? String       { updatetime  = Date.toDate(dateString: v) }
         if let k = this.data["status"] as? String, let v = Status.init(k)   { status = v }
     }
     public func rows() -> [ChatDialog] {
@@ -84,8 +84,8 @@ class ChatDialog_Participant: BaseModel {
         if let v = this.data["lastmessageid"]   as? String { lastmessageid  = v }
         if let k = this.data["type"]            as? String,
             let v = DialogType.init(k) { type = v }
-        if let v = DateUtil.getDate(this.data["createtime"] as? String)     { createtime  = v }
-        if let v = DateUtil.getDate(this.data["updatetime"] as? String)     { updatetime  = v }
+        if let v = this.data["createtime"] as? String      { createtime  = Date.toDate(dateString: v) }
+        if let v = this.data["updatetime"] as? String      { updatetime  = Date.toDate(dateString: v) }
         if let k = this.data["status"] as? String, let v = Status.init(k)   { status = v }
     }
     public func rows() -> [ChatDialog_Participant] {
@@ -142,8 +142,8 @@ class ChatDialog_Message: BaseModel {
             let v = DialogType.init(k) { type = v }
         if let k = this.data["messagetype"]     as? String,
             let v = MessageType.init(k) { messagetype = v }
-        if let v = DateUtil.getDate(this.data["createtime"] as? String)     { createtime  = v }
-        if let v = DateUtil.getDate(this.data["updatetime"] as? String)     { updatetime  = v }
+        if let v = this.data["createtime"] as? String      { createtime  = Date.toDate(dateString: v) }
+        if let v = this.data["updatetime"] as? String      { updatetime  = Date.toDate(dateString: v) }
         if let k = this.data["status"] as? String, let v = Status.init(k)   { status = v }
     }
     public func rows() -> [ChatDialog_Message] {
