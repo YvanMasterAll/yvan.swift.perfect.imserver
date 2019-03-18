@@ -19,6 +19,9 @@ class ChatServiceImpl: ChatService {
     lazy var message: ChatMessage = {
         return ChatMessage()
     }()
+    lazy var dialog_message: ChatDialog_Message = {
+        return ChatDialog_Message()
+    }()
     
     /// 用户判断
     ///
@@ -48,5 +51,16 @@ class ChatServiceImpl: ChatService {
     /// - Throws: 抛出异常
     func message_list(dialogid: String, userid: Int, cursor: StORMCursor) throws -> [[String : Any]] {
         return try message.list(dialogid: dialogid, userid: userid, cursor: cursor)
+    }
+    
+    
+    /// 会话列表
+    ///
+    /// - Parameters:
+    ///   - id: 用户标识
+    ///   - dialogtype: 会话类型
+    /// - Returns: 返回数据
+    func dialog_list(id: Int, dialogtype: DialogType?, cursor: StORMCursor) throws -> [[String : Any]] {
+        return try dialog_message.dialogs(id: id, dialogtype: dialogtype, cursor: cursor)
     }
 }

@@ -296,8 +296,18 @@ extension PostgresStORM {
             throw error
         }
     }
-    public func sql_ex(_ statement: String, params: [String]) throws {
-        results.rows = try execRows(statement, params: params)
+    public func sql_ex(_ statement: String,
+                       params: [Any],
+                       cursor: StORMCursor = StORMCursor()) throws {
+        var kStatement = statement
+        if cursor.limit > 0 {
+            kStatement += " LIMIT \(cursor.limit)"
+        }
+        if cursor.offset > 0 {
+            kStatement += " OFFSET \(cursor.offset)"
+        }
+        let kParams = params.map { return String(describing: TypeUtil.value($0)) }
+        results.rows = try execRows(kStatement, params: kParams)
         if results.cursorData.totalRecords == 1 { makeRow() }
     }
     @discardableResult
@@ -321,8 +331,8 @@ extension PostgresStORM {
         
         // set exec message
         errorMsg = thisConnection.server.errorMessage().trimmingCharacters(in: .whitespacesAndNewlines)
-        if StORMdebug { LogFile.info("Error msg: \(errorMsg)", logFile: "./StORMlog.txt") }
         if isError() {
+            if StORMdebug { LogFile.info("Error msg: \(errorMsg)", logFile: "./StORMlog.txt") }
             thisConnection.server.close()
             throw StORMError.error(errorMsg)
         }

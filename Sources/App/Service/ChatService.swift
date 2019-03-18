@@ -21,4 +21,7 @@ protocol ChatService: class {
     
     //MARK: - 消息列表
     func message_list(dialogid: String, userid: Int, cursor: StORMCursor) throws -> [[String: Any]]
+    
+    //MARK: - 会话列表
+    func dialog_list(id: Int, dialogtype: DialogType?, cursor: StORMCursor) throws -> [[String: Any]]
 }

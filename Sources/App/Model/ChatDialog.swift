@@ -151,7 +151,7 @@ class ChatDialog_Message: BaseModel {
     }
     
     //MARK: - 私有成员
-    fileprivate let sql_dialogs = """
+    fileprivate let _sql_dialogs_single = """
 select a.id,
     b.id as messageid,
     b.sender,
@@ -199,14 +199,15 @@ and c.status=$3
 extension ChatDialog_Message {
     
     //MARK: - 会话列表
-    func dialogs(id: Int) throws -> [[String: Any]]? {
-        let statement = sql_dialogs
-        let params = [
-            DialogType.single.value,
+    func dialogs(id: Int, dialogtype: DialogType?, cursor: StORMCursor) throws -> [[String: Any]] {
+        //TODO: 会话类型判断
+        let statement = _sql_dialogs_single
+        let params: [Any] = [
+            DialogType.single,
             "\(id)",
-            Status.normal.value
+            Status.normal
         ]
-        try self.sql_ex(statement, params: params)
+        try self.sql_ex(statement, params: params, cursor: cursor)
         return rows().map() { return $0.toDict() }
     }
 }

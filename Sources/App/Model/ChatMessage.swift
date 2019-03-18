@@ -44,6 +44,20 @@ class ChatMessage: BaseModel {
     public func rows() -> [ChatMessage] {
         return self._rows(model: self)
     }
+    
+    //MARK: - 数据字典
+    override func toDict(_ offset: Int = 0) -> [String : Any] {
+        var data = super.toDict(offset)
+        
+        switch type {
+        case .image:
+            data["body"] = "\(baseURL)/\(body)"
+        default:
+            break
+        }
+        
+        return data
+    }
 }
 
 //MARK: - 消息列表
@@ -108,6 +122,15 @@ extension ChatMessage {
             if let dialogid = data["dialogid"] as? String {
                 chatMessage.dialogid = dialogid
             }
+            return chatMessage
+        case .list_dialog:
+            guard let sender = data["sender"] as? Int else { return nil }
+            let chatMessage = ChatMessage.init()
+            if let k3 = data["dialogtype"] as? String,
+                let dialogtype = DialogType.init(k3) {
+                chatMessage._dialogtype = dialogtype
+            }
+            chatMessage.sender = sender
             return chatMessage
         default:
             return nil

@@ -19,6 +19,8 @@ func initializeRoute() -> Routes {
     routes.add(ChatController().route)
     //MARK: - 发现模块
     routes.add(FindController().route)
+    //MARK: - 文件模块
+    routes.add(FileController().route)
     
     return routes
 }
@@ -35,6 +37,8 @@ func excludeRoutes() -> [String] {
     routes.append(contentsOf: ChatController().route_ex)
     //MARK: - 发现模块
     routes.append(contentsOf: FindController().route_ex)
+    //MARK: - 文件模块
+    routes.append(contentsOf: FileController().route_ex)
     
     return routes
 }

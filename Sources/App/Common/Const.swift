@@ -8,31 +8,34 @@
 import Foundation
 
 //MARK: - 根路由
-let baseRoute = "/api/v1"
+let baseRoute           = "/api/v1"
 
 //MARK: - 日志文件
-let baseLog = "./log/request.log"
+let baseLog             = "./log/request.log"
 
 //MARK: - 配置文件
-let baseConfig = "./config/ApplicationConfiguration.json"
+let baseConfig          = "./config/ApplicationConfiguration.json"
 
 //MARK: - 默认配置
-var baseDBHost     = "localhost"
-var baseServerPort = 8181
-var baseDBPort     = 5432
-var baseDBUsername = ""
-var baseDBPassword = ""
-var baseDBName     = ""
-var baseURL        = "http://192.168.1.6:8181"
-var baseDomain     = ""
-var baseDocument   = "webroot"
+var baseDBHost          = "localhost"
+var baseServerPort      = 8181
+var baseDBPort          = 5432
+var baseDBUsername      = ""
+var baseDBPassword      = ""
+var baseDBName          = ""
+var baseURL             = "http://192.168.1.6:8181"
+var baseDomain          = ""
+var baseDocument        = "webroot"
+
+//MARK: - 上传位置
+var baseUploadChatImage = "upload/chat/images"
 
 //MARK: - 用户信息
-let baseNickname   = "用户"
-let baseAvatar     = "static/avatar.png"
+let baseNickname        = "用户"
+let baseAvatar          = "static/avatar.png"
 
 //MARK: - 页面配置
-let basePageLimit  = 10
+let basePageLimit       = 10
 
 //MARK: - 枚举类型
 protocol BaseType {
@@ -101,17 +104,19 @@ public enum Whether: BaseType {     //是否
 }
 public enum MessageType: BaseType { //消息类型
     
-    case text
+    case text, image
     
     public var value: String {
         switch self {
         case .text               : return "文本"
+        case .image              : return "图片"
         }
     }
     
     init?(_ value: String) {
         switch value {
         case "文本", "text"       : self = .text
+        case "图片", "image"      : self = .image
         default                  : return nil
         }
     }
@@ -135,14 +140,15 @@ public enum DialogType: BaseType {  //会话类型
 }
 public enum SocketCmdType {         //命令类型, WebSocket
     
-    case register, chat, receive, list
+    case register, chat, receive, list, list_dialog
     
     public var value: String {
         switch self {
         case .register          : return "注册"
         case .chat              : return "聊天"
         case .receive           : return "接收"
-        case .list               : return "列表"
+        case .list              : return "列表"
+        case .list_dialog       : return "会话"
         }
     }
     
@@ -152,6 +158,7 @@ public enum SocketCmdType {         //命令类型, WebSocket
         case "聊天", "chat"       : self = .chat
         case "列表", "list"       : self = .list
         case "接收", "receive"    : self = .receive
+        case "会话", "list_dialog": self = .list_dialog
         default                   : return nil
         }
     }

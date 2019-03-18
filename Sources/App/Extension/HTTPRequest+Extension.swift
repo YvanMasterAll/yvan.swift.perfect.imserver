@@ -8,6 +8,7 @@
 import Foundation
 import StORM
 import PerfectHTTP
+import PerfectLib
 
 extension HTTPRequest {
     
@@ -34,5 +35,23 @@ extension HTTPRequest {
         var cursor = StORMCursor(limit: basePageLimit, offset: 0)
         cursor.offset = (pageindex - 1)*cursor.limit
         return cursor
+    }
+    
+    //MARK: - 图片上传
+    public func upload_image_chat() -> String? {
+        guard let uploads = postFileUploads, uploads.count == 1 else {
+            return nil
+        }
+        let upload = uploads[0]
+        let file = File(upload.tmpFileName)
+        defer { file.close() }
+        guard let suffix = upload.fileName.split(".").last else { return nil }
+        let path = "\(baseUploadChatImage)/\(UUID().uuidString).\(suffix)"
+        do {
+            let _ = try file.moveTo(path: "\(baseDocument)/\(path)", overWrite: true)
+            return path
+        } catch {
+            return nil
+        }
     }
 }

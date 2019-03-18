@@ -16,14 +16,14 @@ class FindController : BaseController {
         super.init()
         
         //MARK: - 路由
-        self.route.add(method: .post, uri: "\(baseRoute)/find/user", handler: self.findUser())
+        self.route.add(method: .post, uri: "\(baseRoute)/find/user/list", handler: self.users())
     }
 }
 
 extension FindController {
     
     //MARK: - 发现用户
-    public func findUser() -> RequestHandler {
+    public func users() -> RequestHandler {
         return { request, response in
             do {
                 let list = try self.findService.user_list(cursor: request.cursor())

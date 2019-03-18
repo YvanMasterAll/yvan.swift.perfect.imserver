@@ -112,7 +112,7 @@ extension BaseAccount {
     open func get(_ un: String) throws -> BaseAccount {
         let cursor = StORMCursor(limit: 1, offset: 0)
         do {
-            try select(whereclause: "username = $1", params: [un], orderby: [], cursor: cursor)
+            try select(whereclause: "uniqueid = $1", params: [un], orderby: [], cursor: cursor)
             if self.results.rows.count == 0 {
                 throw StORMError.noRecordFound
             }
