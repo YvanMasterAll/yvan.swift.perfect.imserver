@@ -84,3 +84,42 @@ extension User {
     }
 }
 
+class UserProfile: BaseModel {
+    
+    //MARK: - 声明区域
+    var id          : Int    = 0
+    var nickname    : String = ""
+    var age         : Int    = 0
+    var avatar      : String = ""
+    var signature   : String = ""
+    var email       : String = ""
+    var address     : String = ""
+    var college     : String = ""
+    var gender      : Gender = Gender.male
+    var createtime  : Date   = Date()
+    var updatetime  : Date   = Date()
+    var status      : Status = .normal
+}
+
+extension UserProfile {
+    
+    //MARK: - 用户简介
+    func profile(id: Int) throws -> [String: Any] {
+        let user = User()
+        try user.get(id)
+        self.id = user.id
+        self.nickname = user.nickname
+        self.age = user.age
+        self.avatar = user.avatar
+        self.signature = user.signature
+        self.email = user.email
+        self.address = user.address
+        self.college = user.college
+        self.gender = user.gender
+        self.createtime = user.createtime
+        self.updatetime = user.updatetime
+        self.status = user.status
+        return self.toDict()
+    }
+}
+

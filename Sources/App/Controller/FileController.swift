@@ -28,8 +28,8 @@ extension FileController {
         return { request, response in
             if let url = request.upload_image_chat() {
                 let params: [String: Any] = [
-                    "url": url,
-                    "imgid": request.param(name: "msgid")
+                    "body": url,
+                    "_id": request.param(name: "_id") ?? ""
                 ]
                 response.callback(Result(code: .success, data: params))
             } else {
